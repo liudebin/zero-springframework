@@ -8,7 +8,7 @@ import org.junit.Test;
  * @author liuguobin
  * @date 2017/10/16
  */
-
+@Deprecated
 public class ApplicationContextTest extends AbstractTest {
 
     @Test

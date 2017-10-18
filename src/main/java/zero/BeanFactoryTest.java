@@ -20,4 +20,10 @@ public class BeanFactoryTest extends AbstractTest {
         App app = (App) beanFactory.getBean("app");
         app.sayHi();
     }
+
+    @Test
+    public void testClassPathResource() {
+        ClassPathResource classPathResource = new ClassPathResource("applicationContext.xml");
+
+    }
 }
