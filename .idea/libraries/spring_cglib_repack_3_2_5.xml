@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="spring-cglib-repack-3.2.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../spring-cglib-repack-3.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../spring-objenesis-repack-2.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

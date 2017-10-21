@@ -13,7 +13,11 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <compilerArguments>
+                        <extdirs>${project.basedir}/lib/</extdirs>
+                    </compilerArguments>
                 </configuration>
+
             </plugin>
         </plugins>
     </build>
@@ -71,6 +75,9 @@
           <artifactId>jsr305</artifactId>
           <version>3.0.2</version>
       </dependency>
+
+
+
 
   </dependencies>
 </project>

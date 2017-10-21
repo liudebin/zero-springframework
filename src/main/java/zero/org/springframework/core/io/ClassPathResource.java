@@ -28,7 +28,7 @@ import java.io.InputStream;
 import java.net.URL;
 
 /**
- * {@link org.springframework.core.io.Resource} implementation for class path resources. Uses either a
+ * {@link zero.org.springframework.core.io.Resource} implementation for class path resources. Uses either a
  * given {@link ClassLoader} or a given {@link Class} for loading resources.
  *
  * <p>Supports resolution as {@code java.io.File} if the class path
@@ -77,7 +77,7 @@ public class ClassPathResource extends AbstractFileResolvingResource {
 	 */
 	public ClassPathResource(String path, @Nullable ClassLoader classLoader) {
 		Assert.notNull(path, "Path must not be null");
-		String pathToUse = StringUtils.cleanPath(path);
+		String pathToUse = StringUtils.cleanPath(path); // 对路径做必要处理。对 .. 有处理
 		if (pathToUse.startsWith("/")) {
 			pathToUse = pathToUse.substring(1);
 		}
