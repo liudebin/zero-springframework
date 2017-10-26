@@ -25,6 +25,7 @@ import zero.org.springframework.lang.Nullable;
 
 /**
  * Simple interface for bean definition readers.
+ * bean 定义读取器的简单接口
  * Specifies load methods with Resource and String location parameters.
  *
  * <p>Concrete bean definition readers can of course add additional
@@ -39,6 +40,7 @@ import zero.org.springframework.lang.Nullable;
  * @since 1.1
  * @see Resource
  */
+// 主要定义资源文件读取并转换为 BeanDefinition 的各个功能
 public interface BeanDefinitionReader {
 
 	/**

@@ -31,12 +31,13 @@ public class BeanFactoryTest extends AbstractTest {
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader((BeanDefinitionRegistry) beanFactory);
         reader.loadBeanDefinitions(new ClassPathResource("applicationContext.xml"));
         App app = (App) beanFactory.getBean("app");
+        logger.info("{}", beanFactory.isSingleton("app"));
         app.sayHi();
     }
 
     @Test
     public void testClassPathResource() {
         ClassPathResource classPathResource = new ClassPathResource("applicationContext.xml");
-
+        logger.info("{}", classPathResource.getPath());
     }
 }

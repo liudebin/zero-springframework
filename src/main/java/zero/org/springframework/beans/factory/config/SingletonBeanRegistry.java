@@ -24,6 +24,9 @@ import zero.org.springframework.lang.Nullable;
  * implementations in order to expose their singleton management facility
  * in a uniform manner.
  *
+ * 共享bean实例定义注册中心的接口。
+ * 可以由BeanFactory实现，以便以统一的方式暴露它们的单例管理工具。
+ *
  * <p>The {@link org.springframework.beans.factory.config.ConfigurableBeanFactory} interface extends this interface.
  *
  * @author Juergen Hoeller
@@ -37,18 +40,30 @@ public interface SingletonBeanRegistry {
 	/**
 	 * Register the given existing object as singleton in the bean registry,
 	 * under the given bean name.
+	 * 将给定的现有对象作为单例使用给定的bean名称注册到 bean 注册表中
 	 * <p>The given instance is supposed to be fully initialized; the registry
 	 * will not perform any initialization callbacks (in particular, it won't
 	 * call InitializingBean's {@code afterPropertiesSet} method).
+	 * 给定的实例应该是被完全初始化;注册表不会执行任何初始化回调
+	 *
 	 * The given instance will not receive any destruction callbacks
 	 * (like DisposableBean's {@code destroy} method) either.
 	 * <p>When running within a full BeanFactory: <b>Register a bean definition
 	 * instead of an existing instance if your bean is supposed to receive
 	 * initialization and/or destruction callbacks.</b>
+	 * 给定实例将不会接收到任何破坏回调函数。
+	 * 运行在一个完全的 BeanFactory.
+	 * 	如果bean应该接受初始化和/或破坏回调，则注册一个bean定义，而不是现有的实例。
+	 *
 	 * <p>Typically invoked during registry configuration, but can also be used
 	 * for runtime registration of singletons. As a consequence, a registry
 	 * implementation should synchronize singleton access; it will have to do
 	 * this anyway if it supports a BeanFactory's lazy initialization of singletons.
+	 *
+	 * 通常在注册表配置期间调用，但也可以用于单例的运行时注册。
+	 * 因此，注册表实现 应该同步单例进入;
+	 * 	如果它支持BeanFactory对单例的延迟初始化，那么它将不得不这样做。
+	 *
 	 * @param beanName the name of the bean
 	 * @param singletonObject the existing singleton object
 	 * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet

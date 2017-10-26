@@ -24,7 +24,7 @@ import org.xml.sax.InputSource;
 
 /**
  * Strategy interface for loading an XML {@link Document}.
- *
+ * 加载 XML Document 的 策略接口
  * @author Rob Harrop
  * @since 2.0
  * @see DefaultDocumentLoader

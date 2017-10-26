@@ -35,13 +35,14 @@ import zero.org.springframework.core.env.Environment;
  * The effect is that an Environment object is 'read-only' until it is being accessed from
  * a ConfigurableApplicationContext, at which point it too may be configured.
  *
+ * 定义获取Environment的方法
  * @author Chris Beams
  * @since 3.1
  * @see Environment
  * @see ConfigurableEnvironment
  * @see org.springframework.context.ConfigurableApplicationContext#getEnvironment()
  */
-public interface EnvironmentCapable {
+public interface EnvironmentCapable { // capable =  ~ of sth 有什么什么的能力
 
 	/**
 	 * Return the {@link Environment} associated with this component.

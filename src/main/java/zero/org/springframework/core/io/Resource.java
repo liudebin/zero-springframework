@@ -16,7 +16,6 @@
 
 package zero.org.springframework.core.io;
 
-import zero.org.springframework.core.io.*;
 import zero.org.springframework.lang.Nullable;
 
 import java.io.File;
@@ -31,6 +30,7 @@ import java.nio.channels.ReadableByteChannel;
  * Interface for a resource descriptor that abstracts from the actual
  * type of underlying resource, such as a file or class path resource.
  *
+ * 用于从实际资源的类型抽象出来的资源描述符的接口，如文件或类路径资源。
  * <p>An InputStream can be opened for every resource if it exists in
  * physical form, but a URL or File handle can just be returned for
  * certain resources. The actual behavior is implementation-specific.
@@ -49,6 +49,12 @@ import java.nio.channels.ReadableByteChannel;
  * @see PathResource
  * @see ByteArrayResource
  * @see InputStreamResource
+ */
+
+/**
+ * 抽象了所有Spring内部使用到的底层资源，File/URL/Classpath等。
+ * 3个判断资源状态的方法：存在性、kedux9ing、是否处于打开状态
+ * 3个不同类型之间的转换：URL、URI/File.
  */
 public interface Resource extends InputStreamSource {
 

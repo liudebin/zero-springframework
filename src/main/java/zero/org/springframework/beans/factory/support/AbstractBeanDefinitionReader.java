@@ -37,6 +37,7 @@ import java.util.Set;
  * Abstract base class for bean definition readers which implement
  * the {@link BeanDefinitionReader} interface.
  *
+ * 实现了 BeanDefinitionReader 接口的 bean definition 读取器的 抽象的基础类
  * <p>Provides common properties like the bean factory to work on
  * and the class loader to use for loading bean classes.
  *
@@ -65,6 +66,7 @@ public abstract class AbstractBeanDefinitionReader implements EnvironmentCapable
 
 	/**
 	 * Create a new AbstractBeanDefinitionReader for the given bean factory.
+	 * 根据新的 bean factory 创建一个新的 AbstractBeanDefinitionReader.
 	 * <p>If the passed-in bean factory does not only implement the BeanDefinitionRegistry
 	 * interface but also the ResourceLoader interface, it will be used as default
 	 * ResourceLoader as well. This will usually be the case for

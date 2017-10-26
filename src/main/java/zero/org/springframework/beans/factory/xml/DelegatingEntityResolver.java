@@ -27,6 +27,7 @@ import java.io.IOException;
 /**
  * {@link EntityResolver} implementation that delegates to a {@link BeansDtdResolver}
  * and a {@link PluggableSchemaResolver} for DTDs and XML schemas, respectively.
+ * EntityResolver 的实现 ，BeansDtdResolver 和 PluggableSchemaResolver 分别代表了 DTDs 和 Xml.
  *
  * @author Rob Harrop
  * @author Juergen Hoeller

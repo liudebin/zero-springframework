@@ -32,6 +32,8 @@ import javax.xml.parsers.ParserConfigurationException;
 /**
  * Spring's default {@link org.springframework.beans.factory.xml.DocumentLoader} implementation.
  *
+ * Spring 默认的 DocumentLoader 的实现类。
+ *
  * <p>Simply loads {@link Document documents} using the standard JAXP-configured
  * XML parser. If you want to change the {@link DocumentBuilder} that is used to
  * load documents, then one strategy is to define a corresponding Java system property

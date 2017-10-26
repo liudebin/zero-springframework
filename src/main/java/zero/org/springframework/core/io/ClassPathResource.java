@@ -54,8 +54,10 @@ public class ClassPathResource extends AbstractFileResolvingResource {
 
 	/**
 	 * Create a new {@code ClassPathResource} for {@code ClassLoader} usage.
+	 * 创建一个新的 ClassPathRecource让 ClassLoader 使用
 	 * A leading slash will be removed, as the ClassLoader resource access
 	 * methods will not accept it.
+	 * 一个斜杠将被拆除，为类资源访问的方法将不接受它。
 	 * <p>The thread context class loader will be used for
 	 * loading the resource.
 	 * @param path the absolute path within the class path

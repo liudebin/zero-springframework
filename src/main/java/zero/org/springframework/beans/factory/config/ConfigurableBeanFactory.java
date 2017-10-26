@@ -35,6 +35,8 @@ import java.security.AccessControlContext;
  * facilities to configure a bean factory, in addition to the bean factory
  * client methods in the {@link BeanFactory}
  * interface.
+ * 大多数bean工厂实现的配置接口 -- 下面会说内部扩展
+ * 除了实现BeanFactory的方法外，还提供了工具方法配置 bean factory
  *
  * <p>This bean factory interface is not meant to be used in normal application
  * code: Stick to {@link BeanFactory} or

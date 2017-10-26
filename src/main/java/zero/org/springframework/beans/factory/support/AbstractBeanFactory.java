@@ -37,10 +37,11 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Abstract base class for {@link BeanFactory}
  * implementations, providing the full capabilities of the
- * {@link ConfigurableBeanFactory} SPI.
+ * {@link ConfigurableBeanFactory} SPI.   是JDK内置的一种服务提供发现机制
  * Does <i>not</i> assume a listable bean factory: can therefore also be used
  * as base class for bean factory implementations which obtain bean definitions
  * from some backend resource (where bean definition access is an expensive operation).
+ * BeanFactory 的抽象的基本类实现，提供 ConfigurableBeanFactory SPI 的全部功能
  *
  * <p>This class provides a singleton cache (through its base class
  * {@link org.springframework.beans.factory.support.DefaultSingletonBeanRegistry},

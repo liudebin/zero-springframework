@@ -245,6 +245,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	/**
 	 * Return the EntityResolver to use, building a default resolver
 	 * if none specified.
+	 * EntityResolver 解析实体的基本接口。
 	 */
 	protected EntityResolver getEntityResolver() {
 		if (this.entityResolver == null) {
@@ -296,8 +297,9 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 
 	/**
 	 * Load bean definitions from the specified XML file.
+	 * 从特定的 XML 文件中 加载 bean的定义
 	 * @param encodedResource the resource descriptor for the XML file,
-	 * allowing to specify an encoding to use for parsing the file
+	 * allowing to specify an encoding  编码 to use for parsing the file
 	 * @return the number of bean definitions found
 	 * @throws BeanDefinitionStoreException in case of loading or parsing errors
 	 */
@@ -312,6 +314,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 			currentResources = new HashSet<>(4);
 			this.resourcesCurrentlyBeingLoaded.set(currentResources);
 		}
+		// 为什么会报 检测循环loading
 		if (!currentResources.add(encodedResource)) {
 			throw new BeanDefinitionStoreException(
 					"Detected cyclic loading of " + encodedResource + " - check your import definitions!");
@@ -319,6 +322,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 		try {
 			InputStream inputStream = encodedResource.getResource().getInputStream();
 			try {
+				// SAX 的 资源对象
 				InputSource inputSource = new InputSource(inputStream);
 				if (encodedResource.getEncoding() != null) {
 					inputSource.setEncoding(encodedResource.getEncoding());
@@ -368,6 +372,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 
 	/**
 	 * Actually load bean definitions from the specified XML file.
+	 * 实际上从指定的XML文件加载bean定义。
 	 * @param inputSource the SAX InputSource to read from
 	 * @param resource the resource descriptor for the XML file
 	 * @return the number of bean definitions found
@@ -408,6 +413,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 
 	/**
 	 * Actually load the specified document using the configured DocumentLoader.
+	 * 实际加载指定的文档使用配置的documentloader
 	 * @param inputSource the SAX InputSource to read from
 	 * @param resource the resource descriptor for the XML file
 	 * @return the DOM Document
@@ -416,8 +422,12 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	 * @see DocumentLoader#loadDocument
 	 */
 	protected Document doLoadDocument(InputSource inputSource, Resource resource) throws Exception {
-		return this.documentLoader.loadDocument(inputSource, getEntityResolver(), this.errorHandler,
-				getValidationModeForResource(resource), isNamespaceAware());
+		return this.documentLoader.loadDocument(
+				inputSource,
+				getEntityResolver(),
+				this.errorHandler,
+				getValidationModeForResource(resource),
+				isNamespaceAware());
 	}
 
 

@@ -26,6 +26,7 @@ import zero.org.springframework.util.ResourceUtils;
  * is required to provide this functionality, plus extended
  * {@link org.springframework.core.io.support.ResourcePatternResolver} support.
  *
+ * 加载资源的策略接口
  * <p>{@link org.springframework.core.io.DefaultResourceLoader} is a standalone implementation that is
 // * usable outside an ApplicationContext, also used by {@link ResourceEditor}.
  *
@@ -40,6 +41,7 @@ import zero.org.springframework.util.ResourceUtils;
  * @see org.springframework.context.ApplicationContext
  * @see org.springframework.context.ResourceLoaderAware
  */
+// 定义资源加载器，主要应用于根据给定的资源文件地址返回相应的Resource
 public interface ResourceLoader {
 
 	/** Pseudo URL prefix for loading from the class path: "classpath:" */

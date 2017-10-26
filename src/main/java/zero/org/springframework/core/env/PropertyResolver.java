@@ -21,6 +21,7 @@ import zero.org.springframework.lang.Nullable;
 
 /**
  * Interface for resolving properties against any underlying source.
+ * 针对任何底层资源的解析 properties 的接口
  *
  * @author Chris Beams
  * @author Juergen Hoeller

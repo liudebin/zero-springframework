@@ -23,6 +23,8 @@ import zero.org.springframework.lang.Nullable;
  * Context that gets passed along a bean definition reading process,
  * encapsulating all relevant configuration as well as state.
  *
+ * 为在bean定义读取过程中传递的上下文，封装所有相关配置和状态。
+ *
  * @author Rob Harrop
  * @author Juergen Hoeller
  * @since 2.0

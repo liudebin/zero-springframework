@@ -40,6 +40,7 @@ import java.util.*;
 
 /**
  * Stateful delegate class used to parse XML bean definitions.
+ *
  * Intended for use by both the main parser and any extension
  * {@link BeanDefinitionParser BeanDefinitionParsers} or
  * {@link BeanDefinitionDecorator BeanDefinitionDecorators}.
@@ -53,6 +54,7 @@ import java.util.*;
  * @see org.springframework.beans.factory.xml.ParserContext
  * @see org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader
  */
+// 定义解析 Element的各种方法
 public class BeanDefinitionParserDelegate {
 
 	public static final String BEANS_NAMESPACE_URI = "http://www.springframework.org/schema/beans";

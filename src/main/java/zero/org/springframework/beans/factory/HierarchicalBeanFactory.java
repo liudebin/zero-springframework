@@ -22,6 +22,8 @@ import zero.org.springframework.lang.Nullable;
  * Sub-interface implemented by bean factories that can be part
  * of a hierarchy.
  *
+ * 子接口，带有层次结构的 BeanFactory 子接口。
+ *
  * <p>The corresponding {@code setParentBeanFactory} method for bean
  * factories that allow setting the parent in a configurable
  * fashion can be found in the ConfigurableBeanFactory interface.

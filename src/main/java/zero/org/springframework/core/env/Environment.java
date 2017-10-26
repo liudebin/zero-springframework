@@ -20,9 +20,11 @@ import zero.org.springframework.core.env.*;
 
 /**
  * Interface representing the environment in which the current application is running.
+ * 代表了当前程序执行的环境的接口。
  * Models two key aspects of the application environment: <em>profiles</em> and
  * <em>properties</em>. Methods related to property access are exposed via the
  * {@link PropertyResolver} superinterface.
+ * 给出了应用程序环境的两个关键方面的模型：profiles 配置文件 properties 特性
  *
  * <p>A <em>profile</em> is a named, logical group of bean definitions to be registered
  * with the container only if the given profile is <em>active</em>. Beans may be assigned
