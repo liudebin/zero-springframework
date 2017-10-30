@@ -27,20 +27,28 @@ import java.lang.annotation.Annotation;
 import java.util.Map;
 
 /**
- * Extension of the {@link org.springframework.beans.factory.BeanFactory} interface to be implemented by bean factories
- * that can enumerate all their bean instances, rather than attempting bean lookup
+
+ 注：随着getBeanDefinitionCount和containsbeandefinition例外，在这个接口中的方法不适用于频繁调用。实现可能很慢。
+ * Extension of the {@link zero.org.springframework.beans.factory.BeanFactory} interface to be implemented by bean factories
+ * that can enumerate（枚举） all their bean instances, rather than attempting bean lookup
  * by name one by one as requested by clients. BeanFactory implementations that
  * preload all their bean definitions (such as XML-based factories) may implement
  * this interface.
  *
+ * BeanFactory 接口的扩展，可以枚举所有的 bean 实例，而不是尝试按请求一个个查询。
+ * BeanFactory 的实现若想 预加载 所有他的 Bean Definitions (比如 XML-based factories)可以实现这个接口
+ *
  * <p>If this is a {@link HierarchicalBeanFactory}, the return values will <i>not</i>
  * take any BeanFactory hierarchy into account, but will relate only to the beans
- * defined in the current factory. Use the {@link org.springframework.beans.factory.BeanFactoryUtils} helper class
+ * defined in the current factory. Use the {@link zero.org.springframework.beans.factory.BeanFactoryUtils} helper class
  * to consider beans in ancestor factories too.
+ *
+ * 如果这是一个 HierarchicalBeanFactory，返回值将不会考虑任何BeanFactory的层次，但只与定义的当前bean的工厂关联。使
+ * 用 BeanFactoryUtils Helper 类也可以把beans 看做祖先工厂。
  *
  * <p>The methods in this interface will just respect bean definitions of this factory.
  * They will ignore any singleton beans that have been registered by other means like
- * {@link org.springframework.beans.factory.config.ConfigurableBeanFactory}'s
+ * {@link zero.org.springframework.beans.factory.config.ConfigurableBeanFactory}'s
  * {@code registerSingleton} method, with the exception of
  * {@code getBeanNamesOfType} and {@code getBeansOfType} which will check
  * such manually registered singletons too. Of course, BeanFactory's {@code getBean}
@@ -48,15 +56,20 @@ import java.util.Map;
  * scenarios, all beans will be defined by external bean definitions anyway, so most
  * applications don't need to worry about this differentiation.
  *
+ * 这个接口中的方法，只会遵守当前factory中的 bean definitions。
+ * 会忽略任何 已经被其他 类似 ConfigurableBeanFactory的 registerSingleton 方法 注册过的单例 beans, 但在 getBeanNameOfType 和
+ * getBeanOfType 方法中也会检测 手工注册的 单例.
+ * 当然， BeanFactory 的 getBean 也会允许透明访问这种特殊的beans。
+ * 然而，在特殊的场景，所有bean都将被外部bean定义定义，所以大多数应用程序不需要担心这种差异
  * <p><b>NOTE:</b> With the exception of {@code getBeanDefinitionCount}
  * and {@code containsBeanDefinition}, the methods in this interface
- * are not designed for frequent invocation. Implementations may be slow.
+ * are not designed for frequent invocation （频繁调用）. Implementations may be slow.
  *
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @since 16 April 2001
  * @see HierarchicalBeanFactory
- * @see org.springframework.beans.factory.BeanFactoryUtils
+ * @see zero.org.springframework.beans.factory.BeanFactoryUtils
  */
 public interface ListableBeanFactory extends BeanFactory {
 

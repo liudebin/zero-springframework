@@ -44,6 +44,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * {@link ListableBeanFactory} and
  * {@link BeanDefinitionRegistry} interfaces: a full-fledged bean factory
  * based on bean definition objects.
+ * 一个基于bean定义对象 的成熟bean工厂。
  *
  * <p>Typical usage is registering all bean definitions first (possibly read
  * from a bean definition file), before accessing beans. Bean definition lookup
@@ -54,7 +55,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * bean factories. Note that readers for specific bean definition formats are
  * typically implemented separately rather than as bean factory subclasses:
  * see for example {@link PropertiesBeanDefinitionReader} and
- * {@link org.springframework.beans.factory.xml.XmlBeanDefinitionReader}.
+ * {@link zero.org.springframework.beans.factory.xml.XmlBeanDefinitionReader}.
  *
  * <p>For an alternative implementation of the
  * {@link ListableBeanFactory} interface,

@@ -45,23 +45,33 @@ import java.util.function.Supplier;
  * Implements the {@link AutowireCapableBeanFactory}
  * interface in addition to AbstractBeanFactory's {@link #createBean} method.
  *
+ * <p>抽象 bean factory 父类，实现了默认 bean 的创建，由RootBeanDefinition类指定的全部功能。
+ * 除了AbstractBeanFactory 的 createBean 方法，还实现了 AutowireCapableBeanFactory 接口的方法。
+ *
  * <p>Provides bean creation (with constructor resolution), property population,
  * wiring (including autowiring), and initialization. Handles runtime bean
  * references, resolves managed collections, calls initialization methods, etc.
  * Supports autowiring constructors, properties by name, and properties by type.
  *
+ * 提供了bean的创建（构造函数）、属性封装， 装配（包括自动装配）和初始化。
+ * 处理运行时的bean的引用，解决了管理的集合，调用初始化方法。
+ * 支持 自动装配构造函数、根据属性的名字和属性类型。
  * <p>The main template method to be implemented by subclasses is
  * {@link #resolveDependency(DependencyDescriptor, String, Set, TypeConverter)},
  * used for autowiring by type. In case of a factory which is capable of searching
  * its bean definitions, matching beans will typically be implemented through such
  * a search. For other factory styles, simplified matching algorithms can be implemented.
  *
+ * 要实现子类的主要模板方法 resolveDependency（dependencydescriptor、字符串、集合，TypeConverter），用于自动装配的类型。
+ * 如果一个工厂能够搜索bean的定义，那么匹配bean通常是通过这样的搜索实现的。对于其他工厂样式，可以实现简化的匹配算法。
  * <p>Note that this class does <i>not</i> assume or implement bean definition
- * registry capabilities. See {@link org.springframework.beans.factory.support.DefaultListableBeanFactory} for an implementation
+ * registry capabilities. See {@link zero.org.springframework.beans.factory.support.DefaultListableBeanFactory} for an implementation
  * of the {@link ListableBeanFactory} and
- * {@link org.springframework.beans.factory.support.BeanDefinitionRegistry} interfaces, which represent the API and SPI
+ * {@link zero.org.springframework.beans.factory.support.BeanDefinitionRegistry} interfaces, which represent the API and SPI
  * view of such a factory, respectively.
  *
+ * 请注意，该类不假定或实现bean定义注册表功能。
+ * 可看 DefaultListableBeanFactory 是  ListableBeanFactory接口 和 BeanDefinitionRegistry 的实现，代表着API和SPI。
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @author Rob Harrop
@@ -71,7 +81,7 @@ import java.util.function.Supplier;
  * @author Sam Brannen
  * @since 13.02.2004
  * @see RootBeanDefinition
- * @see org.springframework.beans.factory.support.DefaultListableBeanFactory
+ * @see zero.org.springframework.beans.factory.support.DefaultListableBeanFactory
  * @see BeanDefinitionRegistry
  */
 public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFactory

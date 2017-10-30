@@ -29,7 +29,10 @@ import java.util.Iterator;
 
 /**
  * Configuration interface to be implemented by most listable bean factories.
- * In addition to {@link org.springframework.beans.factory.config.ConfigurableBeanFactory}, it provides facilities to
+ *
+ * 大多数可序列化的 Bean Factories 会实现  Configuration interface。
+ * In addition to {@link zero.org.springframework.beans.factory.config.ConfigurableBeanFactory}, it provides facilities to
+ * 除 ConfigurableBeanFactory 之外， 提供了功能去分析、修改 bean definitions，和 预实例化 单例。
  * analyze and modify bean definitions, and to pre-instantiate singletons.
  *
  * <p>This subinterface of {@link org.springframework.beans.factory.BeanFactory}
@@ -39,9 +42,10 @@ import java.util.Iterator;
  * use cases. This interface is just meant to allow for framework-internal
  * plug'n'play even when needing access to bean factory configuration methods.
  *
+ * 内部使用
  * @author Juergen Hoeller
  * @since 03.11.2003
- * @see org.springframework.context.support.AbstractApplicationContext#getBeanFactory()
+ * @see zero.org.springframework.context.support.AbstractApplicationContext#getBeanFactory()
  */
 public interface ConfigurableListableBeanFactory
 		extends ListableBeanFactory, AutowireCapableBeanFactory, ConfigurableBeanFactory {

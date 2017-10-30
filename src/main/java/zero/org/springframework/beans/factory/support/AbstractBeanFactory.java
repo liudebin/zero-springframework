@@ -39,12 +39,13 @@ import java.util.concurrent.ConcurrentHashMap;
  * implementations, providing the full capabilities of the
  * {@link ConfigurableBeanFactory} SPI.   是JDK内置的一种服务提供发现机制
  * Does <i>not</i> assume a listable bean factory: can therefore also be used
- * as base class for bean factory implementations which obtain bean definitions
- * from some backend resource (where bean definition access is an expensive operation).
- * BeanFactory 的抽象的基本类实现，提供 ConfigurableBeanFactory SPI 的全部功能
+ * as base class for bean factory implementations which obtain (获得) bean definitions
+ * from some backend(后台) resource (where bean definition access is an expensive operation).
+ * <p>BeanFactory 的抽象的基本类实现，提供 ConfigurableBeanFactory的全部功能的 SPI
+ * 不像 listable bean工厂：因此也可以作为bean工厂实现 从后端资源获取bean定义基类（从中访问bean定义是一个昂贵的操作）。
  *
  * <p>This class provides a singleton cache (through its base class
- * {@link org.springframework.beans.factory.support.DefaultSingletonBeanRegistry},
+ * {@link zero.org.springframework.beans.factory.support.DefaultSingletonBeanRegistry},
  * singleton/prototype determination, {@link FactoryBean}
  * handling, aliases, bean definition merging for child bean definitions,
  * and bean destruction ({@link DisposableBean}
@@ -52,12 +53,18 @@ import java.util.concurrent.ConcurrentHashMap;
  * hierarchy (delegating to the parent in case of an unknown bean), through implementing
  * the {@link HierarchicalBeanFactory} interface.
  *
+ * 这个类提供了一个单例的缓存（通过其基类 .DefaultSingletonBeanRegistry，单件/原型的确定、FactoryBean 的处理，别名，bean的定义合并子bean定义，
+ * 和bean的 DisposableBean 接口（自定义销毁方法）。
+ * 此外，它可以管理一个bean工厂层次（以防在一个未知的 bean 的情况下委托给父类），通过实现 HierarchicalBeanFactory 接口。
+ *
  * <p>The main template methods to be implemented by subclasses are
- * {@link #getBeanDefinition} and {@link #createBean}, retrieving a bean definition
+ * {@link #getBeanDefinition} and {@link #createBean}, retrieving(检索) a bean definition
  * for a given bean name and creating a bean instance for a given bean definition,
  * respectively. Default implementations of those operations can be found in
- * {@link org.springframework.beans.factory.support.DefaultListableBeanFactory} and {@link org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory}.
+ * {@link zero.org.springframework.beans.factory.support.DefaultListableBeanFactory} and {@link zero.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory}.
  *
+ * 主要的被子类实现的模板方法 是 getBeanDefinition 和 createBean ，分别根据一个给定的bean的名称检索一个bean定义，由给定的bean定义创建bean实例
+ * 这些操作的默认实现是可以发现 在 DefaultListableBeanFactory 类和 AbstractAutowireCapableBeanFactory。
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @author Costin Leau
@@ -65,7 +72,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @since 15 April 2001
  * @see #getBeanDefinition
  * @see #createBean
- * @see org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#createBean
+ * @see zero.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#createBean
  * @see DefaultListableBeanFactory#getBeanDefinition
  */
 public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport implements ConfigurableBeanFactory {

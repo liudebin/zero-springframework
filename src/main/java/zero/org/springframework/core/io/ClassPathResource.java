@@ -31,6 +31,7 @@ import java.net.URL;
  * {@link zero.org.springframework.core.io.Resource} implementation for class path resources. Uses either a
  * given {@link ClassLoader} or a given {@link Class} for loading resources.
  *
+ * 使用一个给定的 ClassLoader 或 Class 加载 资源文件。
  * <p>Supports resolution as {@code java.io.File} if the class path
  * resource resides in the file system, but not for resources in a JAR.
  * Always supports resolution as URL.
@@ -54,13 +55,15 @@ public class ClassPathResource extends AbstractFileResolvingResource {
 
 	/**
 	 * Create a new {@code ClassPathResource} for {@code ClassLoader} usage.
-	 * 创建一个新的 ClassPathRecource让 ClassLoader 使用
+	 * 创建一个新的 ClassPathResource 供 ClassLoader 使用
 	 * A leading slash will be removed, as the ClassLoader resource access
 	 * methods will not accept it.
-	 * 一个斜杠将被拆除，为类资源访问的方法将不接受它。
+	 * 开头的一个斜杠将被拆除，因为类资源访问的方法将不接受它。
 	 * <p>The thread context class loader will be used for
 	 * loading the resource.
+	 * 线程的上下文中用到的  类加载器 会被用来加载 resource
 	 * @param path the absolute path within the class path
+	 *             绝对路径
 	 * @see ClassLoader#getResourceAsStream(String)
 	 * @see ClassUtils#getDefaultClassLoader()
 	 */

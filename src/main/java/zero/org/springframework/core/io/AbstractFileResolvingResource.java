@@ -27,11 +27,13 @@ import java.nio.channels.ReadableByteChannel;
 
 /**
  * Abstract base class for resources which resolve URLs into File references,
- * such as {@link org.springframework.core.io.UrlResource} or {@link ClassPathResource}.
+ * such as {@link zero.org.springframework.core.io.UrlResource} or {@link ClassPathResource}.
+ * 将URL解析为文件引用 的 Resources抽象基类。
+ * 如 UrlResource 或 ClassPathResource
  *
  * <p>Detects the "file" protocol as well as the JBoss "vfs" protocol in URLs,
  * resolving file system references accordingly.
- *
+ * 像JBoss“VFS”协议，检测在URL中的“文件”协议 的 相应的解决文件系统引用。
  * @author Juergen Hoeller
  * @since 3.0
  */

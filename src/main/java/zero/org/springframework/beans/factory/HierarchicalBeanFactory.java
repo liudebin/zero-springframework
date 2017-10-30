@@ -31,7 +31,7 @@ import zero.org.springframework.lang.Nullable;
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @since 07.07.2003
- * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#setParentBeanFactory
+ * @see zero.org.springframework.beans.factory.config.ConfigurableBeanFactory#setParentBeanFactory
  */
 public interface HierarchicalBeanFactory extends BeanFactory {
 

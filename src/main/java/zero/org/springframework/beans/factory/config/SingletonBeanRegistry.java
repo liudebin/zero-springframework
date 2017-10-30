@@ -20,20 +20,20 @@ import zero.org.springframework.lang.Nullable;
 
 /**
  * Interface that defines a registry for shared bean instances.
- * Can be implemented by {@link org.springframework.beans.factory.BeanFactory}
+ * Can be implemented by {@link zero.org.springframework.beans.factory.BeanFactory}
  * implementations in order to expose their singleton management facility
  * in a uniform manner.
  *
  * 共享bean实例定义注册中心的接口。
  * 可以由BeanFactory实现，以便以统一的方式暴露它们的单例管理工具。
  *
- * <p>The {@link org.springframework.beans.factory.config.ConfigurableBeanFactory} interface extends this interface.
+ * <p>The {@link zero.org.springframework.beans.factory.config.ConfigurableBeanFactory} interface extends this interface.
  *
  * @author Juergen Hoeller
  * @since 2.0
- * @see org.springframework.beans.factory.config.ConfigurableBeanFactory
- * @see org.springframework.beans.factory.support.DefaultSingletonBeanRegistry
- * @see org.springframework.beans.factory.support.AbstractBeanFactory
+ * @see zero.org.springframework.beans.factory.config.ConfigurableBeanFactory
+ * @see zero.org.springframework.beans.factory.support.DefaultSingletonBeanRegistry
+ * @see zero.org.springframework.beans.factory.support.AbstractBeanFactory
  */
 public interface SingletonBeanRegistry {
 

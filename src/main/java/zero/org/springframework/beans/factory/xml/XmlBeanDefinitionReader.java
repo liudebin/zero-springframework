@@ -43,18 +43,21 @@ import java.util.Set;
 
 /**
  * Bean definition reader for XML bean definitions.
- * Delegates the actual XML document reading to an implementation
+ * Delegates (代表) the actual XML document reading to an implementation
  * of the {@link BeanDefinitionDocumentReader} interface.
- *
+ * Xml Bean 定义 的 读取器。
+ * 代表  实际的XML文档阅读的BeanDefinitionDocumentReader接口的实现。
  * <p>Typically applied to a
- * {@link org.springframework.beans.factory.support.DefaultListableBeanFactory}
- * or a {@link org.springframework.context.support.GenericApplicationContext}.
+ * {@link zero.org.springframework.beans.factory.support.DefaultListableBeanFactory}
+ * or a {@link zero.org.springframework.context.support.GenericApplicationContext}.
+ * 通常使用 DefaultListableBeanFactory 或 GenericApplicationContext 。
  *
  * <p>This class loads a DOM document and applies the BeanDefinitionDocumentReader to it.
  * The document reader will register each bean definition with the given bean factory,
  * talking to the latter's implementation of the
  * {@link BeanDefinitionRegistry} interface.
- *
+ * 这个类 加载一个 DOM document， 使用 BeanDefinitionDocumentReader  解析他。
+ * 这个 document reader 会 使用给定的 bean factory 注册 每个bean定义, 告知 后续的 BeanDefinitionRegistry接口的实现。
  * @author Juergen Hoeller
  * @author Rob Harrop
  * @author Chris Beams
@@ -63,7 +66,7 @@ import java.util.Set;
  * @see BeanDefinitionDocumentReader
  * @see DefaultBeanDefinitionDocumentReader
  * @see BeanDefinitionRegistry
- * @see org.springframework.beans.factory.support.DefaultListableBeanFactory
+ * @see zero.org.springframework.beans.factory.support.DefaultListableBeanFactory
  * @see org.springframework.context.support.GenericApplicationContext
  */
 public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {

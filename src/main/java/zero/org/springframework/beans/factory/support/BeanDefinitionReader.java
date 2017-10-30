@@ -27,7 +27,7 @@ import zero.org.springframework.lang.Nullable;
  * Simple interface for bean definition readers.
  * bean 定义读取器的简单接口
  * Specifies load methods with Resource and String location parameters.
- *
+ * 使用资源和字符串位置参数指定加载方法。
  * <p>Concrete bean definition readers can of course add additional
  * load and register methods for bean definitions, specific to
  * their bean definition format.

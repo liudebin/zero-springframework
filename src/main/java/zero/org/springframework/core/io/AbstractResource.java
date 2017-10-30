@@ -30,7 +30,7 @@ import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 
 /**
- * Convenience base class for {@link org.springframework.core.io.Resource} implementations,
+ * Convenience base class for {@link zero.org.springframework.core.io.Resource} implementations,
  * pre-implementing typical behavior.
  *
  * <p>The "exists" method will check whether a File or InputStream can
@@ -39,6 +39,9 @@ import java.nio.channels.ReadableByteChannel;
  *
  * @author Juergen Hoeller
  * @since 28.12.2003
+ *
+ * 预先实现Resource的典型行为的便利基类，。
+	“exists”方法，检查是否有文件或InputStream可以打开；“isOpen”将始终返回false；“GetURL”和“建立”抛出一个异常；和“toString”将返回描述。
  */
 public abstract class AbstractResource implements Resource {
 

@@ -18,8 +18,9 @@ package zero.org.springframework.core;
 
 /**
  * Common interface for managing aliases. Serves as super-interface for
- * {@link org.springframework.beans.factory.support.BeanDefinitionRegistry}.
- *
+ * {@link zero.org.springframework.beans.factory.support.BeanDefinitionRegistry}.
+ * 管理别名的通用接口。
+ * 作为 BeanDefinitionRegistry 的 超级接口
  * @author Juergen Hoeller
  * @since 2.5.2
  */

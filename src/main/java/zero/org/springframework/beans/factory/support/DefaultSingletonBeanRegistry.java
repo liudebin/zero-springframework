@@ -57,7 +57,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @see #registerSingleton
  * @see #registerDisposableBean
  * @see DisposableBean
- * @see org.springframework.beans.factory.config.ConfigurableBeanFactory
+ * @see zero.org.springframework.beans.factory.config.ConfigurableBeanFactory
  */
 public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements SingletonBeanRegistry {
 

@@ -53,7 +53,7 @@ import java.nio.channels.ReadableByteChannel;
 
 /**
  * 抽象了所有Spring内部使用到的底层资源，File/URL/Classpath等。
- * 3个判断资源状态的方法：存在性、kedux9ing、是否处于打开状态
+ * 3个判断资源状态的方法：存在性、可读性、是否处于打开状态
  * 3个不同类型之间的转换：URL、URI/File.
  */
 public interface Resource extends InputStreamSource {

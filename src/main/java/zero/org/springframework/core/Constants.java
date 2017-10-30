@@ -24,7 +24,7 @@ import java.lang.reflect.Field;
 import java.util.*;
 
 /**
- * This class can be used to parse other classes containing constant definitions
+ * This class can be used to parse (解析) other classes containing constant definitions
  * in public static final members. The {@code asXXXX} methods of this class
  * allow these constant values to be accessed via their string names.
  *

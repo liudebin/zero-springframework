@@ -26,24 +26,32 @@ import zero.org.springframework.core.AliasRegistry;
  * Interface for registries that hold bean definitions, for example RootBeanDefinition
  * and ChildBeanDefinition instances. Typically implemented by BeanFactories that
  * internally work with the AbstractBeanDefinition hierarchy.
+ * 登记持有的bean定义接口，例如RootBeanDefinition和ChildBeanDefinition实例。
+ * 通常被 BeanFactories 实现 内部使用 AbstractBeanDefinition 层次工作。
  *
  * <p>This is the only interface in Spring's bean factory packages that encapsulates
  * <i>registration</i> of bean definitions. The standard BeanFactory interfaces
  * only cover access to a <i>fully configured factory instance</i>.
  *
+ * 这是Spring bean工厂包中唯一封装bean定义注册的接口。
+ * 标准的BeanFactory接口只包括访问(使用)一个完全配置工厂实例。
  * <p>Spring's bean definition readers expect to work on an implementation of this
  * interface. Known implementors within the Spring core are DefaultListableBeanFactory
  * and GenericApplicationContext.
  *
+ * Spring 的 bean 定义 readers 期望通过 这个接口的实现来工作。
+ * 已知该接口的Spring核心的实现 是 DefaultListableBeanFactory 和 GenericApplicationContext。
+ *
+ 。
  * @author Juergen Hoeller
  * @since 26.11.2003
  * @see BeanDefinition
  * @see AbstractBeanDefinition
  * @see RootBeanDefinition
  * @see ChildBeanDefinition
- * @see org.springframework.beans.factory.support.DefaultListableBeanFactory
- * @see org.springframework.context.support.GenericApplicationContext
- * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
+ * @see zero.org.springframework.beans.factory.support.DefaultListableBeanFactory
+ * @see zero.org.springframework.context.support.GenericApplicationContext
+ * @see zero.org.springframework.beans.factory.xml.XmlBeanDefinitionReader
  * @see PropertiesBeanDefinitionReader
  */
 public interface BeanDefinitionRegistry extends AliasRegistry {
