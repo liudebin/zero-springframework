@@ -28,11 +28,12 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Simple implementation of the {@link zero.org.springframework.core.AliasRegistry} interface.
- * AliasRegistry 接口的简单的实现
+ * <br/>AliasRegistry 接口的简单的实现<br/>
+ *
  * Serves as(担任，充当) base class for
  * {@link zero.org.springframework.beans.factory.support.BeanDefinitionRegistry}
  * implementations.
- * 起 AliasRegistry 的基本类，类似于BeanDefinitionRegistry。
+ * <br/> 起 AliasRegistry 的基本类，类似于BeanDefinitionRegistry。
  *
  * @author Juergen Hoeller
  * @since 2.5.2

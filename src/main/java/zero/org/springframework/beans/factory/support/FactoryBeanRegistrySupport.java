@@ -32,7 +32,11 @@ import java.util.concurrent.ConcurrentHashMap;
  * {@link FactoryBean} instances,
  * integrated with {@link DefaultSingletonBeanRegistry}'s singleton management.
  *
- * <p>Serves as base class for {@link org.springframework.beans.factory.support.AbstractBeanFactory}.
+ * <br>对于单例的登记需要 FactoryBean 实例的支撑基类，集成 DefaultSingletonBeanRegistry 的单点管理。
+ * <p>
+ * <p>Serves as base class for {@link zero.org.springframework.beans.factory.support.AbstractBeanFactory}.
+ *
+ * AbstractBeanFactory 的基类
  *
  * @author Juergen Hoeller
  * @since 2.5.1

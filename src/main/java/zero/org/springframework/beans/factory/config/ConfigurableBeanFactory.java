@@ -40,14 +40,14 @@ import java.security.AccessControlContext;
  *
  * <p>This bean factory interface is not meant to be used in normal application
  * code: Stick to {@link BeanFactory} or
- * {@link org.springframework.beans.factory.ListableBeanFactory} for typical
+ * {@link zero.org.springframework.beans.factory.ListableBeanFactory} for typical
  * needs. This extended interface is just meant to allow for framework-internal
  * plug'n'play and for special access to bean factory configuration methods.
  *
  * @author Juergen Hoeller
  * @since 03.11.2003
  * @see BeanFactory
- * @see org.springframework.beans.factory.ListableBeanFactory
+ * @see zero.org.springframework.beans.factory.ListableBeanFactory
  * @see ConfigurableListableBeanFactory
  */
 public interface ConfigurableBeanFactory extends HierarchicalBeanFactory, SingletonBeanRegistry {

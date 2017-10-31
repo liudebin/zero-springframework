@@ -34,23 +34,34 @@ import java.util.concurrent.ConcurrentHashMap;
  * Allows for registering singleton instances that should be shared
  * for all callers of the registry, to be obtained via bean name.
  *
+ * <br>
+ *     实现了 SingletonBeanRegistry的 共享bean实例的通用的注册表。
+ *     允许注册 所有调用方过bean名称获得共享的单例。
+ * </br>
  * <p>Also supports registration of
  * {@link DisposableBean} instances,
  * (which might or might not correspond to registered singletons),
  * to be destroyed on shutdown of the registry. Dependencies between
  * beans can be registered to enforce an appropriate shutdown order.
- *
+ * <br>
+ *     还支持注册DisposableBean 实例（这可能会或可能不符合 登记的单例），可以在注册表关闭的时候 销毁的实例。
+ *     可以注册bean之间的依赖关系，以强制执行适当的关闭顺序。
+ * </br>
  * <p>This class mainly serves as base class for
  * {@link BeanFactory} implementations,
  * factoring out the common management of singleton bean instances. Note that
- * the {@link org.springframework.beans.factory.config.ConfigurableBeanFactory}
+ * the {@link zero.org.springframework.beans.factory.config.ConfigurableBeanFactory}
  * interface extends the {@link SingletonBeanRegistry} interface.
- *
- * <p>Note that this class assumes neither a bean definition concept
+ * <br>
+ *     这类主要用作基类BeanFactory实现，分解出单bean实例的共同管理。
+ *     请注意，zero.org.springframework.beans.factory.config.configurablebeanfactory接口扩展singletonbeanregistry接口。
+ * <p>Note that this class assumes neither a bean definition concept （概念）
  * nor a specific creation process for bean instances, in contrast to
- * {@link org.springframework.beans.factory.support.AbstractBeanFactory} and {@link DefaultListableBeanFactory}
+ * {@link zero.org.springframework.beans.factory.support.AbstractBeanFactory} and {@link DefaultListableBeanFactory}
  * (which inherit from it). Can alternatively also be used as a nested
  * helper to delegate to.
+ * <br>注意，这类假设既不是一个bean定义概念和bean实例具体创作过程，在对比 AbstractBeanFactory 和 DefaultListableBeanFactory（它的继承类）。
+ * 也可以用作嵌套的助手来委托给。
  *
  * @author Juergen Hoeller
  * @since 2.0

@@ -35,7 +35,7 @@ import java.util.Set;
  * <p> 如果想提供已经存在的bean实例的自动装配功能，需要实现 这个BeanFactory扩展的接口。
  * <p>This subinterface of BeanFactory is not meant to be used in normal
  * application code: stick to {@link BeanFactory}
- * or {@link org.springframework.beans.factory.ListableBeanFactory} for
+ * or {@link zero.org.springframework.beans.factory.ListableBeanFactory} for
  * typical use cases.
  *
  * <p> 这个BeanFactory的子接口，并不是意味着是能正常使用的应用程序代码：坚守 BeanFactory或 ListableBeanFactory 是典型用例。
