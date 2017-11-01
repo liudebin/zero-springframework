@@ -226,6 +226,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 		else {
 			// Fail if we're already creating this bean instance:
 			// We're assumably within a circular reference.
+            // 如果已经在创建这个bean的实例- 我们可能是在一个循环引用，所以失败。
 			if (isPrototypeCurrentlyInCreation(beanName)) {
 				throw new BeanCurrentlyInCreationException(beanName);
 			}
@@ -1092,7 +1093,9 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 
 	/**
 	 * Return the bean name, stripping out the factory dereference prefix if necessary,
-	 * and resolving aliases to canonical names.
+	 * and resolving aliases to canonical（规范的） names.
+	 * 如果有必要剥离出 factory 引用的前缀。
+     * 解析规范名称别名
 	 * @param name the user-specified name
 	 * @return the transformed bean name
 	 */

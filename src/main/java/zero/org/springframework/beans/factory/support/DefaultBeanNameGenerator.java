@@ -17,13 +17,10 @@
 package zero.org.springframework.beans.factory.support;
 
 import zero.org.springframework.beans.factory.config.BeanDefinition;
-import zero.org.springframework.beans.factory.support.*;
-import zero.org.springframework.beans.factory.support.BeanDefinitionReaderUtils;
-import zero.org.springframework.beans.factory.support.BeanDefinitionRegistry;
 
 /**
- * Default implementation of the {@link org.springframework.beans.factory.support.BeanNameGenerator} interface, delegating to
- * {@link org.springframework.beans.factory.support.BeanDefinitionReaderUtils#generateBeanName(BeanDefinition, org.springframework.beans.factory.support.BeanDefinitionRegistry)}.
+ * Default implementation of the {@link zero.org.springframework.beans.factory.support.BeanNameGenerator} interface, delegating to
+ * {@link zero.org.springframework.beans.factory.support.BeanDefinitionReaderUtils#generateBeanName(BeanDefinition, zero.org.springframework.beans.factory.support.BeanDefinitionRegistry)}.
  *
  * @author Juergen Hoeller
  * @since 2.0.3

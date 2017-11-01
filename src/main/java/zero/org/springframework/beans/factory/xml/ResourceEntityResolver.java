@@ -30,6 +30,7 @@ import java.net.URL;
 import java.net.URLDecoder;
 
 /**
+ * 0.0
  * EntityResolver implementation that tries to resolve entity references
  * through a {@link ResourceLoader} (usually,
  * relative to the resource base of an ApplicationContext), if applicable.

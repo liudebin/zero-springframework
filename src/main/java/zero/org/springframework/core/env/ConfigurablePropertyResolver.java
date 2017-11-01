@@ -20,11 +20,13 @@ import zero.org.springframework.core.convert.support.ConfigurableConversionServi
 import zero.org.springframework.lang.Nullable;
 
 /**
- * Configuration interface to be implemented by most if not all {@link org.springframework.core.env.PropertyResolver}
+ * Configuration interface to be implemented by most if not all {@link zero.org.springframework.core.env.PropertyResolver}
  * types. Provides facilities for accessing and customizing the
- * {@link org.springframework.core.convert.ConversionService ConversionService}
+ * {@link zero.org.springframework.core.convert.ConversionService ConversionService}
  * used when converting property values from one type to another.
  *
+ * <br>配置接口被如果不是所有的那就是大多数 PropertyResolver 类型实现。
+ * 通过访问和定制 ConversionService ，提供了使用的属性值转换为另一种类型的功能。
  * @author Chris Beams
  * @since 3.1
  */

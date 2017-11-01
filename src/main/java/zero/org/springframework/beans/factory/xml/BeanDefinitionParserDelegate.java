@@ -39,6 +39,7 @@ import org.w3c.dom.NodeList;
 import java.util.*;
 
 /**
+ * 0.0
  * Stateful delegate class used to parse XML bean definitions.
  *
  * Intended for use by both the main parser and any extension
@@ -489,7 +490,7 @@ public class BeanDefinitionParserDelegate {
 		if (ele.hasAttribute(PARENT_ATTRIBUTE)) {
 			parent = ele.getAttribute(PARENT_ATTRIBUTE);
 		}
-
+//0.0
 		try {
 			AbstractBeanDefinition bd = createBeanDefinition(className, parent);
 

@@ -20,7 +20,7 @@ import zero.org.springframework.core.env.*;
 
 /**
  * Interface representing the environment in which the current application is running.
- * 代表了当前程序执行的环境的接口。
+ * 代表了当前程序执行的环境的 接口。
  * Models two key aspects of the application environment: <em>profiles</em> and
  * <em>properties</em>. Methods related to property access are exposed via the
  * {@link PropertyResolver} superinterface.

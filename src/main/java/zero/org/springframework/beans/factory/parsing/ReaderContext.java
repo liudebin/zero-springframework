@@ -20,6 +20,7 @@ import zero.org.springframework.core.io.Resource;
 import zero.org.springframework.lang.Nullable;
 
 /**
+ * 0.0
  * Context that gets passed along a bean definition reading process,
  * encapsulating all relevant configuration as well as state.
  *

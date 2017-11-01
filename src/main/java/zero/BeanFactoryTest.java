@@ -31,6 +31,8 @@ public class BeanFactoryTest extends AbstractTest {
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader((BeanDefinitionRegistry) beanFactory);
         reader.loadBeanDefinitions(new ClassPathResource("applicationContext.xml"));
         App app = (App) beanFactory.getBean("app");
+        app = (App) beanFactory.getBean("app");
+//        App app = beanFactory.getBean(App.class);
         logger.info("{}", beanFactory.isSingleton("app"));
         app.sayHi();
     }

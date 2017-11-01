@@ -34,6 +34,7 @@ import org.xml.sax.InputSource;
 import java.io.StringReader;
 
 /**
+ * 0.0
  * Extension of {@link ReaderContext},
  * specific to use with an {@link org.springframework.beans.factory.xml.XmlBeanDefinitionReader}. Provides access to the
  * {@link NamespaceHandlerResolver} configured in the {@link org.springframework.beans.factory.xml.XmlBeanDefinitionReader}.

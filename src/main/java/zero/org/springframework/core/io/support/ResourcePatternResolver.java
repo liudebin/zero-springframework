@@ -25,6 +25,7 @@ import java.io.IOException;
  * Strategy interface for resolving a location pattern (for example,
  * an Ant-style path pattern) into Resource objects.
  *
+ * 策略接口：解决定位模式为资源对象。
  * <p>This is an extension to the {@link ResourceLoader}
  * interface. A passed-in ResourceLoader (for example, an
  * {@link org.springframework.context.ApplicationContext} passed in via

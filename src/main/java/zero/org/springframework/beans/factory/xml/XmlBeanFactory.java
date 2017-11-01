@@ -19,7 +19,6 @@ package zero.org.springframework.beans.factory.xml;
 import zero.org.springframework.beans.BeansException;
 import zero.org.springframework.beans.factory.BeanFactory;
 import zero.org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import zero.org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import zero.org.springframework.core.io.Resource;
 
 /**

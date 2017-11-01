@@ -33,7 +33,7 @@ import java.util.jar.JarFile;
 import java.util.zip.ZipException;
 
 /**
- * A {@link org.springframework.core.io.support.ResourcePatternResolver} implementation that is able to resolve a
+ * A {@link zero.org.springframework.core.io.support.ResourcePatternResolver} implementation that is able to resolve a
  * specified resource location path into one or more matching Resources.
  * The source path may be a simple path which has a one-to-one mapping to a
  * target {@link Resource}, or alternatively
@@ -42,6 +42,7 @@ import java.util.zip.ZipException;
  * {@link AntPathMatcher} utility).
  * Both of the latter are effectively wildcards.
  *
+ * 实现了 ResourcePatternResolver ，又能力解析特定的资源定位地址，到一个或多个适合的 Resources。
  * <p><b>No Wildcards:</b>
  *
  * <p>In the simple case, if the specified location path does not start with the

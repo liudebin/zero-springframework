@@ -45,7 +45,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * {@link BeanDefinitionRegistry} interfaces: a full-fledged bean factory
  * based on bean definition objects.
  * ListableBeanFactory 和 BeanDefinitionRegistry 接口的默认实现。
- * 一个基于bean definition 对象 的成熟bean工厂。
+ * 是一个 基于bean definition 对象 的成熟bean工厂。
  *
  * <p>Typical usage is registering all bean definitions first (possibly read
  * from a bean definition file), before accessing beans. Bean definition lookup
@@ -166,29 +166,29 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 	}
 
 
-	/**
-	 * Specify an id for serialization purposes, allowing this BeanFactory to be
-	 * deserialized from this id back into the BeanFactory object, if needed.
-	 */
-	public void setSerializationId(@Nullable String serializationId) {
-		if (serializationId != null) {
-			serializableFactories.put(serializationId, new WeakReference<>(this));
-		}
-		else if (this.serializationId != null) {
-			serializableFactories.remove(this.serializationId);
-		}
-		this.serializationId = serializationId;
-	}
+//	/**
+//	 * Specify an id for serialization purposes, allowing this BeanFactory to be
+//	 * deserialized from this id back into the BeanFactory object, if needed.
+//	 */
+//	public void setSerializationId(@Nullable String serializationId) {
+//		if (serializationId != null) {
+//			serializableFactories.put(serializationId, new WeakReference<>(this));
+//		}
+//		else if (this.serializationId != null) {
+//			serializableFactories.remove(this.serializationId);
+//		}
+//		this.serializationId = serializationId;
+//	}
 
-	/**
-	 * Return an id for serialization purposes, if specified, allowing this BeanFactory
-	 * to be deserialized from this id back into the BeanFactory object, if needed.
-	 * @since 4.1.2
-	 */
-	@Nullable
-	public String getSerializationId() {
-		return this.serializationId;
-	}
+//	/**
+//	 * Return an id for serialization purposes, if specified, allowing this BeanFactory
+//	 * to be deserialized from this id back into the BeanFactory object, if needed.
+//	 * @since 4.1.2
+//	 */
+//	@Nullable
+//	public String getSerializationId() {
+//		return this.serializationId;
+//	}
 
 	/**
 	 * Set whether it should be allowed to override bean definitions by registering
@@ -237,7 +237,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 	 * Set a {@link Comparator} for dependency Lists and arrays.
 	 * @since 4.0
 	 * @see OrderComparator
-	 * @see org.springframework.core.annotation.AnnotationAwareOrderComparator
+	 * @see zero.org.springframework.core.annotation.AnnotationAwareOrderComparator
 	 */
 	public void setDependencyComparator(Comparator<Object> dependencyComparator) {
 		this.dependencyComparator = dependencyComparator;

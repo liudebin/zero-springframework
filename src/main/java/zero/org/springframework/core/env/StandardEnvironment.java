@@ -22,10 +22,10 @@ import zero.org.springframework.core.env.MapPropertySource;
 import zero.org.springframework.core.env.MutablePropertySources;
 
 /**
- * {@link org.springframework.core.env.Environment} implementation suitable for use in 'standard' (i.e. non-web)
+ * {@link zero.org.springframework.core.env.Environment} implementation suitable for use in 'standard' (i.e. non-web)
  * applications.
  *
- * <p>In addition to the usual functions of a {@link org.springframework.core.env.ConfigurableEnvironment} such as
+ * <p>In addition to the usual functions of a {@link zero.org.springframework.core.env.ConfigurableEnvironment} such as
  * property resolution and profile-related operations, this implementation configures two
  * default property sources, to be searched in the following order:
  * <ul>
@@ -42,9 +42,9 @@ import zero.org.springframework.core.env.MutablePropertySources;
  * per-JVM basis.
  *
  * <p>These default property sources may be removed, reordered, or replaced; and
- * additional property sources may be added using the {@link org.springframework.core.env.MutablePropertySources}
+ * additional property sources may be added using the {@link zero.org.springframework.core.env.MutablePropertySources}
  * instance available from {@link #getPropertySources()}. See
- * {@link org.springframework.core.env.ConfigurableEnvironment} Javadoc for usage examples.
+ * {@link zero.org.springframework.core.env.ConfigurableEnvironment} Javadoc for usage examples.
  *
  * <p>See {@link SystemEnvironmentPropertySource} javadoc for details on special handling
  * of property names in shell environments (e.g. Bash) that disallow period characters in

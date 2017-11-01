@@ -37,9 +37,12 @@ import java.util.Set;
  * Abstract base class for bean definition readers which implement
  * the {@link BeanDefinitionReader} interface.
  *
- * 实现了 BeanDefinitionReader 接口的 bean definition 读取器的 抽象的基础类
+ * 实现了 BeanDefinitionReader 接口的 bean definition 读取器的 抽象基类
+ *
  * <p>Provides common properties like the bean factory to work on
  * and the class loader to use for loading bean classes.
+ *
+ * 提供通用的属性，bean factory 工作需要的和 class loader 加载 bean classes 使用的
  *
  * @author Juergen Hoeller
  * @author Chris Beams

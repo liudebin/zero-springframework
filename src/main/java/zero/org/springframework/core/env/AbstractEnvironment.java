@@ -40,22 +40,28 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Abstract base class for {@link org.springframework.core.env.Environment} implementations. Supports the notion of
+ *
+ * 环境实现的抽象基类。支持保留默认名称的概念，使活性和指定默认配置文件通过active_profiles_property_name和default_profiles_property_name性质。
+ 具体的子类为主，propertysource对象默认情况下添加不同。环境增加了没有。
+ 子类应该有助于通过保护产权的来源customizepropertysources（mutablepropertysources）挂钩，而客户要定制使用configurableenvironment。getpropertysources()和对mutablepropertysources API。
+ 看到 configurableenvironment javadoc的用法示例。
+
+ * Abstract base class for {@link zero.org.springframework.core.env.Environment} implementations. Supports the notion of
  * reserved default profile names and enables specifying active and default profiles
  * through the {@link #ACTIVE_PROFILES_PROPERTY_NAME} and
  * {@link #DEFAULT_PROFILES_PROPERTY_NAME} properties.
  *
- * <p>Concrete subclasses differ primarily on which {@link org.springframework.core.env.PropertySource} objects they
+ * <p>Concrete subclasses differ primarily on which {@link zero.org.springframework.core.env.PropertySource} objects they
  * add by default. {@code AbstractEnvironment} adds none. Subclasses should contribute
- * property sources through the protected {@link #customizePropertySources(org.springframework.core.env.MutablePropertySources)}
- * hook, while clients should customize using {@link org.springframework.core.env.ConfigurableEnvironment#getPropertySources()}
- * and working against the {@link org.springframework.core.env.MutablePropertySources} API.
- * See {@link org.springframework.core.env.ConfigurableEnvironment} javadoc for usage examples.
+ * property sources through the protected {@link #customizePropertySources(zero.org.springframework.core.env.MutablePropertySources)}
+ * hook, while clients should customize using {@link zero.org.springframework.core.env.ConfigurableEnvironment#getPropertySources()}
+ * and working against the {@link zero.org.springframework.core.env.MutablePropertySources} API.
+ * See {@link zero.org.springframework.core.env.ConfigurableEnvironment} javadoc for usage examples.
  *
  * @author Chris Beams
  * @author Juergen Hoeller
  * @since 3.1
- * @see org.springframework.core.env.ConfigurableEnvironment
+ * @see zero.org.springframework.core.env.ConfigurableEnvironment
  * @see StandardEnvironment
  */
 public abstract class AbstractEnvironment implements ConfigurableEnvironment {

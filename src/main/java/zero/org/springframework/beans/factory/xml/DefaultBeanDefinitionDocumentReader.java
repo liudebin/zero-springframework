@@ -41,6 +41,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
+ * 0.0
  * Default implementation of the {@link BeanDefinitionDocumentReader} interface that
  * reads bean definitions according to the "spring-beans" DTD and XSD format
  * (Spring's default XML bean definition format).
@@ -80,7 +81,7 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 
 	private XmlReaderContext readerContext;
 
-	private BeanDefinitionParserDelegate delegate;
+	private BeanDefinitionParserDelegate delegate;// 代表
 
 
 	/**
