@@ -84,7 +84,7 @@ public interface ConversionService {
 	 * @param sourceType context about the source type to convert from
 	 * (may be {@code null} if source is {@code null})
 	 * @param targetType context about the target type to convert to (required)
-	 * @return the converted object, an instance of {@linkorg.springframework.core.convert.TypeDescriptor#getObjectType() targetType}
+	 * @return the converted object, an instance of {@link org.springframework.core.convert.TypeDescriptor#getObjectType() targetType}
 	 * @throws ConversionException if a conversion exception occurred
 	 * @throws IllegalArgumentException if targetType is {@code null},
 	 * or {@code sourceType} is {@code null} but source is not {@code null}

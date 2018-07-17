@@ -42,7 +42,7 @@ import java.util.Date;
  * @since 28.04.2003
  * @see Date
  * @see DateFormat
- * @seeorg.springframework.validation.DataBinder#registerCustomEditor
+ * @see org.springframework.validation.DataBinder#registerCustomEditor
  */
 public class CustomDateEditor extends PropertyEditorSupport {
 

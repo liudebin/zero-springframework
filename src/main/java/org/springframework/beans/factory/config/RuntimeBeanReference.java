@@ -26,8 +26,8 @@ import org.springframework.util.Assert;
  * 不可变占位符类，当属性值对象是工厂中另一个bean的引用时，它将在运行时解析。
  * @author Rod Johnson
  * @author Juergen Hoeller
- * @seeorg.springframework.beans.factory.config.BeanDefinition#getPropertyValues()
- * @seeorg.springframework.beans.factory.BeanFactory#getBean
+ * @see org.springframework.beans.factory.config.BeanDefinition#getPropertyValues()
+ * @see org.springframework.beans.factory.BeanFactory#getBean
  */
 public class RuntimeBeanReference implements BeanReference {
 

@@ -27,13 +27,13 @@ import java.util.Set;
  * Set of method overrides, determining which, if any, methods on a
  * managed object the Spring IoC container will override at runtime.
  *
- * <p>The currently supported {@linkorg.springframework.beans.factory.support.MethodOverride} variants are
- * {@linkorg.springframework.beans.factory.support.LookupOverride} and {@link ReplaceOverride}.
+ * <p>The currently supported {@link org.springframework.beans.factory.support.MethodOverride} variants are
+ * {@link org.springframework.beans.factory.support.LookupOverride} and {@link ReplaceOverride}.
  *
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @since 1.1
- * @seeorg.springframework.beans.factory.support.MethodOverride
+ * @see org.springframework.beans.factory.support.MethodOverride
  */
 public class MethodOverrides {
 
@@ -77,7 +77,7 @@ public class MethodOverrides {
 	/**
 	 * Return all method overrides contained by this object.
 	 * @return Set of MethodOverride objects
-	 * @seeorg.springframework.beans.factory.support.MethodOverride
+	 * @see org.springframework.beans.factory.support.MethodOverride
 	 */
 	public Set<MethodOverride> getOverrides() {
 		this.modified = true;

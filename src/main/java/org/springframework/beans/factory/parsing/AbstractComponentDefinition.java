@@ -16,12 +16,11 @@
 
 package org.springframework.beans.factory.parsing;
 
-import org.springframework.beans.factory.config.BeanReference;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanReference;
 
 /**
- * Base implementation of {@linkorg.springframework.beans.factory.parsing.ComponentDefinition} that provides a basic implementation of
+ * Base implementation of {@link org.springframework.beans.factory.parsing.ComponentDefinition} that provides a basic implementation of
  * {@link #getDescription} which delegates to {@link #getName}. Also provides a base implementation
  * of {@link #toString} which delegates to {@link #getDescription} in keeping with the recommended
  * implementation strategy. Also provides default implementations of {@link #getInnerBeanDefinitions}

@@ -24,7 +24,7 @@ import org.springframework.util.Assert;
 import java.util.Map;
 
 /**
- * Specialization of {@linkorg.springframework.core.env.MapPropertySource} designed for use with
+ * Specialization of {@link org.springframework.core.env.MapPropertySource} designed for use with
  * {@linkplainorg.springframework.core.env.AbstractEnvironment#getSystemEnvironment() system environment variables}.
  * Compensates for constraints in Bash and other shells that do not allow for variables
  * containing the period character and/or hyphen character; also allows for uppercase
@@ -55,14 +55,14 @@ import java.util.Map;
  * <p>Enable debug- or trace-level logging for this class (or package) for messages
  * explaining when these 'property name resolutions' occur.
  *
- * <p>This property source is included by default in {@linkorg.springframework.core.env.StandardEnvironment}
+ * <p>This property source is included by default in {@link org.springframework.core.env.StandardEnvironment}
  * and all its subclasses.
  *
  * @author Chris Beams
  * @author Juergen Hoeller
  * @since 3.1
- * @seeorg.springframework.core.env.StandardEnvironment
- * @seeorg.springframework.core.env.AbstractEnvironment#getSystemEnvironment()
+ * @see org.springframework.core.env.StandardEnvironment
+ * @see org.springframework.core.env.AbstractEnvironment#getSystemEnvironment()
  * @see AbstractEnvironment#ACTIVE_PROFILES_PROPERTY_NAME
  */
 public class SystemEnvironmentPropertySource extends MapPropertySource {

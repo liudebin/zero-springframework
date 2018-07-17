@@ -40,8 +40,8 @@ import java.net.URL;
  * @author Juergen Hoeller
  * @since 15.12.2003
  * @see URL
- * @seeorg.springframework.core.io.ResourceEditor
- * @seeorg.springframework.core.io.ResourceLoader
+ * @see org.springframework.core.io.ResourceEditor
+ * @see org.springframework.core.io.ResourceLoader
  * @see FileEditor
  * @see InputStreamEditor
  */

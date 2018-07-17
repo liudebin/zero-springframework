@@ -20,7 +20,7 @@ import org.springframework.lang.Nullable;
 import org.springframework.lang.Nullable;
 
 /**
- * Any object can implement this interface to provide its actual {@linkorg.springframework.core.ResolvableType}.
+ * Any object can implement this interface to provide its actual {@link org.springframework.core.ResolvableType}.
  *
  * <p>Such information is very useful when figuring out if the instance matches a generic
  * signature as Java does not convey the signature at runtime.
@@ -35,7 +35,7 @@ import org.springframework.lang.Nullable;
 public interface ResolvableTypeProvider {
 
 	/**
-	 * Return the {@linkorg.springframework.core.ResolvableType} describing this instance
+	 * Return the {@link org.springframework.core.ResolvableType} describing this instance
 	 * (or {@code null} if some sort of default should be applied instead).
 	 */
 	@Nullable

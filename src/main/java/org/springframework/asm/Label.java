@@ -218,7 +218,7 @@ public class Label {
 
     /**
      * Information about the input and output stack map frames of this basic
-     * block. This field is only used when {@linkorg.springframework.asm.ClassWriter#COMPUTE_FRAMES}
+     * block. This field is only used when {@link org.springframework.asm.ClassWriter#COMPUTE_FRAMES}
      * option is used.
      */
     Frame frame;
@@ -234,8 +234,8 @@ public class Label {
 
     /**
      * The successors of this node in the control flow graph. These successors
-     * are stored in a linked list of {@linkorg.springframework.asm.Edge Edge} objects, linked to each
-     * other by their {@linkorg.springframework.asm.Edge#next} field.
+     * are stored in a linked list of {@link org.springframework.asm.Edge Edge} objects, linked to each
+     * other by their {@link org.springframework.asm.Edge#next} field.
      */
     Edge successors;
 

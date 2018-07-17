@@ -31,7 +31,7 @@ import java.util.Optional;
  * or {@link Constructor} plus a parameter index and a nested type index for a declared generic
  * type. Useful as a specification object to pass along.
  *
- * <p>As of 4.2, there is a {@linkorg.springframework.core.annotation.SynthesizingMethodParameter}
+ * <p>As of 4.2, there is a {@link org.springframework.core.annotation.SynthesizingMethodParameter}
  * subclass available which synthesizes annotations with attribute aliases. That subclass is used
  * for web and message endpoint processing, in particular.
  *
@@ -41,7 +41,7 @@ import java.util.Optional;
  * @author Sam Brannen
  * @author Sebastien Deleuze
  * @since 2.0
- * @seeorg.springframework.core.annotation.SynthesizingMethodParameter
+ * @see org.springframework.core.annotation.SynthesizingMethodParameter
  */
 public class MethodParameter {
 

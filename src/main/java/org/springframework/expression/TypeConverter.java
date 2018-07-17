@@ -22,7 +22,7 @@ import org.springframework.lang.Nullable;
 /**
  * A type converter can convert values between different types encountered during
  * expression evaluation. This is an SPI for the expression parser; see
- * {@linkorg.springframework.core.convert.ConversionService} for the primary
+ * {@link org.springframework.core.convert.ConversionService} for the primary
  * user API to Spring's conversion facilities.
  *
  * @author Andy Clement

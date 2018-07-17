@@ -742,9 +742,9 @@ public abstract class ClassUtils {
 	 * if there is one. E.g. the method may be {@code IFoo.bar()} and the
 	 * target class may be {@code DefaultFoo}. In this case, the method may be
 	 * {@code DefaultFoo.bar()}. This enables attributes on that method to be found.
-	 * <p><b>NOTE:</b> In contrast to {@linkorg.springframework.aop.support.AopUtils#getMostSpecificMethod},
+	 * <p><b>NOTE:</b> In contrast to {@link org.springframework.aop.support.AopUtils#getMostSpecificMethod},
 	 * this method does <i>not</i> resolve Java 5 bridge methods automatically.
-	 * Call {@linkorg.springframework.core.BridgeMethodResolver#findBridgedMethod}
+	 * Call {@link org.springframework.core.BridgeMethodResolver#findBridgedMethod}
 	 * if bridge method resolution is desirable (e.g. for obtaining metadata from
 	 * the original method definition).
 	 * <p><b>NOTE:</b> Since Spring 3.1.1, if Java security settings disallow reflective
@@ -967,7 +967,7 @@ public abstract class ClassUtils {
 	 * if necessary, and concatenating the specified resource name to this.
 	 * <br/>As such, this function may be used to build a path suitable for
 	 * loading a resource file that is in the same package as a class file,
-	 * although {@linkorg.springframework.core.io.ClassPathResource} is usually
+	 * although {@link org.springframework.core.io.ClassPathResource} is usually
 	 * even more convenient.
 	 * @param clazz the Class whose package will be used as the base
 	 * @param resourceName the resource name to append. A leading slash is optional.
@@ -1221,7 +1221,7 @@ public abstract class ClassUtils {
 	 * Check whether the given object is a CGLIB proxy.
 	 * @param object the object to check
 	 * @see #isCglibProxyClass(Class)
-	 * @seeorg.springframework.aop.support.AopUtils#isCglibProxy(Object)
+	 * @see org.springframework.aop.support.AopUtils#isCglibProxy(Object)
 	 */
 	public static boolean isCglibProxy(Object object) {
 		return isCglibProxyClass(object.getClass());

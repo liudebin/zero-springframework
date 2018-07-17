@@ -62,7 +62,7 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * Abstract implementation of the {@linkorg.springframework.context.ApplicationContext}
+ * Abstract implementation of the {@link org.springframework.context.ApplicationContext}
  * interface. Doesn't mandate the type of storage used for configuration; simply
  * implements common context functionality. Uses the Template Method design pattern,
  * requiring concrete subclasses to implement abstract methods.
@@ -70,21 +70,21 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * <p>In contrast to a plain BeanFactory, an ApplicationContext is supposed
  * to detect special beans defined in its internal bean factory:
  * Therefore, this class automatically registers
- * {@linkorg.springframework.beans.factory.config.BeanFactoryPostProcessor BeanFactoryPostProcessors},
- * {@linkorg.springframework.beans.factory.config.BeanPostProcessor BeanPostProcessors}
- * and {@linkorg.springframework.context.ApplicationListener ApplicationListeners}
+ * {@link org.springframework.beans.factory.config.BeanFactoryPostProcessor BeanFactoryPostProcessors},
+ * {@link org.springframework.beans.factory.config.BeanPostProcessor BeanPostProcessors}
+ * and {@link org.springframework.context.ApplicationListener ApplicationListeners}
  * which are defined as beans in the context.
  *
- * <p>A {@linkorg.springframework.context.MessageSource} may also be supplied
+ * <p>A {@link org.springframework.context.MessageSource} may also be supplied
  * as a bean in the context, with the name "messageSource"; otherwise, message
  * resolution is delegated to the parent context. Furthermore, a multicaster
  * for application events can be supplied as "applicationEventMulticaster" bean
- * of type {@linkorg.springframework.context.event.ApplicationEventMulticaster}
+ * of type {@link org.springframework.context.event.ApplicationEventMulticaster}
  * in the context; otherwise, a default multicaster of type
- * {@linkorg.springframework.context.event.SimpleApplicationEventMulticaster} will be used.
+ * {@link org.springframework.context.event.SimpleApplicationEventMulticaster} will be used.
  *
  * <p>Implements resource loading through extending
- * {@linkorg.springframework.core.io.DefaultResourceLoader}.
+ * {@link org.springframework.core.io.DefaultResourceLoader}.
  * Consequently treats non-URL resource paths as class path resources
  * (supporting full class path resource names that include the package path,
  * e.g. "mypackage/myresource.dat"), unless the {@link #getResourceByPath}
@@ -97,11 +97,11 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * @since January 21, 2001
  * @see #refreshBeanFactory
  * @see #getBeanFactory
- * @seeorg.springframework.beans.factory.config.BeanFactoryPostProcessor
- * @seeorg.springframework.beans.factory.config.BeanPostProcessor
- * @seeorg.springframework.context.event.ApplicationEventMulticaster
- * @seeorg.springframework.context.ApplicationListener
- * @seeorg.springframework.context.MessageSource
+ * @see org.springframework.beans.factory.config.BeanFactoryPostProcessor
+ * @see org.springframework.beans.factory.config.BeanPostProcessor
+ * @see org.springframework.context.event.ApplicationEventMulticaster
+ * @see org.springframework.context.ApplicationListener
+ * @see org.springframework.context.MessageSource
  */
 public abstract class AbstractApplicationContext extends DefaultResourceLoader
 		implements ConfigurableApplicationContext, DisposableBean {
@@ -116,16 +116,16 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	/**
 	 * Name of the LifecycleProcessor bean in the factory.
 	 * If none is supplied, a DefaultLifecycleProcessor is used.
-	 * @seeorg.springframework.context.LifecycleProcessor
-	 * @seeorg.springframework.context.support.DefaultLifecycleProcessor
+	 * @see org.springframework.context.LifecycleProcessor
+	 * @see org.springframework.context.support.DefaultLifecycleProcessor
 	 */
 	public static final String LIFECYCLE_PROCESSOR_BEAN_NAME = "lifecycleProcessor";
 
 	/**
 	 * Name of the ApplicationEventMulticaster bean in the factory.
 	 * If none is supplied, a default SimpleApplicationEventMulticaster is used.
-	 * @seeorg.springframework.context.event.ApplicationEventMulticaster
-	 * @seeorg.springframework.context.event.SimpleApplicationEventMulticaster
+	 * @see org.springframework.context.event.ApplicationEventMulticaster
+	 * @see org.springframework.context.event.SimpleApplicationEventMulticaster
 	 */
 	public static final String APPLICATION_EVENT_MULTICASTER_BEAN_NAME = "applicationEventMulticaster";
 
@@ -273,7 +273,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	 * default with this method is one option but configuration through {@link
 	 * #getEnvironment()} should also be considered. In either case, such modifications
 	 * should be performed <em>before</em> {@link #refresh()}.
-	 * @seeorg.springframework.context.support.AbstractApplicationContext#createEnvironment
+	 * @see org.springframework.context.support.AbstractApplicationContext#createEnvironment
 	 */
 	@Override
 	public void setEnvironment(ConfigurableEnvironment environment) {
@@ -420,7 +420,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	/**
 	 * Return the ResourcePatternResolver to use for resolving location patterns
 	 * into Resource instances. Default is a
-	 * {@linkorg.springframework.core.io.support.PathMatchingResourcePatternResolver},
+	 * {@link org.springframework.core.io.support.PathMatchingResourcePatternResolver},
 	 * supporting Ant-style location patterns.
 	 * <p>Can be overridden in subclasses, for extended resolution strategies,
 	 * for example in a web environment.
@@ -429,7 +429,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	 * will delegate to the ResourcePatternResolver.
 	 * @return the ResourcePatternResolver for this context
 	 * @see #getResources
-	 * @seeorg.springframework.core.io.support.PathMatchingResourcePatternResolver
+	 * @see org.springframework.core.io.support.PathMatchingResourcePatternResolver
 	 */
 	protected ResourcePatternResolver getResourcePatternResolver() {
 		return new PathMatchingResourcePatternResolver(this);
@@ -584,8 +584,8 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 
 	/**
 	 * <p>Replace any stub property sources with actual instances.
-	 * @seeorg.springframework.core.env.PropertySource.StubPropertySource
-	 * @seeorg.springframework.web.context.support.WebApplicationContextUtils#initServletPropertySources
+	 * @see org.springframework.core.env.PropertySource.StubPropertySource
+	 * @see org.springframework.web.context.support.WebApplicationContextUtils#initServletPropertySources
 	 */
 	protected void initPropertySources() {
 		// For subclasses: do nothing by default.
@@ -727,7 +727,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	/**
 	 * Initialize the ApplicationEventMulticaster.
 	 * Uses SimpleApplicationEventMulticaster if none defined in the context.
-	 * @seeorg.springframework.context.event.SimpleApplicationEventMulticaster
+	 * @see org.springframework.context.event.SimpleApplicationEventMulticaster
 	 */
 	protected void initApplicationEventMulticaster() {
 		ConfigurableListableBeanFactory beanFactory = getBeanFactory();
@@ -752,7 +752,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	/**
 	 * Initialize the LifecycleProcessor.
 	 * Uses DefaultLifecycleProcessor if none defined in the context.
-	 * @seeorg.springframework.context.support.DefaultLifecycleProcessor
+	 * @see org.springframework.context.support.DefaultLifecycleProcessor
 	 */
 	protected void initLifecycleProcessor() {
 		ConfigurableListableBeanFactory beanFactory = getBeanFactory();
@@ -852,7 +852,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	/**
 	 * Finish the refresh of this context, invoking the LifecycleProcessor's
 	 * onRefresh() method and publishing the
-	 * {@linkorg.springframework.context.event.ContextRefreshedEvent}.
+	 * {@link org.springframework.context.event.ContextRefreshedEvent}.
 	 */
 	protected void finishRefresh() {
 		// Clear context-level resource caches (such as ASM metadata from scanning).
@@ -958,7 +958,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	 * Actually performs context closing: publishes a ContextClosedEvent and
 	 * destroys the singletons in the bean factory of this application context.
 	 * <p>Called by both {@code close()} and a JVM shutdown hook, if any.
-	 * @seeorg.springframework.context.event.ContextClosedEvent
+	 * @see org.springframework.context.event.ContextClosedEvent
 	 * @see #destroyBeans()
 	 * @see #close()
 	 * @see #registerShutdownHook()

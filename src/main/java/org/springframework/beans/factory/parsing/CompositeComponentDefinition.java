@@ -25,8 +25,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * {@linkorg.springframework.beans.factory.parsing.ComponentDefinition} implementation that holds one or more nested
- * {@linkorg.springframework.beans.factory.parsing.ComponentDefinition} instances, aggregating them into a named group
+ * {@link org.springframework.beans.factory.parsing.ComponentDefinition} implementation that holds one or more nested
+ * {@link org.springframework.beans.factory.parsing.ComponentDefinition} instances, aggregating them into a named group
  * of components.
  *
  * @author Juergen Hoeller

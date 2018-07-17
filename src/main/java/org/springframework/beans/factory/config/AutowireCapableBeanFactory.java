@@ -52,7 +52,7 @@ import java.util.Set;
  * {@link ApplicationContext} facades,
  * as it is hardly ever used by application code. That said, it is available
  * from an application context too, accessible through ApplicationContext's
- * {@linkorg.springframework.context.ApplicationContext#getAutowireCapableBeanFactory()}
+ * {@link org.springframework.context.ApplicationContext#getAutowireCapableBeanFactory()}
  * method.
  *
  *  <p>注意，这个接口不是由 ApplicationContext 正面实现，因为它是很难被应用程序代码使用。
@@ -314,7 +314,7 @@ public interface AutowireCapableBeanFactory extends BeanFactory {
 
 	/**
 	 * Destroy the given bean instance (typically coming from {@link #createBean}),
-	 * applying the {@linkorg.springframework.beans.factory.DisposableBean} contract as well as
+	 * applying the {@link org.springframework.beans.factory.DisposableBean} contract as well as
 	 * registered {@link DestructionAwareBeanPostProcessor DestructionAwareBeanPostProcessors}.
 	 * <p>Any exception that arises during destruction should be caught
 	 * and logged instead of propagated to the caller of this method.

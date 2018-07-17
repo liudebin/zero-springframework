@@ -43,8 +43,8 @@ public interface ConfigurablePropertyResolver extends PropertyResolver {
 	 * ConfigurableConversionService cs = env.getConversionService();
 	 * cs.addConverter(new FooConverter());
 	 * </pre>
-	 * @seeorg.springframework.core.env.PropertyResolver#getProperty(String, Class)
-	 * @seeorg.springframework.core.convert.converter.ConverterRegistry#addConverter
+	 * @see org.springframework.core.env.PropertyResolver#getProperty(String, Class)
+	 * @see org.springframework.core.convert.converter.ConverterRegistry#addConverter
 	 */
 	ConfigurableConversionService getConversionService();
 
@@ -55,9 +55,9 @@ public interface ConfigurablePropertyResolver extends PropertyResolver {
 	 * {@code ConversionService}, consider adding or removing individual
 	 * {@code Converter} instances by drilling into {@link #getConversionService()}
 	 * and calling methods such as {@code #addConverter}.
-	 * @seeorg.springframework.core.env.PropertyResolver#getProperty(String, Class)
+	 * @see org.springframework.core.env.PropertyResolver#getProperty(String, Class)
 	 * @see #getConversionService()
-	 * @seeorg.springframework.core.convert.converter.ConverterRegistry#addConverter
+	 * @see org.springframework.core.convert.converter.ConverterRegistry#addConverter
 	 */
 	void setConversionService(ConfigurableConversionService conversionService);
 

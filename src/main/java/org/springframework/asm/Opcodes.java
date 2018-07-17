@@ -111,7 +111,7 @@ public interface Opcodes {
     // stack map frame types
 
     /**
-     * Represents an expanded frame. See {@linkorg.springframework.asm.ClassReader#EXPAND_FRAMES}.
+     * Represents an expanded frame. See {@link org.springframework.asm.ClassReader#EXPAND_FRAMES}.
      */
     int F_NEW = -1;
 

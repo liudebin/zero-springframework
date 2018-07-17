@@ -19,7 +19,7 @@ package org.springframework.core.env;
 import org.springframework.lang.Nullable;
 
 /**
- * Holder containing one or more {@linkorg.springframework.core.env.PropertySource} objects.
+ * Holder containing one or more {@link org.springframework.core.env.PropertySource} objects.
  *
  * @author Chris Beams
  * @since 3.1

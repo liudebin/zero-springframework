@@ -24,8 +24,8 @@ import java.lang.annotation.*;
 
 /**
  * Annotation providing a convenient and declarative mechanism for adding a
- * {@linkorg.springframework.core.env.PropertySource PropertySource} to Spring's
- * {@linkorg.springframework.core.env.Environment Environment}. To be used in
+ * {@link org.springframework.core.env.PropertySource PropertySource} to Spring's
+ * {@link org.springframework.core.env.Environment Environment}. To be used in
  * conjunction with @{@link Configuration} classes.
  *
  * <h3>Example usage</h3>
@@ -132,8 +132,8 @@ import java.lang.annotation.*;
  * if the {@code @Configuration} classes above were registered via component-scanning,
  * the ordering is difficult to predict. In such cases - and if overriding is important -
  * it is recommended that the user fall back to using the programmatic PropertySource API.
- * See {@linkorg.springframework.core.env.ConfigurableEnvironment ConfigurableEnvironment}
- * and {@linkorg.springframework.core.env.MutablePropertySources MutablePropertySources}
+ * See {@link org.springframework.core.env.ConfigurableEnvironment ConfigurableEnvironment}
+ * and {@link org.springframework.core.env.MutablePropertySources MutablePropertySources}
  * javadocs for details.
  *
  * @author Chris Beams
@@ -142,9 +142,9 @@ import java.lang.annotation.*;
  * @since 3.1
  * @see PropertySources
  * @see Configuration
- * @seeorg.springframework.core.env.PropertySource
- * @seeorg.springframework.core.env.ConfigurableEnvironment#getPropertySources()
- * @seeorg.springframework.core.env.MutablePropertySources
+ * @see org.springframework.core.env.PropertySource
+ * @see org.springframework.core.env.ConfigurableEnvironment#getPropertySources()
+ * @see org.springframework.core.env.MutablePropertySources
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
@@ -155,8 +155,8 @@ public @interface PropertySource {
 	/**
 	 * Indicate the name of this property source. If omitted, a name will
 	 * be generated based on the description of the underlying resource.
-	 * @seeorg.springframework.core.env.PropertySource#getName()
-	 * @seeorg.springframework.core.io.Resource#getDescription()
+	 * @see org.springframework.core.env.PropertySource#getName()
+	 * @see org.springframework.core.io.Resource#getDescription()
 	 */
 	String name() default "";
 
@@ -193,8 +193,8 @@ public @interface PropertySource {
 	 * Specify a custom {@link PropertySourceFactory}, if any.
 	 * <p>By default, a default factory for standard resource files will be used.
 	 * @since 4.3
-	 * @seeorg.springframework.core.io.support.DefaultPropertySourceFactory
-	 * @seeorg.springframework.core.io.support.ResourcePropertySource
+	 * @see org.springframework.core.io.support.DefaultPropertySourceFactory
+	 * @see org.springframework.core.io.support.ResourcePropertySource
 	 */
 	Class<? extends PropertySourceFactory> factory() default PropertySourceFactory.class;
 

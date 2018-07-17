@@ -37,9 +37,9 @@ import org.springframework.lang.Nullable;
  * <p>An ApplicationContext provides:
  * <ul>
  * <li>Bean factory methods for accessing application components.
- * Inherited from {@linkorg.springframework.beans.factory.ListableBeanFactory}.
+ * Inherited from {@link org.springframework.beans.factory.ListableBeanFactory}.
  * <li>The ability to load file resources in a generic fashion.
- * Inherited from the {@linkorg.springframework.core.io.ResourceLoader} interface.
+ * Inherited from the {@link org.springframework.core.io.ResourceLoader} interface.
  * <li>The ability to publish events to registered listeners.
  * Inherited from the {@link ApplicationEventPublisher} interface.
  * <li>The ability to resolve messages, supporting internationalization.
@@ -50,7 +50,7 @@ import org.springframework.lang.Nullable;
  * its own child context that is independent of that of any other servlet.
  * </ul>
  *
- * <p>In addition to standard {@linkorg.springframework.beans.factory.BeanFactory}
+ * <p>In addition to standard {@link org.springframework.beans.factory.BeanFactory}
  * lifecycle capabilities, ApplicationContext implementations detect and invoke
  * {@link ApplicationContextAware} beans as well as {@link ResourceLoaderAware},
  * {@link ApplicationEventPublisherAware} and {@link MessageSourceAware} beans.
@@ -58,8 +58,8 @@ import org.springframework.lang.Nullable;
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @see ConfigurableApplicationContext
- * @seeorg.springframework.beans.factory.BeanFactory
- * @seeorg.springframework.core.io.ResourceLoader
+ * @see org.springframework.beans.factory.BeanFactory
+ * @see org.springframework.core.io.ResourceLoader
  */
 public interface ApplicationContext extends EnvironmentCapable, ListableBeanFactory, HierarchicalBeanFactory,
 		MessageSource, ApplicationEventPublisher, ResourcePatternResolver {

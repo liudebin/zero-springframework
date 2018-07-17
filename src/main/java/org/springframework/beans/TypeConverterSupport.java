@@ -28,8 +28,8 @@ import org.springframework.lang.Nullable;
 import java.lang.reflect.Field;
 
 /**
- * Base implementation of the {@linkorg.springframework.beans.TypeConverter} interface, using a package-private delegate.
- * Mainly serves as base class for {@linkorg.springframework.beans.BeanWrapperImpl}.
+ * Base implementation of the {@link org.springframework.beans.TypeConverter} interface, using a package-private delegate.
+ * Mainly serves as base class for {@link org.springframework.beans.BeanWrapperImpl}.
  *
  * @author Juergen Hoeller
  * @since 3.2

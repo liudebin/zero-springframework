@@ -62,7 +62,7 @@ import java.lang.instrument.ClassFileTransformer;
  * @author Ramnivas Laddad
  * @author Costin Leau
  * @since 2.5
- * @seeorg.springframework.context.ConfigurableApplicationContext#LOAD_TIME_WEAVER_BEAN_NAME
+ * @see org.springframework.context.ConfigurableApplicationContext#LOAD_TIME_WEAVER_BEAN_NAME
  */
 public class DefaultContextLoadTimeWeaver implements LoadTimeWeaver, BeanClassLoaderAware, DisposableBean {
 

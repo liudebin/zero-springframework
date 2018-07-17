@@ -26,11 +26,11 @@ import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 
 /**
- * {@linkorg.springframework.beans.factory.config.BeanPostProcessor}
+ * {@link org.springframework.beans.factory.config.BeanPostProcessor}
  * implementation that passes the context's default {@link LoadTimeWeaver}
  * to beans that implement the {@link LoadTimeWeaverAware} interface.
  *
- * <p>{@linkorg.springframework.context.ApplicationContext Application contexts}
+ * <p>{@link org.springframework.context.ApplicationContext Application contexts}
  * will automatically register this with their underlying {@link BeanFactory bean factory},
  * provided that a default {@code LoadTimeWeaver} is actually available.
  *
@@ -39,7 +39,7 @@ import org.springframework.util.Assert;
  * @author Juergen Hoeller
  * @since 2.5
  * @see LoadTimeWeaverAware
- * @seeorg.springframework.context.ConfigurableApplicationContext#LOAD_TIME_WEAVER_BEAN_NAME
+ * @see org.springframework.context.ConfigurableApplicationContext#LOAD_TIME_WEAVER_BEAN_NAME
  */
 public class LoadTimeWeaverAwareProcessor implements BeanPostProcessor, BeanFactoryAware {
 

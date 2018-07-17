@@ -41,9 +41,9 @@ import org.springframework.util.StringUtils;
  * 如果你不关心BeanNameAware之类的东西，注册RootBeanDefinition或ChildBeanDefinition就足够了。
  * @author Juergen Hoeller
  * @since 1.0.2
- * @seeorg.springframework.beans.factory.BeanNameAware
- * @seeorg.springframework.beans.factory.support.RootBeanDefinition
- * @seeorg.springframework.beans.factory.support.ChildBeanDefinition
+ * @see org.springframework.beans.factory.BeanNameAware
+ * @see org.springframework.beans.factory.support.RootBeanDefinition
+ * @see org.springframework.beans.factory.support.ChildBeanDefinition
  */
 public class BeanDefinitionHolder implements BeanMetadataElement {
 
@@ -119,7 +119,7 @@ public class BeanDefinitionHolder implements BeanMetadataElement {
 
 	/**
 	 * Expose the bean definition's source object.
-	 * @seeorg.springframework.beans.factory.config.BeanDefinition#getSource()
+	 * @see org.springframework.beans.factory.config.BeanDefinition#getSource()
 	 */
 	@Override
 	public Object getSource() {
@@ -153,7 +153,7 @@ public class BeanDefinitionHolder implements BeanMetadataElement {
 
 	/**
 	 * Return a long description for the bean, including name and aliases
-	 * as well as a description of the contained {@linkorg.springframework.beans.factory.config.BeanDefinition}.
+	 * as well as a description of the contained {@link org.springframework.beans.factory.config.BeanDefinition}.
 	 * @see #getShortDescription()
 	 * @see #getBeanDefinition()
 	 */

@@ -49,7 +49,7 @@ public interface HierarchicalBeanFactory extends BeanFactory {
 	 * of the given name from an ancestor bean factory.
 	 * @param name the name of the bean to query
 	 * @return whether a bean with the given name is defined in the local factory
-	 * @seeorg.springframework.beans.factory.BeanFactory#containsBean
+	 * @see org.springframework.beans.factory.BeanFactory#containsBean
 	 */
 	boolean containsLocalBean(String name);
 

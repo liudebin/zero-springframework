@@ -22,14 +22,14 @@ import org.springframework.util.Assert;
 
 /**
  * Represents a problem with a bean definition configuration.
- * Mainly serves as common argument passed into a {@linkorg.springframework.beans.factory.parsing.ProblemReporter}.
+ * Mainly serves as common argument passed into a {@link org.springframework.beans.factory.parsing.ProblemReporter}.
  *
  * <p>May indicate a potentially fatal problem (an error) or just a warning.
  *
  * @author Rob Harrop
  * @author Juergen Hoeller
  * @since 2.0
- * @seeorg.springframework.beans.factory.parsing.ProblemReporter
+ * @see org.springframework.beans.factory.parsing.ProblemReporter
  */
 public class Problem {
 
@@ -56,7 +56,7 @@ public class Problem {
 	/**
 	 * Create a new instance of the {@link Problem} class.
 	 * @param message a message detailing the problem
-	 * @param parseState the {@linkorg.springframework.beans.factory.parsing.ParseState} at the time of the error
+	 * @param parseState the {@link org.springframework.beans.factory.parsing.ParseState} at the time of the error
 	 * @param location the location within a bean configuration source that triggered the error
 	 */
 	public Problem(String message, Location location, ParseState parseState) {
@@ -67,7 +67,7 @@ public class Problem {
 	 * Create a new instance of the {@link Problem} class.
 	 * @param message a message detailing the problem
 	 * @param rootCause the underlying exception that caused the error (may be {@code null})
-	 * @param parseState the {@linkorg.springframework.beans.factory.parsing.ParseState} at the time of the error
+	 * @param parseState the {@link org.springframework.beans.factory.parsing.ParseState} at the time of the error
 	 * @param location the location within a bean configuration source that triggered the error
 	 */
 	public Problem(String message, Location location, @Nullable ParseState parseState, @Nullable Throwable rootCause) {
@@ -104,7 +104,7 @@ public class Problem {
 	}
 
 	/**
-	 * Get the {@linkorg.springframework.beans.factory.parsing.ParseState} at the time of the error (may be {@code null}).
+	 * Get the {@link org.springframework.beans.factory.parsing.ParseState} at the time of the error (may be {@code null}).
 	 */
 	@Nullable
 	public ParseState getParseState() {

@@ -26,7 +26,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Support class for {@linkorg.springframework.core.AttributeAccessor AttributeAccessors}, providing
+ * Support class for {@link org.springframework.core.AttributeAccessor AttributeAccessors}, providing
  * a base implementation of all methods. To be extended by subclasses.
  *
  * <p>{@link Serializable} if subclasses and all attribute values are {@link Serializable}.

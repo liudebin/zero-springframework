@@ -28,7 +28,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Base class for decorating ClassLoaders such as {@link OverridingClassLoader}
- * and {@linkorg.springframework.instrument.classloading.ShadowingClassLoader},
+ * and {@link org.springframework.instrument.classloading.ShadowingClassLoader},
  * providing common handling of excluded packages and classes.
  *
  * @author Juergen Hoeller

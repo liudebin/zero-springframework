@@ -19,7 +19,7 @@ package org.springframework.beans.factory.config;
 import org.springframework.beans.BeansException;
 
 /**
- * Subinterface of {@linkorg.springframework.beans.factory.config.BeanPostProcessor} that adds a before-destruction callback.
+ * Subinterface of {@link org.springframework.beans.factory.config.BeanPostProcessor} that adds a before-destruction callback.
  *
  * <p>The typical usage will be to invoke custom destruction callbacks on
  * specific bean types, matching corresponding initialization callbacks.
@@ -38,8 +38,8 @@ public interface DestructionAwareBeanPostProcessor extends BeanPostProcessor {
 	 * @param bean the bean instance to be destroyed
 	 * @param beanName the name of the bean
 	 * @throws BeansException in case of errors
-	 * @seeorg.springframework.beans.factory.DisposableBean
-	 * @seeorg.springframework.beans.factory.support.AbstractBeanDefinition#setDestroyMethodName
+	 * @see org.springframework.beans.factory.DisposableBean
+	 * @see org.springframework.beans.factory.support.AbstractBeanDefinition#setDestroyMethodName
 	 */
 	void postProcessBeforeDestruction(Object bean, String beanName) throws BeansException;
 

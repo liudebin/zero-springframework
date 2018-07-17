@@ -31,7 +31,7 @@ import org.springframework.util.Assert;
  *
  * @author Juergen Hoeller
  * @since 2.0
- * @seeorg.springframework.beans.factory.parsing.ReaderEventListener#importProcessed(ImportDefinition)
+ * @see org.springframework.beans.factory.parsing.ReaderEventListener#importProcessed(ImportDefinition)
  */
 public class ImportDefinition implements BeanMetadataElement {
 

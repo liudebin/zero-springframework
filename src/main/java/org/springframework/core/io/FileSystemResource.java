@@ -30,7 +30,7 @@ import java.nio.channels.ReadableByteChannel;
 import java.nio.channels.WritableByteChannel;
 
 /**
- * {@linkorg.springframework.core.io.Resource} implementation for {@code java.io.File} handles.
+ * {@link org.springframework.core.io.Resource} implementation for {@code java.io.File} handles.
  * Supports resolution as a {@code File} and also as a {@code URL}.
  * Implements the extended {@link WritableResource} interface.
  *

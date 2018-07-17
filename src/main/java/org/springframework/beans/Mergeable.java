@@ -25,10 +25,10 @@ import org.springframework.lang.Nullable;
  *
  * @author Rob Harrop
  * @since 2.0
- * @seeorg.springframework.beans.factory.support.ManagedSet
- * @seeorg.springframework.beans.factory.support.ManagedList
- * @seeorg.springframework.beans.factory.support.ManagedMap
- * @seeorg.springframework.beans.factory.support.ManagedProperties
+ * @see org.springframework.beans.factory.support.ManagedSet
+ * @see org.springframework.beans.factory.support.ManagedList
+ * @see org.springframework.beans.factory.support.ManagedMap
+ * @see org.springframework.beans.factory.support.ManagedProperties
  */
 public interface Mergeable {
 

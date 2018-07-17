@@ -227,7 +227,7 @@ public class BeanDefinitionParserDelegate {
 
 	/**
 	 * Create a new BeanDefinitionParserDelegate associated with the supplied
-	 * {@linkorg.springframework.beans.factory.xml.XmlReaderContext}.
+	 * {@link org.springframework.beans.factory.xml.XmlReaderContext}.
 	 */
 	public BeanDefinitionParserDelegate(XmlReaderContext readerContext) {
 		Assert.notNull(readerContext, "XmlReaderContext must not be null");
@@ -236,7 +236,7 @@ public class BeanDefinitionParserDelegate {
 
 
 	/**
-	 * Get the {@linkorg.springframework.beans.factory.xml.XmlReaderContext} associated with this helper instance.
+	 * Get the {@link org.springframework.beans.factory.xml.XmlReaderContext} associated with this helper instance.
 	 */
 	public final XmlReaderContext getReaderContext() {
 		return this.readerContext;

@@ -22,7 +22,7 @@ import org.springframework.lang.Nullable;
 import org.springframework.core.io.Resource;
 
 /**
- * Simple implementation of {@linkorg.springframework.beans.factory.parsing.SourceExtractor} that returns {@code null}
+ * Simple implementation of {@link org.springframework.beans.factory.parsing.SourceExtractor} that returns {@code null}
  * as the source metadata.
  *
  * <p>This is the default implementation and prevents too much metadata from being

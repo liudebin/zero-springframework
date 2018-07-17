@@ -19,7 +19,7 @@ package org.springframework.core.convert.converter;
 import org.springframework.core.convert.TypeDescriptor;
 
 /**
- * Allows a {@linkorg.springframework.core.convert.converter.Converter}, {@linkorg.springframework.core.convert.converter.GenericConverter} or {@linkorg.springframework.core.convert.converter.ConverterFactory} to
+ * Allows a {@link org.springframework.core.convert.converter.Converter}, {@link org.springframework.core.convert.converter.GenericConverter} or {@link org.springframework.core.convert.converter.ConverterFactory} to
  * conditionally execute based on attributes of the {@code source} and {@code target}
  * {@link TypeDescriptor}.
  *
@@ -35,7 +35,7 @@ import org.springframework.core.convert.TypeDescriptor;
  * @author Phillip Webb
  * @author Keith Donald
  * @since 3.2
- * @seeorg.springframework.core.convert.converter.Converter
+ * @see org.springframework.core.convert.converter.Converter
  * @see GenericConverter
  * @see ConverterFactory
  * @see ConditionalGenericConverter

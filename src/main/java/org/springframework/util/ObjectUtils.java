@@ -42,8 +42,8 @@ import java.util.Optional;
  * @author Chris Beams
  * @author Sam Brannen
  * @since 19.03.2004
- * @seeorg.springframework.util.ClassUtils
- * @seeorg.springframework.util.CollectionUtils
+ * @see org.springframework.util.ClassUtils
+ * @see org.springframework.util.CollectionUtils
  * @see StringUtils
  */
 public abstract class ObjectUtils {
@@ -131,7 +131,7 @@ public abstract class ObjectUtils {
 	 * @see ObjectUtils#isEmpty(Object[])
 	 * @see StringUtils#hasLength(CharSequence)
 	 * @see StringUtils#isEmpty(Object)
-	 * @seeorg.springframework.util.CollectionUtils#isEmpty(Collection)
+	 * @see org.springframework.util.CollectionUtils#isEmpty(Collection)
 	 * @see CollectionUtils#isEmpty(Map)
 	 */
 	@SuppressWarnings("rawtypes")

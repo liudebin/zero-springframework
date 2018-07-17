@@ -26,8 +26,8 @@ import org.springframework.lang.Nullable;
  *
  * @author Juergen Hoeller
  * @see MessageSource#getMessage(MessageSourceResolvable, java.util.Locale)
- * @seeorg.springframework.validation.ObjectError
- * @seeorg.springframework.validation.FieldError
+ * @see org.springframework.validation.ObjectError
+ * @see org.springframework.validation.FieldError
  */
 @FunctionalInterface
 public interface MessageSourceResolvable {
@@ -57,7 +57,7 @@ public interface MessageSourceResolvable {
 	 * <p>The default implementation simply returns {@code null}.
 	 * Note that the default message may be identical to the primary
 	 * message code ({@link #getCodes()}), which effectively enforces
-	 * {@linkorg.springframework.context.support.AbstractMessageSource#setUseCodeAsDefaultMessage}
+	 * {@link org.springframework.context.support.AbstractMessageSource#setUseCodeAsDefaultMessage}
 	 * for this particular message.
 	 * @return the default message, or {@code null} if no default
 	 */

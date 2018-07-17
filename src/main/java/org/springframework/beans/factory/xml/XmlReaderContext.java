@@ -87,7 +87,7 @@ public class XmlReaderContext extends ReaderContext {
 
 	/**
 	 * Return the bean definition registry to use.
-	 * @seeorg.springframework.beans.factory.xml.XmlBeanDefinitionReader#XmlBeanDefinitionReader(BeanDefinitionRegistry)
+	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader#XmlBeanDefinitionReader(BeanDefinitionRegistry)
 	 */
 	public final BeanDefinitionRegistry getRegistry() {
 		return this.reader.getRegistry();
@@ -97,7 +97,7 @@ public class XmlReaderContext extends ReaderContext {
 	 * Return the resource loader to use, if any.
 	 * <p>This will be non-null in regular scenarios,
 	 * also allowing access to the resource class loader.
-	 * @seeorg.springframework.beans.factory.xml.XmlBeanDefinitionReader#setResourceLoader
+	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader#setResourceLoader
 	 * @see ResourceLoader#getClassLoader()
 	 */
 	@Nullable
@@ -109,7 +109,7 @@ public class XmlReaderContext extends ReaderContext {
 	 * Return the bean class loader to use, if any.
 	 * <p>Note that this will be null in regular scenarios,
 	 * as an indication to lazily resolve bean classes.
-	 * @seeorg.springframework.beans.factory.xml.XmlBeanDefinitionReader#setBeanClassLoader
+	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader#setBeanClassLoader
 	 */
 	@Nullable
 	public final ClassLoader getBeanClassLoader() {
@@ -118,7 +118,7 @@ public class XmlReaderContext extends ReaderContext {
 
 	/**
 	 * Return the environment to use.
-	 * @seeorg.springframework.beans.factory.xml.XmlBeanDefinitionReader#setEnvironment
+	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader#setEnvironment
 	 */
 	public final Environment getEnvironment() {
 		return this.reader.getEnvironment();
@@ -126,7 +126,7 @@ public class XmlReaderContext extends ReaderContext {
 
 	/**
 	 * Return the namespace resolver.
-	 * @seeorg.springframework.beans.factory.xml.XmlBeanDefinitionReader#setNamespaceHandlerResolver
+	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader#setNamespaceHandlerResolver
 	 */
 	public final NamespaceHandlerResolver getNamespaceHandlerResolver() {
 		return this.namespaceHandlerResolver;
@@ -137,8 +137,8 @@ public class XmlReaderContext extends ReaderContext {
 
 	/**
 	 * Call the bean name generator for the given bean definition.
-	 * @seeorg.springframework.beans.factory.xml.XmlBeanDefinitionReader#getBeanNameGenerator()
-	 * @seeorg.springframework.beans.factory.support.BeanNameGenerator#generateBeanName
+	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader#getBeanNameGenerator()
+	 * @see org.springframework.beans.factory.support.BeanNameGenerator#generateBeanName
 	 */
 	public String generateBeanName(BeanDefinition beanDefinition) {
 		return this.reader.getBeanNameGenerator().generateBeanName(beanDefinition, getRegistry());
@@ -147,8 +147,8 @@ public class XmlReaderContext extends ReaderContext {
 	/**
 	 * Call the bean name generator for the given bean definition
 	 * and register the bean definition under the generated name.
-	 * @seeorg.springframework.beans.factory.xml.XmlBeanDefinitionReader#getBeanNameGenerator()
-	 * @seeorg.springframework.beans.factory.support.BeanNameGenerator#generateBeanName
+	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader#getBeanNameGenerator()
+	 * @see org.springframework.beans.factory.support.BeanNameGenerator#generateBeanName
 	 * @see BeanDefinitionRegistry#registerBeanDefinition
 	 */
 	public String registerWithGeneratedName(BeanDefinition beanDefinition) {

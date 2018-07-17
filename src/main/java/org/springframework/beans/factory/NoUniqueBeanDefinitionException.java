@@ -28,7 +28,7 @@ import java.util.Collection;
  *
  * @author Juergen Hoeller
  * @since 3.2.1
- * @seeorg.springframework.beans.factory.BeanFactory#getBean(Class)
+ * @see org.springframework.beans.factory.BeanFactory#getBean(Class)
  */
 @SuppressWarnings("serial")
 public class NoUniqueBeanDefinitionException extends NoSuchBeanDefinitionException {

@@ -24,7 +24,7 @@ package org.springframework.beans.factory;
  * unnecessary dependence on a Spring API.
  *
  * <p>For a list of all bean lifecycle methods, see the
- * {@linkorg.springframework.beans.factory.BeanFactory BeanFactory javadocs}.
+ * {@link org.springframework.beans.factory.BeanFactory BeanFactory javadocs}.
  *
  * @author Juergen Hoeller
  * @author Chris Beams

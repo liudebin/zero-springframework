@@ -31,7 +31,7 @@ import java.io.InputStream;
 import java.net.*;
 
 /**
- * {@linkorg.springframework.core.io.Resource} implementation for {@code java.net.URL} locators.
+ * {@link org.springframework.core.io.Resource} implementation for {@code java.net.URL} locators.
  * Supports resolution as a {@code URL} and also as a {@code File} in
  * case of the {@code "file:"} protocol.
  *

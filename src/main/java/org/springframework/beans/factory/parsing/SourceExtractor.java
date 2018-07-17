@@ -33,8 +33,8 @@ import org.springframework.lang.Nullable;
  * @author Rob Harrop
  * @author Juergen Hoeller
  * @since 2.0
- * @seeorg.springframework.beans.BeanMetadataElement#getSource()
- * @seeorg.springframework.beans.factory.config.BeanDefinition
+ * @see org.springframework.beans.BeanMetadataElement#getSource()
+ * @see org.springframework.beans.factory.config.BeanDefinition
  */
 @FunctionalInterface
 public interface SourceExtractor {

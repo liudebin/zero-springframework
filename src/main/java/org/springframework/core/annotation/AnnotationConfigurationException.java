@@ -21,12 +21,12 @@ import org.springframework.core.NestedRuntimeException;
 import org.springframework.core.annotation.*;
 
 /**
- * Thrown by {@linkorg.springframework.core.annotation.AnnotationUtils} and <em>synthesized annotations</em>
+ * Thrown by {@link org.springframework.core.annotation.AnnotationUtils} and <em>synthesized annotations</em>
  * if an annotation is improperly configured.
  *
  * @author Sam Brannen
  * @since 4.2
- * @seeorg.springframework.core.annotation.AnnotationUtils
+ * @see org.springframework.core.annotation.AnnotationUtils
  * @see SynthesizedAnnotation
  */
 @SuppressWarnings("serial")

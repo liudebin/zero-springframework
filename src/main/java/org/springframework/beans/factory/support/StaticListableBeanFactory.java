@@ -43,15 +43,15 @@ import java.util.Map;
  * {@link ListableBeanFactory} interface,
  * managing existing bean instances rather than creating new ones based on bean
  * definitions, and not implementing any extended SPI interfaces (such as
- * {@linkorg.springframework.beans.factory.config.ConfigurableBeanFactory}).
+ * {@link org.springframework.beans.factory.config.ConfigurableBeanFactory}).
  *
  * <p>For a full-fledged factory based on bean definitions, have a look
- * at {@linkorg.springframework.beans.factory.support.DefaultListableBeanFactory}.
+ * at {@link org.springframework.beans.factory.support.DefaultListableBeanFactory}.
  *
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @since 06.01.2003
- * @seeorg.springframework.beans.factory.support.DefaultListableBeanFactory
+ * @see org.springframework.beans.factory.support.DefaultListableBeanFactory
  */
 public class StaticListableBeanFactory implements ListableBeanFactory {
 

@@ -26,16 +26,16 @@ import java.util.Locale;
  *
  * <p>Spring provides two out-of-the-box implementations for production:
  * <ul>
- * <li>{@linkorg.springframework.context.support.ResourceBundleMessageSource},
+ * <li>{@link org.springframework.context.support.ResourceBundleMessageSource},
  * built on top of the standard {@link java.util.ResourceBundle}
- * <li>{@linkorg.springframework.context.support.ReloadableResourceBundleMessageSource},
+ * <li>{@link org.springframework.context.support.ReloadableResourceBundleMessageSource},
  * being able to reload message definitions without restarting the VM
  * </ul>
  *
  * @author Rod Johnson
  * @author Juergen Hoeller
- * @seeorg.springframework.context.support.ResourceBundleMessageSource
- * @seeorg.springframework.context.support.ReloadableResourceBundleMessageSource
+ * @see org.springframework.context.support.ResourceBundleMessageSource
+ * @see org.springframework.context.support.ReloadableResourceBundleMessageSource
  */
 public interface MessageSource {
 

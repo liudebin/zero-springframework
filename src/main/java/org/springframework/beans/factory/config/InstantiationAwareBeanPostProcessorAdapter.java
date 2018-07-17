@@ -23,13 +23,13 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.Constructor;
 
 /**
- * Adapter that implements all methods on {@linkorg.springframework.beans.factory.config.SmartInstantiationAwareBeanPostProcessor}
+ * Adapter that implements all methods on {@link org.springframework.beans.factory.config.SmartInstantiationAwareBeanPostProcessor}
  * as no-ops, which will not change normal processing of each bean instantiated
  * by the container. Subclasses may override merely those methods that they are
  * actually interested in.
  *
  * <p>Note that this base class is only recommendable if you actually require
- * {@linkorg.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor} functionality. If all you need
+ * {@link org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor} functionality. If all you need
  * is plain {@link BeanPostProcessor} functionality, prefer a straight
  * implementation of that (simpler) interface.
  *

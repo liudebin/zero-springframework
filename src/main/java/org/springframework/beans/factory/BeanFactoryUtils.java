@@ -55,7 +55,7 @@ public abstract class BeanFactoryUtils {
 	 * (beginning with the factory dereference prefix).
 	 * @param name the name of the bean
 	 * @return whether the given name is a factory dereference
-	 * @seeorg.springframework.beans.factory.BeanFactory#FACTORY_BEAN_PREFIX
+	 * @see org.springframework.beans.factory.BeanFactory#FACTORY_BEAN_PREFIX
 	 */
 	public static boolean isFactoryDereference(@Nullable String name) {
 		return (name != null && name.startsWith(BeanFactory.FACTORY_BEAN_PREFIX));
@@ -66,7 +66,7 @@ public abstract class BeanFactoryUtils {
 	 * prefix (if any, also stripping repeated factory prefixes if found).
 	 * @param name the name of the bean
 	 * @return the transformed name
-	 * @seeorg.springframework.beans.factory.BeanFactory#FACTORY_BEAN_PREFIX
+	 * @see org.springframework.beans.factory.BeanFactory#FACTORY_BEAN_PREFIX
 	 */
 	public static String transformedBeanName(String name) {
 		Assert.notNull(name, "'name' must not be null");
@@ -83,8 +83,8 @@ public abstract class BeanFactoryUtils {
 	 * @param name the name of the bean
 	 * @return whether the given name is a generated bean name
 	 * @see #GENERATED_BEAN_NAME_SEPARATOR
-	 * @seeorg.springframework.beans.factory.support.BeanDefinitionReaderUtils#generateBeanName
-	 * @seeorg.springframework.beans.factory.support.DefaultBeanNameGenerator
+	 * @see org.springframework.beans.factory.support.BeanDefinitionReaderUtils#generateBeanName
+	 * @see org.springframework.beans.factory.support.DefaultBeanNameGenerator
 	 */
 	public static boolean isGeneratedBeanName(@Nullable String name) {
 		return (name != null && name.contains(GENERATED_BEAN_NAME_SEPARATOR));

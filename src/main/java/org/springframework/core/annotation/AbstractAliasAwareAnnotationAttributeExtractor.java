@@ -36,7 +36,7 @@ import java.util.Map;
  * @param <S> the type of source supported by this extractor
  * @see Annotation
  * @see AliasFor
- * @seeorg.springframework.core.annotation.AnnotationUtils#synthesizeAnnotation(Annotation, Object)
+ * @see org.springframework.core.annotation.AnnotationUtils#synthesizeAnnotation(Annotation, Object)
  */
 abstract class AbstractAliasAwareAnnotationAttributeExtractor<S> implements AnnotationAttributeExtractor<S> {
 

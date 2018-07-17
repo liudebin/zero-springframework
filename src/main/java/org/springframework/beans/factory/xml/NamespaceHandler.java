@@ -26,7 +26,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
 /**
- * Base interface used by the {@linkorg.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader}
+ * Base interface used by the {@link org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader}
  * for handling custom namespaces in a Spring XML configuration file.
  *
  * <p>Implementations are expected to return implementations of the
@@ -45,8 +45,8 @@ import org.w3c.dom.Node;
  * @author Rob Harrop
  * @author Erik Wiersma
  * @since 2.0
- * @seeorg.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader
- * @seeorg.springframework.beans.factory.xml.NamespaceHandlerResolver
+ * @see org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader
+ * @see org.springframework.beans.factory.xml.NamespaceHandlerResolver
  */
 public interface NamespaceHandler {
 
@@ -60,7 +60,7 @@ public interface NamespaceHandler {
 	/**
 	 * Parse the specified {@link Element} and register any resulting
 	 * {@link BeanDefinition BeanDefinitions} with the
-	 * {@linkorg.springframework.beans.factory.support.BeanDefinitionRegistry}
+	 * {@link org.springframework.beans.factory.support.BeanDefinitionRegistry}
 	 * that is embedded in the supplied {@link ParserContext}.
 	 * <p>Implementations should return the primary {@code BeanDefinition}
 	 * that results from the parse phase if they wish to be used nested
@@ -82,7 +82,7 @@ public interface NamespaceHandler {
 	 * is being parsed.
 	 * <p>Implementations may choose to return a completely new definition,
 	 * which will replace the original definition in the resulting
-	 * {@linkorg.springframework.beans.factory.BeanFactory}.
+	 * {@link org.springframework.beans.factory.BeanFactory}.
 	 * <p>The supplied {@link ParserContext} can be used to register any
 	 * additional beans needed to support the main definition.
 	 * @param source the source element or attribute that is to be parsed

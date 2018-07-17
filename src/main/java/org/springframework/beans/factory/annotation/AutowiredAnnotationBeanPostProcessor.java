@@ -66,7 +66,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * {@linkorg.springframework.beans.factory.config.BeanPostProcessor} implementation
+ * {@link org.springframework.beans.factory.config.BeanPostProcessor} implementation
  * that autowires annotated fields, setter methods and arbitrary config methods.
  * Such members to be injected are detected through a Java 5 annotation: by default,
  * Spring's {@link  Autowired @Autowired} and {@link  Value @Value} annotations.

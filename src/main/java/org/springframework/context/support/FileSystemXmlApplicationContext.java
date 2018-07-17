@@ -39,7 +39,7 @@ import org.springframework.lang.Nullable;
  * <p>The config location defaults can be overridden via {@link #getConfigLocations},
  * Config locations can either denote concrete files like "/myfiles/context.xml"
  * or Ant-style patterns like "/myfiles/*-context.xml" (see the
- * {@linkorg.springframework.util.AntPathMatcher} javadoc for pattern details).
+ * {@link org.springframework.util.AntPathMatcher} javadoc for pattern details).
  *
  * <p>Note: In case of multiple config locations, later bean definitions will
  * override ones defined in earlier loaded files. This can be leveraged to
@@ -47,7 +47,7 @@ import org.springframework.lang.Nullable;
  *
  * <p><b>This is a simple, one-stop shop convenience ApplicationContext.
  * Consider using the {@link GenericApplicationContext} class in combination
- * with an {@linkorg.springframework.beans.factory.xml.XmlBeanDefinitionReader}
+ * with an {@link org.springframework.beans.factory.xml.XmlBeanDefinitionReader}
  * for more flexible context setup.</b>
  *
  * @author Rod Johnson
@@ -154,7 +154,7 @@ public class FileSystemXmlApplicationContext extends AbstractXmlApplicationConte
 	 * This is consistent with the semantics in a Servlet container.
 	 * @param path path to the resource
 	 * @return Resource handle
-	 * @seeorg.springframework.web.context.support.XmlWebApplicationContext#getResourceByPath
+	 * @see org.springframework.web.context.support.XmlWebApplicationContext#getResourceByPath
 	 */
 	@Override
 	protected Resource getResourceByPath(String path) {

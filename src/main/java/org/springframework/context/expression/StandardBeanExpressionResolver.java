@@ -134,7 +134,7 @@ public class StandardBeanExpressionResolver implements BeanExpressionResolver {
 
 	/**
 	 * Specify the EL parser to use for expression parsing.
-	 * <p>Default is a {@linkorg.springframework.expression.spel.standard.SpelExpressionParser},
+	 * <p>Default is a {@link org.springframework.expression.spel.standard.SpelExpressionParser},
 	 * compatible with standard Unified EL style expression syntax.
 	 */
 	public void setExpressionParser(ExpressionParser expressionParser) {

@@ -19,16 +19,16 @@ package org.springframework.context.annotation;
 import java.lang.annotation.*;
 
 /**
- * Container annotation that aggregates several {@linkorg.springframework.context.annotation.PropertySource} annotations.
+ * Container annotation that aggregates several {@link org.springframework.context.annotation.PropertySource} annotations.
  *
- * <p>Can be used natively, declaring several nested {@linkorg.springframework.context.annotation.PropertySource} annotations.
+ * <p>Can be used natively, declaring several nested {@link org.springframework.context.annotation.PropertySource} annotations.
  * Can also be used in conjunction with Java 8's support for <em>repeatable annotations</em>,
- * where {@linkorg.springframework.context.annotation.PropertySource} can simply be declared several times on the same
+ * where {@link org.springframework.context.annotation.PropertySource} can simply be declared several times on the same
  * {@linkplain ElementType#TYPE type}, implicitly generating this container annotation.
  *
  * @author Phillip Webb
  * @since 4.0
- * @seeorg.springframework.context.annotation.PropertySource
+ * @see org.springframework.context.annotation.PropertySource
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

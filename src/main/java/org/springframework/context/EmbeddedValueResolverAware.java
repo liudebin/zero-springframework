@@ -31,9 +31,9 @@ import org.springframework.util.StringValueResolver;
  * @author Juergen Hoeller
  * @author Chris Beams
  * @since 3.0.3
- * @seeorg.springframework.beans.factory.config.ConfigurableBeanFactory#resolveEmbeddedValue(String)
- * @seeorg.springframework.beans.factory.config.ConfigurableBeanFactory#getBeanExpressionResolver()
- * @seeorg.springframework.beans.factory.config.EmbeddedValueResolver
+ * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#resolveEmbeddedValue(String)
+ * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#getBeanExpressionResolver()
+ * @see org.springframework.beans.factory.config.EmbeddedValueResolver
  */
 public interface EmbeddedValueResolverAware extends Aware {
 

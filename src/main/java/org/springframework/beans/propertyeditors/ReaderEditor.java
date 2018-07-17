@@ -39,8 +39,8 @@ import java.io.IOException;
  * @author Juergen Hoeller
  * @since 4.2
  * @see java.io.Reader
- * @seeorg.springframework.core.io.ResourceEditor
- * @seeorg.springframework.core.io.ResourceLoader
+ * @see org.springframework.core.io.ResourceEditor
+ * @see org.springframework.core.io.ResourceLoader
  * @see InputStreamEditor
  */
 public class ReaderEditor extends PropertyEditorSupport {

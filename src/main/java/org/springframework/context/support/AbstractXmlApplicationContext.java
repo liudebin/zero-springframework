@@ -29,9 +29,9 @@ import org.springframework.lang.Nullable;
 import java.io.IOException;
 
 /**
- * Convenient base class for {@linkorg.springframework.context.ApplicationContext}
+ * Convenient base class for {@link org.springframework.context.ApplicationContext}
  * implementations, drawing configuration from XML documents containing bean definitions
- * understood by an {@linkorg.springframework.beans.factory.xml.XmlBeanDefinitionReader}.
+ * understood by an {@link org.springframework.beans.factory.xml.XmlBeanDefinitionReader}.
  *
  * <p>Subclasses just have to implement the {@link #getConfigResources} and/or
  * the {@link #getConfigLocations} method. Furthermore, they might override
@@ -75,7 +75,7 @@ public abstract class AbstractXmlApplicationContext extends AbstractRefreshableC
 
 	/**
 	 * Loads the bean definitions via an XmlBeanDefinitionReader.
-	 * @seeorg.springframework.beans.factory.xml.XmlBeanDefinitionReader
+	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
 	 * @see #initBeanDefinitionReader
 	 * @see #loadBeanDefinitions
 	 */
@@ -102,7 +102,7 @@ public abstract class AbstractXmlApplicationContext extends AbstractRefreshableC
 	 * <p>Can be overridden in subclasses, e.g. for turning off XML validation
 	 * or using a different XmlBeanDefinitionParser implementation.
 	 * @param reader the bean definition reader used by this context
-	 * @seeorg.springframework.beans.factory.xml.XmlBeanDefinitionReader#setDocumentReaderClass
+	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader#setDocumentReaderClass
 	 */
 	protected void initBeanDefinitionReader(XmlBeanDefinitionReader reader) {
 		reader.setValidating(this.validating);

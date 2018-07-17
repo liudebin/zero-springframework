@@ -26,7 +26,7 @@ import org.springframework.beans.factory.NamedBean;
  *
  * @author Juergen Hoeller
  * @since 4.3.3
-// * @seeorg.springframework.beans.factory.config.AutowireCapableBeanFactory#resolveNamedBean(Class)
+// * @see org.springframework.beans.factory.config.AutowireCapableBeanFactory#resolveNamedBean(Class)
  */
 public class NamedBeanHolder<T> implements NamedBean {
 

@@ -69,9 +69,9 @@ public interface SingletonBeanRegistry {
 	 *
 	 * @param beanName the name of the bean
 	 * @param singletonObject the existing singleton object
-	 * @seeorg.springframework.beans.factory.InitializingBean#afterPropertiesSet
-	 * @seeorg.springframework.beans.factory.DisposableBean#destroy
-	 * @seeorg.springframework.beans.factory.support.BeanDefinitionRegistry#registerBeanDefinition
+	 * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet
+	 * @see org.springframework.beans.factory.DisposableBean#destroy
+	 * @see org.springframework.beans.factory.support.BeanDefinitionRegistry#registerBeanDefinition
 	 */
 	void registerSingleton(String beanName, Object singletonObject);
 
@@ -110,8 +110,8 @@ public interface SingletonBeanRegistry {
 	 * @param beanName the name of the bean to look for
 	 * @return if this bean factory contains a singleton instance with the given name
 	 * @see #registerSingleton
-	 * @seeorg.springframework.beans.factory.ListableBeanFactory#containsBeanDefinition
-	 * @seeorg.springframework.beans.factory.BeanFactory#containsBean
+	 * @see org.springframework.beans.factory.ListableBeanFactory#containsBeanDefinition
+	 * @see org.springframework.beans.factory.BeanFactory#containsBean
 	 */
 	boolean containsSingleton(String beanName);
 
@@ -124,8 +124,8 @@ public interface SingletonBeanRegistry {
 	 * defined by a bean definition have already been created.
 	 * @return the list of names as a String array (never {@code null})
 	 * @see #registerSingleton
-	 * @seeorg.springframework.beans.factory.support.BeanDefinitionRegistry#getBeanDefinitionNames
-	 * @seeorg.springframework.beans.factory.ListableBeanFactory#getBeanDefinitionNames
+	 * @see org.springframework.beans.factory.support.BeanDefinitionRegistry#getBeanDefinitionNames
+	 * @see org.springframework.beans.factory.ListableBeanFactory#getBeanDefinitionNames
 	 */
 	String[] getSingletonNames();
 
@@ -138,8 +138,8 @@ public interface SingletonBeanRegistry {
 	 * singletons defined by a bean definition that have already been created.
 	 * @return the number of singleton beans
 	 * @see #registerSingleton
-	 * @seeorg.springframework.beans.factory.support.BeanDefinitionRegistry#getBeanDefinitionCount
-	 * @seeorg.springframework.beans.factory.ListableBeanFactory#getBeanDefinitionCount
+	 * @see org.springframework.beans.factory.support.BeanDefinitionRegistry#getBeanDefinitionCount
+	 * @see org.springframework.beans.factory.ListableBeanFactory#getBeanDefinitionCount
 	 */
 	int getSingletonCount();
 

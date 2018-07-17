@@ -23,7 +23,7 @@ import org.springframework.util.ResourceUtils;
 
 /**
  * Utility class for determining whether a given URL is a resource
- * location that can be loaded via a {@linkorg.springframework.core.io.support.ResourcePatternResolver}.
+ * location that can be loaded via a {@link org.springframework.core.io.support.ResourcePatternResolver}.
  *
  * <p>Callers will usually assume that a location is a relative path
  * if the {@link #isUrl(String)} method returns {@code false}.
@@ -38,7 +38,7 @@ public abstract class ResourcePatternUtils {
 	 * special "classpath" or "classpath*" pseudo URL or a standard URL.
 	 * @param resourceLocation the location String to check
 	 * @return whether the location qualifies as a URL
-	 * @seeorg.springframework.core.io.support.ResourcePatternResolver#CLASSPATH_ALL_URL_PREFIX
+	 * @see org.springframework.core.io.support.ResourcePatternResolver#CLASSPATH_ALL_URL_PREFIX
 	 * @see ResourceUtils#CLASSPATH_URL_PREFIX
 	 * @see ResourceUtils#isUrl(String)
 	 * @see java.net.URL
@@ -57,7 +57,7 @@ public abstract class ResourcePatternUtils {
 	 * @param resourceLoader the ResourceLoader to build a pattern resolver for
 	 * (may be {@code null} to indicate a default ResourceLoader)
 	 * @return the ResourcePatternResolver
-	 * @seeorg.springframework.core.io.support.PathMatchingResourcePatternResolver
+	 * @see org.springframework.core.io.support.PathMatchingResourcePatternResolver
 	 */
 	public static ResourcePatternResolver getResourcePatternResolver(@Nullable ResourceLoader resourceLoader) {
 		if (resourceLoader instanceof ResourcePatternResolver) {

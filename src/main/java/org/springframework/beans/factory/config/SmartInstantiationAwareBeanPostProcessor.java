@@ -27,7 +27,7 @@ import java.lang.reflect.Constructor;
  *
  * <p><b>NOTE:</b> This interface is a special purpose interface, mainly for
  * internal use within the framework. In general, application-provided
- * post-processors should simply implement the plain {@linkorg.springframework.beans.factory.config.BeanPostProcessor}
+ * post-processors should simply implement the plain {@link org.springframework.beans.factory.config.BeanPostProcessor}
  * interface or derive from the {@link InstantiationAwareBeanPostProcessorAdapter}
  * class. New methods might be added to this interface even in point releases.
  *

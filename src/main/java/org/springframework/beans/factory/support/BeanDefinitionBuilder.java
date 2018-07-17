@@ -25,9 +25,9 @@ import java.util.function.Supplier;
 
 /**
  * Programmatic means of constructing
- * {@linkorg.springframework.beans.factory.config.BeanDefinition BeanDefinitions}
+ * {@link org.springframework.beans.factory.config.BeanDefinition BeanDefinitions}
  * using the builder pattern. Intended primarily for use when implementing Spring 2.0
- * {@linkorg.springframework.beans.factory.xml.NamespaceHandler NamespaceHandlers}.
+ * {@link org.springframework.beans.factory.xml.NamespaceHandler NamespaceHandlers}.
  *
  * @author Rod Johnson
  * @author Rob Harrop
@@ -255,8 +255,8 @@ public class BeanDefinitionBuilder {
 
 	/**
 	 * Set the scope of this definition.
-	 * @seeorg.springframework.beans.factory.config.BeanDefinition#SCOPE_SINGLETON
-	 * @seeorg.springframework.beans.factory.config.BeanDefinition#SCOPE_PROTOTYPE
+	 * @see org.springframework.beans.factory.config.BeanDefinition#SCOPE_SINGLETON
+	 * @see org.springframework.beans.factory.config.BeanDefinition#SCOPE_PROTOTYPE
 	 */
 	public BeanDefinitionBuilder setScope(String scope) {
 		this.beanDefinition.setScope(scope);

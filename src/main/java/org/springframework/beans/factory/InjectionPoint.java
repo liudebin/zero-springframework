@@ -35,7 +35,7 @@ import java.lang.reflect.Member;
  * @author Juergen Hoeller
  * @since 4.3
  * @see UnsatisfiedDependencyException#getInjectionPoint()
- * @seeorg.springframework.beans.factory.config.DependencyDescriptor
+ * @see org.springframework.beans.factory.config.DependencyDescriptor
  */
 public class InjectionPoint {
 

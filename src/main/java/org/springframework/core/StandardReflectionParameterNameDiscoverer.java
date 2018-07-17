@@ -21,7 +21,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 
 /**
- * {@linkorg.springframework.core.ParameterNameDiscoverer} implementation which uses JDK 8's reflection facilities
+ * {@link org.springframework.core.ParameterNameDiscoverer} implementation which uses JDK 8's reflection facilities
  * for introspecting parameter names (based on the "-parameters" compiler flag).
  *
  * @author Juergen Hoeller

@@ -25,9 +25,9 @@ import org.springframework.util.Assert;
  *
  * @author Juergen Hoeller
  * @since 2.0
- * @seeorg.springframework.beans.factory.config.RuntimeBeanReference
+ * @see org.springframework.beans.factory.config.RuntimeBeanReference
  * @see BeanDefinition#getPropertyValues()
- * @seeorg.springframework.beans.factory.BeanFactory#getBean
+ * @see org.springframework.beans.factory.BeanFactory#getBean
  */
 public class RuntimeBeanNameReference implements BeanReference {
 

@@ -44,7 +44,7 @@ import java.util.List;
  * @author Sam Brannen
  * @since 07.04.2003
  * @see Ordered
- * @seeorg.springframework.core.annotation.AnnotationAwareOrderComparator
+ * @see org.springframework.core.annotation.AnnotationAwareOrderComparator
  * @see Collections#sort(List, Comparator)
  * @see Arrays#sort(Object[], Comparator)
  */

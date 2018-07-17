@@ -38,8 +38,8 @@ import org.springframework.util.ObjectUtils;
  *
  * @author Juergen Hoeller
  * @since 1.2
- * @seeorg.springframework.beans.factory.config.BeanDefinition#getPropertyValues
- * @seeorg.springframework.beans.MutablePropertyValues#addPropertyValue
+ * @see org.springframework.beans.factory.config.BeanDefinition#getPropertyValues
+ * @see org.springframework.beans.MutablePropertyValues#addPropertyValue
  */
 public class TypedStringValue implements BeanMetadataElement {
 

@@ -20,7 +20,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.util.StringUtils;
 
 /**
- * {@linkorg.springframework.beans.factory.parsing.ParseState} entry representing a JavaBean property.
+ * {@link org.springframework.beans.factory.parsing.ParseState} entry representing a JavaBean property.
  *
  * @author Rob Harrop
  * @since 2.0

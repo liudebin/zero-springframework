@@ -38,7 +38,7 @@ import java.security.*;
  * for all typical use cases. Caches introspection results for efficiency.
  *
  * <p>Note: Auto-registers default property editors from the
- * {@codeorg.springframework.beans.propertyeditors} package, which apply
+ * {@code org.springframework.beans.propertyeditors} package, which apply
  * in addition to the JDK's standard PropertyEditors. Applications can call
  * the {@link #registerCustomEditor(Class, java.beans.PropertyEditor)} method
  * to register an editor for a particular instance (i.e. they are not shared

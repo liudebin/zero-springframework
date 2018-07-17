@@ -33,28 +33,28 @@ import org.springframework.util.ObjectUtils;
  *
  * <p>{@code PropertySource} objects are not typically used in isolation, but rather
  * through a {@link PropertySources} object, which aggregates property sources and in
- * conjunction with a {@linkorg.springframework.core.env.PropertyResolver} implementation that can perform
+ * conjunction with a {@link org.springframework.core.env.PropertyResolver} implementation that can perform
  * precedence-based searches across the set of {@code PropertySources}.
  *
  * <p>{@code PropertySource} identity is determined not based on the content of
  * encapsulated properties, but rather based on the {@link #getName() name} of the
  * {@code PropertySource} alone. This is useful for manipulating {@code PropertySource}
- * objects when in collection contexts. See operations in {@linkorg.springframework.core.env.MutablePropertySources}
+ * objects when in collection contexts. See operations in {@link org.springframework.core.env.MutablePropertySources}
  * as well as the {@link #named(String)} and {@link #toString()} methods for details.
  *
  * <p>Note that when working with @{@link
  * Configuration Configuration} classes that
- * the @{@linkorg.springframework.context.annotation.PropertySource PropertySource}
+ * the @{@link org.springframework.context.annotation.PropertySource PropertySource}
  * annotation provides a convenient and declarative way of adding property sources to the
  * enclosing {@code Environment}.
  *
  * @author Chris Beams
  * @since 3.1
  * @see PropertySources
- * @seeorg.springframework.core.env.PropertyResolver
+ * @see org.springframework.core.env.PropertyResolver
  * @see PropertySourcesPropertyResolver
- * @seeorg.springframework.core.env.MutablePropertySources
- * @seeorg.springframework.context.annotation.PropertySource
+ * @see org.springframework.core.env.MutablePropertySources
+ * @see org.springframework.context.annotation.PropertySource
  */
 public abstract class PropertySource<T> {
 
@@ -196,9 +196,9 @@ public abstract class PropertySource<T> {
 	 * {@code ApplicationContext}.  In such cases, a stub should be used to hold the
 	 * intended default position/order of the property source, then be replaced
 	 * during context refresh.
-	 * @seeorg.springframework.context.support.AbstractApplicationContext#initPropertySources()
-	 * @seeorg.springframework.web.context.support.StandardServletEnvironment
-	 * @seeorg.springframework.web.context.support.ServletContextPropertySource
+	 * @see org.springframework.context.support.AbstractApplicationContext#initPropertySources()
+	 * @see org.springframework.web.context.support.StandardServletEnvironment
+	 * @see org.springframework.web.context.support.ServletContextPropertySource
 	 */
 	public static class StubPropertySource extends PropertySource<Object> {
 

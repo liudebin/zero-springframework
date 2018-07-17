@@ -70,16 +70,16 @@ public class SimpleApplicationEventMulticaster extends AbstractApplicationEventM
 
 
 	/**
-	 * Set a custom executor (typically a {@linkorg.springframework.core.task.TaskExecutor})
+	 * Set a custom executor (typically a {@link org.springframework.core.task.TaskExecutor})
 	 * to invoke each listener with.
-	 * <p>Default is equivalent to {@linkorg.springframework.core.task.SyncTaskExecutor},
+	 * <p>Default is equivalent to {@link org.springframework.core.task.SyncTaskExecutor},
 	 * executing all listeners synchronously in the calling thread.
 	 * <p>Consider specifying an asynchronous task executor here to not block the
 	 * caller until all listeners have been executed. However, note that asynchronous
 	 * execution will not participate in the caller's thread context (class loader,
 	 * transaction association) unless the TaskExecutor explicitly supports this.
-	 * @seeorg.springframework.core.task.SyncTaskExecutor
-	 * @seeorg.springframework.core.task.SimpleAsyncTaskExecutor
+	 * @see org.springframework.core.task.SyncTaskExecutor
+	 * @see org.springframework.core.task.SimpleAsyncTaskExecutor
 	 */
 	public void setTaskExecutor(@Nullable Executor taskExecutor) {
 		this.taskExecutor = taskExecutor;
@@ -103,9 +103,9 @@ public class SimpleApplicationEventMulticaster extends AbstractApplicationEventM
 	 * won't necessarily stop execution of other listeners.
 	 * <p>Consider setting an {@link ErrorHandler} implementation that catches
 	 * and logs exceptions (a la
-	 * {@linkorg.springframework.scheduling.support.TaskUtils#LOG_AND_SUPPRESS_ERROR_HANDLER})
+	 * {@link org.springframework.scheduling.support.TaskUtils#LOG_AND_SUPPRESS_ERROR_HANDLER})
 	 * or an implementation that logs exceptions while nevertheless propagating them
-	 * (e.g. {@linkorg.springframework.scheduling.support.TaskUtils#LOG_AND_PROPAGATE_ERROR_HANDLER}).
+	 * (e.g. {@link org.springframework.scheduling.support.TaskUtils#LOG_AND_PROPAGATE_ERROR_HANDLER}).
 	 * @since 4.1
 	 */
 	public void setErrorHandler(@Nullable ErrorHandler errorHandler) {

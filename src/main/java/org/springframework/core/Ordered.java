@@ -25,20 +25,20 @@ package org.springframework.core;
  * priority.
  *
  * <p>Note that there is also a <em>priority</em> marker for this interface:
- * {@linkorg.springframework.core.PriorityOrdered}. Order values expressed by {@code PriorityOrdered}
+ * {@link org.springframework.core.PriorityOrdered}. Order values expressed by {@code PriorityOrdered}
  * objects always apply before same order values expressed by <em>plain</em>
  * {@link Ordered} objects.
  *
- * <p>Consult the Javadoc for {@linkorg.springframework.core.OrderComparator} for details on the
+ * <p>Consult the Javadoc for {@link org.springframework.core.OrderComparator} for details on the
  * sort semantics for non-ordered objects.
  *
  * @author Juergen Hoeller
  * @author Sam Brannen
  * @since 07.04.2003
- * @seeorg.springframework.core.PriorityOrdered
+ * @see org.springframework.core.PriorityOrdered
  * @see OrderComparator
- * @seeorg.springframework.core.annotation.Order
- * @seeorg.springframework.core.annotation.AnnotationAwareOrderComparator
+ * @see org.springframework.core.annotation.Order
+ * @see org.springframework.core.annotation.AnnotationAwareOrderComparator
  */
 public interface Ordered {
 

@@ -38,7 +38,7 @@ import java.lang.annotation.*;
  * @see Repository
  * @see Service
  * @see Controller
- * @seeorg.springframework.context.annotation.ClassPathBeanDefinitionScanner
+ * @see org.springframework.context.annotation.ClassPathBeanDefinitionScanner
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

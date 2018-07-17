@@ -107,10 +107,10 @@ public class DefaultNamespaceHandlerResolver implements NamespaceHandlerResolver
 
 
 	/**
-	 * Locate the {@linkorg.springframework.beans.factory.xml.NamespaceHandler} for the supplied namespace URI
+	 * Locate the {@link org.springframework.beans.factory.xml.NamespaceHandler} for the supplied namespace URI
 	 * from the configured mappings.
 	 * @param namespaceUri the relevant namespace URI
-	 * @return the located {@linkorg.springframework.beans.factory.xml.NamespaceHandler}, or {@code null} if none found
+	 * @return the located {@link org.springframework.beans.factory.xml.NamespaceHandler}, or {@code null} if none found
 	 */
 	@Override
 	public NamespaceHandler resolve(String namespaceUri) {

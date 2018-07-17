@@ -23,7 +23,7 @@ import java.lang.annotation.*;
  * are to be considered as non-nullable by default for a given package,
  * along with their underlying fields.
  *
- * <p>Should be used at package level in association with {@linkorg.springframework.lang.Nullable}
+ * <p>Should be used at package level in association with {@link org.springframework.lang.Nullable}
  * annotations at parameter and return value level.
  *
  * <p>Leverages JSR-305 meta-annotations to indicate its semantics to
@@ -32,7 +32,7 @@ import java.lang.annotation.*;
  * @author Sebastien Deleuze
  * @author Juergen Hoeller
  * @since 5.0
- * @seeorg.springframework.lang.Nullable
+ * @see org.springframework.lang.Nullable
 // * @see javax.annotation.Nonnull
  */
 @Target(ElementType.PACKAGE)

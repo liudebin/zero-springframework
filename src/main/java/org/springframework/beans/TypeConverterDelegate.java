@@ -18,13 +18,6 @@ package org.springframework.beans;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.core.MethodParameter;
-import org.springframework.core.convert.ConversionFailedException;
-import org.springframework.core.convert.TypeDescriptor;
-import org.springframework.lang.Nullable;
-import org.springframework.util.ClassUtils;
-import org.springframework.util.NumberUtils;
-import org.springframework.util.StringUtils;
 import org.springframework.core.CollectionFactory;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.convert.ConversionFailedException;
@@ -50,13 +43,13 @@ import java.util.Optional;
  * Internal helper class for converting property values to target types.
  *
  * <p>Works on a given {@link PropertyEditorRegistrySupport} instance.
- * Used as a delegate by {@linkorg.springframework.beans.BeanWrapperImpl} and {@link SimpleTypeConverter}.
+ * Used as a delegate by {@link org.springframework.beans.BeanWrapperImpl} and {@link SimpleTypeConverter}.
  *
  * @author Juergen Hoeller
  * @author Rob Harrop
  * @author Dave Syer
  * @since 2.0
- * @seeorg.springframework.beans.BeanWrapperImpl
+ * @see org.springframework.beans.BeanWrapperImpl
  * @see SimpleTypeConverter
  */
 class TypeConverterDelegate {

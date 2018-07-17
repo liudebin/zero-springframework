@@ -148,7 +148,7 @@ import java.lang.annotation.*;
  * <h3>{@code BeanFactoryPostProcessor}-returning {@code @Bean} methods</h3>
  *
  * <p>Special consideration must be taken for {@code @Bean} methods that return Spring
- * {@linkorg.springframework.beans.factory.config.BeanFactoryPostProcessor BeanFactoryPostProcessor}
+ * {@link org.springframework.beans.factory.config.BeanFactoryPostProcessor BeanFactoryPostProcessor}
  * ({@code BFPP}) types. Because {@code BFPP} objects must be instantiated very early in the
  * container lifecycle, they can interfere with processing of annotations such as {@code @Autowired},
  * {@code @Value}, and {@code @PostConstruct} within {@code @Configuration} classes. To avoid these
@@ -180,9 +180,9 @@ import java.lang.annotation.*;
  * @see DependsOn
  * @see Lazy
  * @see Primary
- * @seeorg.springframework.stereotype.Component
- * @seeorg.springframework.beans.factory.annotation.Autowired
- * @seeorg.springframework.beans.factory.annotation.Value
+ * @see org.springframework.stereotype.Component
+ * @see org.springframework.beans.factory.annotation.Autowired
+ * @see org.springframework.beans.factory.annotation.Value
  */
 @Target({ElementType.METHOD, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)
@@ -247,13 +247,13 @@ public @interface Bean {
 	 * creation time).
 	 * <p>To disable destroy method inference for a particular {@code @Bean}, specify an
 	 * empty string as the value, e.g. {@code @Bean(destroyMethod="")}. Note that the
-	 * {@linkorg.springframework.beans.factory.DisposableBean} and the
+	 * {@link org.springframework.beans.factory.DisposableBean} and the
 	 * {@link java.io.Closeable}/{@link AutoCloseable} interfaces will
 	 * nevertheless get detected and the corresponding destroy/close method invoked.
 	 * <p>Note: Only invoked on beans whose lifecycle is under the full control of the
 	 * factory, which is always the case for singletons but not guaranteed for any
 	 * other scope.
-	 * @seeorg.springframework.context.ConfigurableApplicationContext#close()
+	 * @see org.springframework.context.ConfigurableApplicationContext#close()
 	 */
 	String destroyMethod() default AbstractBeanDefinition.INFER_METHOD;
 

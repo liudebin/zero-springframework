@@ -32,7 +32,7 @@ import java.lang.reflect.Method;
  * @see AliasFor
  * @see AbstractAliasAwareAnnotationAttributeExtractor
  * @see MapAnnotationAttributeExtractor
- * @seeorg.springframework.core.annotation.AnnotationUtils#synthesizeAnnotation
+ * @see org.springframework.core.annotation.AnnotationUtils#synthesizeAnnotation
  */
 class DefaultAnnotationAttributeExtractor extends AbstractAliasAwareAnnotationAttributeExtractor<Annotation> {
 

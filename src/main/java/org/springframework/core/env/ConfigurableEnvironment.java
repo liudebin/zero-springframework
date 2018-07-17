@@ -69,7 +69,7 @@ import java.util.Map;
  * @author Chris Beams
  * @since 3.1
  * @see StandardEnvironment
- * @seeorg.springframework.context.ConfigurableApplicationContext#getEnvironment
+ * @see org.springframework.context.ConfigurableApplicationContext#getEnvironment
  */
 public interface ConfigurableEnvironment extends  Environment, ConfigurablePropertyResolver {
 
@@ -82,7 +82,7 @@ public interface ConfigurableEnvironment extends  Environment, ConfigurablePrope
 	 * {@link #addActiveProfile} to add a profile while preserving the existing set.
 	 * @see #addActiveProfile
 	 * @see #setDefaultProfiles
-	 * @seeorg.springframework.context.annotation.Profile
+	 * @see org.springframework.context.annotation.Profile
 	 * @see AbstractEnvironment#ACTIVE_PROFILES_PROPERTY_NAME
 	 * @throws IllegalArgumentException if any profile is null, empty or whitespace-only
 	 */
@@ -166,7 +166,7 @@ public interface ConfigurableEnvironment extends  Environment, ConfigurablePrope
 	 * property sources and profile information prior to calling {@code merge}.
 	 * @param parent the environment to merge with
 	 * @since 3.1.2
-	 * @seeorg.springframework.context.support.AbstractApplicationContext#setParent
+	 * @see org.springframework.context.support.AbstractApplicationContext#setParent
 	 */
 	void merge(ConfigurableEnvironment parent);
 

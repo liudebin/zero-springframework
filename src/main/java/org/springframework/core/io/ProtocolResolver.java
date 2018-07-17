@@ -21,13 +21,13 @@ import org.springframework.lang.Nullable;
 /**
  * A resolution strategy for protocol-specific resource handles.
  *
- * <p>Used as an SPI for {@linkorg.springframework.core.io.DefaultResourceLoader}, allowing for
+ * <p>Used as an SPI for {@link org.springframework.core.io.DefaultResourceLoader}, allowing for
  * custom protocols to be handled without subclassing the loader
  * implementation (or application context implementation).
  *
  * @author Juergen Hoeller
  * @since 4.3
- * @seeorg.springframework.core.io.DefaultResourceLoader#addProtocolResolver
+ * @see org.springframework.core.io.DefaultResourceLoader#addProtocolResolver
  */
 @FunctionalInterface
 public interface ProtocolResolver {

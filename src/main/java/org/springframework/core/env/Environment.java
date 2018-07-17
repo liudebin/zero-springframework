@@ -30,7 +30,7 @@ import org.springframework.core.env.*;
  * <p>A <em>profile</em> is a named, logical group of bean definitions to be registered
  * with the container only if the given profile is <em>active</em>. Beans may be assigned
  * to a profile whether defined in XML or via annotations; see the spring-beans 3.1 schema
- * or the {@linkorg.springframework.context.annotation.Profile @Profile} annotation for
+ * or the {@link org.springframework.context.annotation.Profile @Profile} annotation for
  * syntax details. The role of the {@code Environment} object with relation to profiles is
  * in determining which profiles (if any) are currently {@linkplain #getActiveProfiles
  * active}, and which profiles (if any) should be {@linkplain #getDefaultProfiles active
@@ -50,7 +50,7 @@ import org.springframework.core.env.*;
  * <p>In most cases, however, application-level beans should not need to interact with the
  * {@code Environment} directly but instead may have to have {@code ${...}} property
  * values replaced by a property placeholder configurer such as
- * {@linkorg.springframework.context.support.PropertySourcesPlaceholderConfigurer
+ * {@link org.springframework.context.support.PropertySourcesPlaceholderConfigurer
  * PropertySourcesPlaceholderConfigurer}, which itself is {@code EnvironmentAware} and
  * as of Spring 3.1 is registered by default when using
  * {@code <context:property-placeholder/>}.
@@ -64,14 +64,14 @@ import org.springframework.core.env.*;
  * @author Chris Beams
  * @since 3.1
  * @see PropertyResolver
- * @seeorg.springframework.core.env.EnvironmentCapable
+ * @see org.springframework.core.env.EnvironmentCapable
  * @see ConfigurableEnvironment
  * @see AbstractEnvironment
  * @see StandardEnvironment
- * @seeorg.springframework.context.EnvironmentAware
- * @seeorg.springframework.context.ConfigurableApplicationContext#getEnvironment
- * @seeorg.springframework.context.ConfigurableApplicationContext#setEnvironment
- * @seeorg.springframework.context.support.AbstractApplicationContext#createEnvironment
+ * @see org.springframework.context.EnvironmentAware
+ * @see org.springframework.context.ConfigurableApplicationContext#getEnvironment
+ * @see org.springframework.context.ConfigurableApplicationContext#setEnvironment
+ * @see org.springframework.context.support.AbstractApplicationContext#createEnvironment
  */
 public interface Environment extends PropertyResolver {
 

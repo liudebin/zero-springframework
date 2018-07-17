@@ -24,12 +24,12 @@ import org.springframework.lang.Nullable;
 import java.io.IOException;
 
 /**
- * The default implementation for {@linkorg.springframework.core.io.support.PropertySourceFactory},
+ * The default implementation for {@link org.springframework.core.io.support.PropertySourceFactory},
  * wrapping every resource in a {@link ResourcePropertySource}.
  *
  * @author Juergen Hoeller
  * @since 4.3
- * @seeorg.springframework.core.io.support.PropertySourceFactory
+ * @see org.springframework.core.io.support.PropertySourceFactory
  * @see ResourcePropertySource
  */
 public class DefaultPropertySourceFactory implements PropertySourceFactory {

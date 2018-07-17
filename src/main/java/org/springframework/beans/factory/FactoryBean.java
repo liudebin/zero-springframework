@@ -20,7 +20,7 @@ import org.springframework.lang.Nullable;
 import org.springframework.lang.Nullable;
 
 /**
- * Interface to be implemented by objects used within a {@linkorg.springframework.beans.factory.BeanFactory} which
+ * Interface to be implemented by objects used within a {@link org.springframework.beans.factory.BeanFactory} which
  * are themselves factories for individual objects. If a bean implements this
  * interface, it is used as a factory for an object to expose, not directly as a
  * bean instance that will be exposed itself.
@@ -34,15 +34,15 @@ import org.springframework.lang.Nullable;
  * interface allows for exposing more fine-grained behavioral metadata.
  *
  * <p>This interface is heavily used within the framework itself, for example for
- * the AOP {@linkorg.springframework.aop.framework.ProxyFactoryBean} or the
- * {@linkorg.springframework.jndi.JndiObjectFactoryBean}. It can be used for
+ * the AOP {@link org.springframework.aop.framework.ProxyFactoryBean} or the
+ * {@link org.springframework.jndi.JndiObjectFactoryBean}. It can be used for
  * custom components as well; however, this is only common for infrastructure code.
  *
  * <p><b>{@code FactoryBean} is a programmatic contract. Implementations are not
  * supposed to rely on annotation-driven injection or other reflective facilities.</b>
  * {@link #getObjectType()} {@link #getObject()} invocations may arrive early in
  * the bootstrap process, even ahead of any post-processor setup. If you need access
- * other beans, implement {@linkorg.springframework.beans.factory.BeanFactoryAware} and obtain them programmatically.
+ * other beans, implement {@link org.springframework.beans.factory.BeanFactoryAware} and obtain them programmatically.
  *
  * <p>Finally, FactoryBean objects participate in the containing BeanFactory's
  * synchronization of bean creation. There is usually no need for internal
@@ -52,9 +52,9 @@ import org.springframework.lang.Nullable;
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @since 08.03.2003
- * @seeorg.springframework.beans.factory.BeanFactory
- * @seeorg.springframework.aop.framework.ProxyFactoryBean
- * @seeorg.springframework.jndi.JndiObjectFactoryBean
+ * @see org.springframework.beans.factory.BeanFactory
+ * @see org.springframework.aop.framework.ProxyFactoryBean
+ * @see org.springframework.jndi.JndiObjectFactoryBean
  */
 public interface FactoryBean<T> {
 

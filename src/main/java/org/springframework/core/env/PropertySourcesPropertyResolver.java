@@ -22,14 +22,14 @@ import org.springframework.core.env.AbstractPropertyResolver;
 import org.springframework.lang.Nullable;
 
 /**
- * {@linkorg.springframework.core.env.PropertyResolver} implementation that resolves property values against
- * an underlying set of {@linkorg.springframework.core.env.PropertySources}.
+ * {@link org.springframework.core.env.PropertyResolver} implementation that resolves property values against
+ * an underlying set of {@link org.springframework.core.env.PropertySources}.
  *
  * @author Chris Beams
  * @author Juergen Hoeller
  * @since 3.1
- * @seeorg.springframework.core.env.PropertySource
- * @seeorg.springframework.core.env.PropertySources
+ * @see org.springframework.core.env.PropertySource
+ * @see org.springframework.core.env.PropertySources
 // * @see AbstractEnvironment
  */
 public class PropertySourcesPropertyResolver extends AbstractPropertyResolver {
@@ -40,7 +40,7 @@ public class PropertySourcesPropertyResolver extends AbstractPropertyResolver {
 
 	/**
 	 * Create a new resolver against the given property sources.
-	 * @param propertySources the set of {@linkorg.springframework.core.env.PropertySource} objects to use
+	 * @param propertySources the set of {@link org.springframework.core.env.PropertySource} objects to use
 	 */
 	public PropertySourcesPropertyResolver(@Nullable PropertySources propertySources) {
 		this.propertySources = propertySources;
@@ -98,7 +98,7 @@ public class PropertySourcesPropertyResolver extends AbstractPropertyResolver {
 	}
 
 	/**
-	 * Log the given key as found in the given {@linkorg.springframework.core.env.PropertySource}, resulting in
+	 * Log the given key as found in the given {@link org.springframework.core.env.PropertySource}, resulting in
 	 * the given value.
 	 * <p>The default implementation writes a debug log message with key and source.
 	 * As of 4.3.3, this does not log the value anymore in order to avoid accidental

@@ -49,7 +49,7 @@ import java.net.URLDecoder;
  * @author Juergen Hoeller
  * @since 31.07.2003
  * @see ResourceLoader
- * @seeorg.springframework.context.ApplicationContext
+ * @see org.springframework.context.ApplicationContext
  */
 public class ResourceEntityResolver extends DelegatingEntityResolver {
 

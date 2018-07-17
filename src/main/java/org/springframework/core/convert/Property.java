@@ -48,8 +48,8 @@ import java.util.Map;
  * @author Keith Donald
  * @author Phillip Webb
  * @since 3.1
- * @seeorg.springframework.core.convert.TypeDescriptor#TypeDescriptor(Property)
- * @seeorg.springframework.core.convert.TypeDescriptor#nested(Property, int)
+ * @see org.springframework.core.convert.TypeDescriptor#TypeDescriptor(Property)
+ * @see org.springframework.core.convert.TypeDescriptor#nested(Property, int)
  */
 public final class Property {
 

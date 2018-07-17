@@ -29,9 +29,9 @@ import java.beans.PropertyEditor;
 import java.util.*;
 
 /**
- * Base implementation of the {@linkorg.springframework.beans.PropertyEditorRegistry} interface.
+ * Base implementation of the {@link org.springframework.beans.PropertyEditorRegistry} interface.
  * Provides management of default editors and custom editors.
- * Mainly serves as base class for {@linkorg.springframework.beans.BeanWrapperImpl}.
+ * Mainly serves as base class for {@link org.springframework.beans.BeanWrapperImpl}.
  *
  * @author Juergen Hoeller
  * @author Rob Harrop

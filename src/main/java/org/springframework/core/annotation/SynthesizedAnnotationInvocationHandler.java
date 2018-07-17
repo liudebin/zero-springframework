@@ -42,8 +42,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author Sam Brannen
  * @since 4.2
  * @see Annotation
- * @seeorg.springframework.core.annotation.AnnotationAttributeExtractor
- * @seeorg.springframework.core.annotation.AnnotationUtils#synthesizeAnnotation(Annotation, AnnotatedElement)
+ * @see org.springframework.core.annotation.AnnotationAttributeExtractor
+ * @see org.springframework.core.annotation.AnnotationUtils#synthesizeAnnotation(Annotation, AnnotatedElement)
  */
 class SynthesizedAnnotationInvocationHandler implements InvocationHandler {
 
@@ -54,7 +54,7 @@ class SynthesizedAnnotationInvocationHandler implements InvocationHandler {
 
 	/**
 	 * Construct a new {@code SynthesizedAnnotationInvocationHandler} for
-	 * the supplied {@linkorg.springframework.core.annotation.AnnotationAttributeExtractor}.
+	 * the supplied {@link org.springframework.core.annotation.AnnotationAttributeExtractor}.
 	 * @param attributeExtractor the extractor to delegate to
 	 */
 	SynthesizedAnnotationInvocationHandler(AnnotationAttributeExtractor<?> attributeExtractor) {

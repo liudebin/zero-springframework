@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * Base class for message source implementations, providing support infrastructure
  * such as {@link MessageFormat} handling but not implementing concrete
- * methods defined in the {@linkorg.springframework.context.MessageSource}.
+ * methods defined in the {@link org.springframework.context.MessageSource}.
  *
  * <p>{@link AbstractMessageSource} derives from this class, providing concrete
  * {@code getMessage} implementations that delegate to a central template

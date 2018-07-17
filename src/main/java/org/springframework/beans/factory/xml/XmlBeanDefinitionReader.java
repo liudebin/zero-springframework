@@ -82,7 +82,7 @@ import java.util.Set;
  * @see DefaultBeanDefinitionDocumentReader
  * @see BeanDefinitionRegistry
  * @see DefaultListableBeanFactory
- * @seeorg.springframework.context.support.GenericApplicationContext
+ * @see org.springframework.context.support.GenericApplicationContext
  */
 public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 

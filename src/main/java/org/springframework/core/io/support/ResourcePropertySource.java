@@ -42,7 +42,7 @@ import java.util.Properties;
  * @author Juergen Hoeller
  * @since 3.1
  * @see Resource
- * @seeorg.springframework.core.io.support.EncodedResource
+ * @see org.springframework.core.io.support.EncodedResource
  */
 public class ResourcePropertySource extends PropertiesPropertySource {
 

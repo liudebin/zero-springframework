@@ -29,11 +29,11 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
  * actual instances of a bean. It is also allowed to modify the bean definition but
  * <i>only</i> for definition properties which are actually intended for concurrent
  * modification. Essentially, this only applies to operations defined on the
- * {@linkorg.springframework.beans.factory.support.RootBeanDefinition} itself but not to the properties of its base classes.
+ * {@link org.springframework.beans.factory.support.RootBeanDefinition} itself but not to the properties of its base classes.
  *
  * @author Juergen Hoeller
  * @since 2.5
- * @seeorg.springframework.beans.factory.config.ConfigurableBeanFactory#getMergedBeanDefinition
+ * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#getMergedBeanDefinition
  */
 public interface MergedBeanDefinitionPostProcessor extends BeanPostProcessor {
 

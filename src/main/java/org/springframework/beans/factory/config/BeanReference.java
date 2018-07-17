@@ -26,7 +26,7 @@ import org.springframework.beans.factory.config.*;
  * instance; it just expresses a logical reference to the name of a bean.
  *
  * <p>Serves as common interface implemented by any kind of bean reference
- * holder, such as {@linkorg.springframework.beans.factory.config.RuntimeBeanReference RuntimeBeanReference} and
+ * holder, such as {@link org.springframework.beans.factory.config.RuntimeBeanReference RuntimeBeanReference} and
  * {@link RuntimeBeanNameReference RuntimeBeanNameReference}.
  *
  * @author Juergen Hoeller

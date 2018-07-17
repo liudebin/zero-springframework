@@ -42,17 +42,17 @@ import java.util.function.Supplier;
 
 /**
  * Generic ApplicationContext implementation that holds a single internal
- * {@linkorg.springframework.beans.factory.support.DefaultListableBeanFactory}
+ * {@link org.springframework.beans.factory.support.DefaultListableBeanFactory}
  * instance and does not assume a specific bean definition format. Implements
- * the {@linkorg.springframework.beans.factory.support.BeanDefinitionRegistry}
+ * the {@link org.springframework.beans.factory.support.BeanDefinitionRegistry}
  * interface in order to allow for applying any bean definition readers to it.
  *
  * <p>Typical usage is to register a variety of bean definitions via the
- * {@linkorg.springframework.beans.factory.support.BeanDefinitionRegistry}
+ * {@link org.springframework.beans.factory.support.BeanDefinitionRegistry}
  * interface and then call {@link #refresh()} to initialize those beans
  * with application context semantics (handling
- * {@linkorg.springframework.context.ApplicationContextAware}, auto-detecting
- * {@linkorg.springframework.beans.factory.config.BeanFactoryPostProcessor BeanFactoryPostProcessors},
+ * {@link org.springframework.context.ApplicationContextAware}, auto-detecting
+ * {@link org.springframework.beans.factory.config.BeanFactoryPostProcessor BeanFactoryPostProcessors},
  * etc).
  *
  * <p>In contrast to other ApplicationContext implementations that create a new
@@ -78,7 +78,7 @@ import java.util.function.Supplier;
  * which are easier to set up - but less flexible, since you can just use standard
  * resource locations for XML bean definitions, rather than mixing arbitrary bean
  * definition formats. The equivalent in a web environment is
- * {@linkorg.springframework.web.context.support.XmlWebApplicationContext}.
+ * {@link org.springframework.web.context.support.XmlWebApplicationContext}.
  *
  * <p>For custom application context implementations that are supposed to read
  * special bean definition formats in a refreshable manner, consider deriving
@@ -89,8 +89,8 @@ import java.util.function.Supplier;
  * @since 1.1.2
  * @see #registerBeanDefinition
  * @see #refresh()
- * @seeorg.springframework.beans.factory.xml.XmlBeanDefinitionReader
- * @seeorg.springframework.beans.factory.support.PropertiesBeanDefinitionReader
+ * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
+ * @see org.springframework.beans.factory.support.PropertiesBeanDefinitionReader
  */
 public class GenericApplicationContext extends AbstractApplicationContext implements BeanDefinitionRegistry {
 
@@ -151,7 +151,7 @@ public class GenericApplicationContext extends AbstractApplicationContext implem
 	/**
 	 * Set the parent of this application context, also setting
 	 * the parent of the internal BeanFactory accordingly.
-	 * @seeorg.springframework.beans.factory.config.ConfigurableBeanFactory#setParentBeanFactory
+	 * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#setParentBeanFactory
 	 */
 	@Override
 	public void setParent(@Nullable ApplicationContext parent) {
@@ -169,7 +169,7 @@ public class GenericApplicationContext extends AbstractApplicationContext implem
 	 * a different definition with the same name, automatically replacing the former.
 	 * If not, an exception will be thrown. Default is "true".
 	 * @since 3.0
-	 * @seeorg.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowBeanDefinitionOverriding
+	 * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowBeanDefinitionOverriding
 	 */
 	public void setAllowBeanDefinitionOverriding(boolean allowBeanDefinitionOverriding) {
 		this.beanFactory.setAllowBeanDefinitionOverriding(allowBeanDefinitionOverriding);
@@ -181,7 +181,7 @@ public class GenericApplicationContext extends AbstractApplicationContext implem
 	 * <p>Default is "true". Turn this off to throw an exception when encountering
 	 * a circular reference, disallowing them completely.
 	 * @since 3.0
-	 * @seeorg.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowCircularReferences
+	 * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowCircularReferences
 	 */
 	public void setAllowCircularReferences(boolean allowCircularReferences) {
 		this.beanFactory.setAllowCircularReferences(allowCircularReferences);
@@ -200,9 +200,9 @@ public class GenericApplicationContext extends AbstractApplicationContext implem
 	 * be autodetected by the context and used for {@code getResources}
 	 * calls as well. Else, default resource pattern matching will apply.
 	 * @see #getResource
-	 * @seeorg.springframework.core.io.DefaultResourceLoader
-	 * @seeorg.springframework.core.io.FileSystemResourceLoader
-	 * @seeorg.springframework.core.io.support.ResourcePatternResolver
+	 * @see org.springframework.core.io.DefaultResourceLoader
+	 * @see org.springframework.core.io.FileSystemResourceLoader
+	 * @see org.springframework.core.io.support.ResourcePatternResolver
 	 * @see #getResources
 	 */
 	public void setResourceLoader(ResourceLoader resourceLoader) {

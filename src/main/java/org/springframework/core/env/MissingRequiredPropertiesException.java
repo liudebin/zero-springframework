@@ -24,9 +24,9 @@ import java.util.Set;
  *
  * @author Chris Beams
  * @since 3.1
- * @seeorg.springframework.core.env.ConfigurablePropertyResolver#setRequiredProperties(String...)
- * @seeorg.springframework.core.env.ConfigurablePropertyResolver#validateRequiredProperties()
- * @seeorg.springframework.context.support.AbstractApplicationContext#prepareRefresh()
+ * @see org.springframework.core.env.ConfigurablePropertyResolver#setRequiredProperties(String...)
+ * @see org.springframework.core.env.ConfigurablePropertyResolver#validateRequiredProperties()
+ * @see org.springframework.context.support.AbstractApplicationContext#prepareRefresh()
  */
 @SuppressWarnings("serial")
 public class MissingRequiredPropertiesException extends IllegalStateException {
@@ -36,8 +36,8 @@ public class MissingRequiredPropertiesException extends IllegalStateException {
 	/**
 	 * Return the set of properties marked as required but not present
 	 * upon validation.
-	 * @seeorg.springframework.core.env.ConfigurablePropertyResolver#setRequiredProperties(String...)
-	 * @seeorg.springframework.core.env.ConfigurablePropertyResolver#validateRequiredProperties()
+	 * @see org.springframework.core.env.ConfigurablePropertyResolver#setRequiredProperties(String...)
+	 * @see org.springframework.core.env.ConfigurablePropertyResolver#validateRequiredProperties()
 	 */
 	public Set<String> getMissingRequiredProperties() {
 		return missingRequiredProperties;

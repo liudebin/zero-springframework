@@ -24,12 +24,12 @@ import org.springframework.lang.Nullable;
  * Also extends the PropertyEditorRegistry interface, which defines methods
  * for PropertyEditor management.
  *
- * <p>Serves as base interface for {@linkorg.springframework.beans.BeanWrapper}.
+ * <p>Serves as base interface for {@link org.springframework.beans.BeanWrapper}.
  *
  * @author Juergen Hoeller
  * @author Stephane Nicoll
  * @since 2.0
- * @seeorg.springframework.beans.BeanWrapper
+ * @see org.springframework.beans.BeanWrapper
  */
 public interface ConfigurablePropertyAccessor extends PropertyAccessor, PropertyEditorRegistry, TypeConverter {
 

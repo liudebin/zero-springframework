@@ -25,15 +25,15 @@ import java.beans.PropertyEditor;
  * Encapsulates methods for registering JavaBeans {@link PropertyEditor PropertyEditors}.
  * This is the central interface that a {@link PropertyEditorRegistrar} operates on.
  *
- * <p>Extended by {@link BeanWrapper}; implemented by {@linkorg.springframework.beans.BeanWrapperImpl}
- * and {@linkorg.springframework.validation.DataBinder}.
+ * <p>Extended by {@link BeanWrapper}; implemented by {@link org.springframework.beans.BeanWrapperImpl}
+ * and {@link org.springframework.validation.DataBinder}.
  *
  * @author Juergen Hoeller
  * @since 1.2.6
  * @see PropertyEditor
  * @see PropertyEditorRegistrar
  * @see BeanWrapper
- * @seeorg.springframework.validation.DataBinder
+ * @see org.springframework.validation.DataBinder
  */
 public interface PropertyEditorRegistry {
 

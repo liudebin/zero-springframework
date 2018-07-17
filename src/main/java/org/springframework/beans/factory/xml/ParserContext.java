@@ -34,12 +34,12 @@ import java.util.Stack;
 /**
  * Context that gets passed along a bean definition parsing process,
  * encapsulating all relevant configuration as well as state.
- * Nested inside an {@linkorg.springframework.beans.factory.xml.XmlReaderContext}.
+ * Nested inside an {@link org.springframework.beans.factory.xml.XmlReaderContext}.
  *
  * @author Rob Harrop
  * @author Juergen Hoeller
  * @since 2.0
- * @seeorg.springframework.beans.factory.xml.XmlReaderContext
+ * @see org.springframework.beans.factory.xml.XmlReaderContext
  * @see BeanDefinitionParserDelegate
  */
 public final class ParserContext {

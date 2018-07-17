@@ -23,7 +23,7 @@ import org.springframework.util.StringUtils;
 import java.util.Map;
 
 /**
- * {@linkorg.springframework.core.env.PropertySource} that reads keys and values from a {@code Map} object.
+ * {@link org.springframework.core.env.PropertySource} that reads keys and values from a {@code Map} object.
  *
  * @author Chris Beams
  * @author Juergen Hoeller

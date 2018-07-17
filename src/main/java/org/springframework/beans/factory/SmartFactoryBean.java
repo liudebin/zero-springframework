@@ -17,12 +17,12 @@
 package org.springframework.beans.factory;
 
 /**
- * Extension of the {@linkorg.springframework.beans.factory.FactoryBean} interface. Implementations may
+ * Extension of the {@link org.springframework.beans.factory.FactoryBean} interface. Implementations may
  * indicate whether they always return independent instances, for the
  * case where their {@link #isSingleton()} implementation returning
  * {@code false} does not clearly indicate independent instances.
  *
- * <p>Plain {@linkorg.springframework.beans.factory.FactoryBean} implementations which do not implement
+ * <p>Plain {@link org.springframework.beans.factory.FactoryBean} implementations which do not implement
  * this extended interface are simply assumed to always return independent
  * instances if their {@link #isSingleton()} implementation returns
  * {@code false}; the exposed object is only accessed on demand.
@@ -30,7 +30,7 @@ package org.springframework.beans.factory;
  * <p><b>NOTE:</b> This interface is a special purpose interface, mainly for
  * internal use within the framework and within collaborating frameworks.
  * In general, application-provided FactoryBeans should simply implement
- * the plain {@linkorg.springframework.beans.factory.FactoryBean} interface. New methods might be added
+ * the plain {@link org.springframework.beans.factory.FactoryBean} interface. New methods might be added
  * to this extended interface even in point releases.
  *
  * @author Juergen Hoeller
@@ -72,7 +72,7 @@ public interface SmartFactoryBean<T> extends FactoryBean<T> {
 	 * post-processors expect to be applied on startup.
 	 * <p>The default implementation returns {@code false}.
 	 * @return whether eager initialization applies
-	 * @seeorg.springframework.beans.factory.config.ConfigurableListableBeanFactory#preInstantiateSingletons()
+	 * @see org.springframework.beans.factory.config.ConfigurableListableBeanFactory#preInstantiateSingletons()
 	 */
 	default boolean isEagerInit() {
 		return false;

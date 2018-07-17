@@ -141,7 +141,7 @@ public abstract class AnnotationVisitor {
      * Visits an array value of the annotation. Note that arrays of primitive
      * types (such as byte, boolean, short, char, int, long, float or double)
      * can be passed as value to {@link #visit visit}. This is what
-     * {@linkorg.springframework.asm.ClassReader} does.
+     * {@link org.springframework.asm.ClassReader} does.
      * 
      * @param name
      *            the value name.

@@ -30,13 +30,13 @@ import java.io.IOException;
  * 策略接口：解决定位模式为资源对象。
  * <p>This is an extension to the {@link ResourceLoader}
  * interface. A passed-in ResourceLoader (for example, an
- * {@linkorg.springframework.context.ApplicationContext} passed in via
- * {@linkorg.springframework.context.ResourceLoaderAware} when running in a context)
+ * {@link org.springframework.context.ApplicationContext} passed in via
+ * {@link org.springframework.context.ResourceLoaderAware} when running in a context)
  * can be checked whether it implements this extended interface too.
  *
  * <p>{@link PathMatchingResourcePatternResolver} is a standalone implementation
  * that is usable outside an ApplicationContext, also used by
- * {@linkorg.springframework.core.io.support.ResourceArrayPropertyEditor} for populating Resource array bean properties.
+ * {@link org.springframework.core.io.support.ResourceArrayPropertyEditor} for populating Resource array bean properties.
  *
  * <p>Can be used with any sort of location pattern (e.g. "/WEB-INF/*-context.xml"):
  * Input patterns have to match the strategy implementation. This interface just
@@ -51,8 +51,8 @@ import java.io.IOException;
  * @since 1.0.2
  * @see Resource
  * @see ResourceLoader
- * @seeorg.springframework.context.ApplicationContext
- * @seeorg.springframework.context.ResourceLoaderAware
+ * @see org.springframework.context.ApplicationContext
+ * @see org.springframework.context.ResourceLoaderAware
  */
 public interface ResourcePatternResolver extends ResourceLoader {
 

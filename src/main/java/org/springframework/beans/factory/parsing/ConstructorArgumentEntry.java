@@ -19,7 +19,7 @@ package org.springframework.beans.factory.parsing;
 import org.springframework.util.Assert;
 
 /**
- * {@linkorg.springframework.beans.factory.parsing.ParseState} entry representing a (possibly indexed)
+ * {@link org.springframework.beans.factory.parsing.ParseState} entry representing a (possibly indexed)
  * constructor argument.
  *
  * @author Rob Harrop

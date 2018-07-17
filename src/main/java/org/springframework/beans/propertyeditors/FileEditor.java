@@ -51,8 +51,8 @@ import java.io.IOException;
  * @author Thomas Risberg
  * @since 09.12.2003
  * @see File
- * @seeorg.springframework.core.io.ResourceEditor
- * @seeorg.springframework.core.io.ResourceLoader
+ * @see org.springframework.core.io.ResourceEditor
+ * @see org.springframework.core.io.ResourceLoader
  * @see URLEditor
  * @see InputStreamEditor
  */

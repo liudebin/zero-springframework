@@ -26,9 +26,9 @@ import org.springframework.lang.Nullable;
  * <p>This interface is typically used to encapsulate a generic factory which
  * returns a new instance (prototype) of some target object on each invocation.
  *
- * <p>This interface is similar to {@linkorg.springframework.beans.factory.FactoryBean}, but implementations
+ * <p>This interface is similar to {@link org.springframework.beans.factory.FactoryBean}, but implementations
  * of the latter are normally meant to be defined as SPI instances in a
- * {@linkorg.springframework.beans.factory.BeanFactory}, while implementations of this class are normally meant
+ * {@link org.springframework.beans.factory.BeanFactory}, while implementations of this class are normally meant
  * to be fed as an API to other beans (through injection). As such, the
  * {@code getObject()} method has different exception handling behavior.
  *

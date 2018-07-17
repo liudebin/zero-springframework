@@ -29,21 +29,21 @@ import java.lang.annotation.*;
  * "#{systemProperties.myProp}" style expressions.
  *
  * <p>Note that actual processing of the {@code @Value} annotation is performed
- * by a {@linkorg.springframework.beans.factory.config.BeanPostProcessor
+ * by a {@link org.springframework.beans.factory.config.BeanPostProcessor
  * BeanPostProcessor} which in turn means that you <em>cannot</em> use
  * {@code @Value} within
- * {@linkorg.springframework.beans.factory.config.BeanPostProcessor
+ * {@link org.springframework.beans.factory.config.BeanPostProcessor
  * BeanPostProcessor} or
- * {@linkorg.springframework.beans.factory.config.BeanFactoryPostProcessor BeanFactoryPostProcessor}
+ * {@link org.springframework.beans.factory.config.BeanFactoryPostProcessor BeanFactoryPostProcessor}
  * types. Please consult the javadoc for the {@link AutowiredAnnotationBeanPostProcessor}
  * class (which, by default, checks for the presence of this annotation).
  *
  * @author Juergen Hoeller
  * @since 3.0
  * @see AutowiredAnnotationBeanPostProcessor
- * @seeorg.springframework.beans.factory.annotation.Autowired
- * @seeorg.springframework.beans.factory.config.BeanExpressionResolver
- * @seeorg.springframework.beans.factory.support.AutowireCandidateResolver#getSuggestedValue
+ * @see org.springframework.beans.factory.annotation.Autowired
+ * @see org.springframework.beans.factory.config.BeanExpressionResolver
+ * @see org.springframework.beans.factory.support.AutowireCandidateResolver#getSuggestedValue
  */
 @Target({ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)

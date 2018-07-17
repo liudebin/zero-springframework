@@ -34,7 +34,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  *
  * <p>Where <em>precedence</em> is mentioned in methods such as {@link #addFirst}
  * and {@link #addLast}, this is with regard to the order in which property sources
- * will be searched when resolving a given property with a {@linkorg.springframework.core.env.PropertyResolver}.
+ * will be searched when resolving a given property with a {@link org.springframework.core.env.PropertyResolver}.
  *
  * @author Chris Beams
  * @author Juergen Hoeller

@@ -35,7 +35,7 @@ import java.security.ProtectionDomain;
  * Post-processor that registers AspectJ's
  * {@link org.aspectj.weaver.loadtime.ClassPreProcessorAgentAdapter}
  * with the Spring application context's default
- * {@linkorg.springframework.instrument.classloading.LoadTimeWeaver}.
+ * {@link org.springframework.instrument.classloading.LoadTimeWeaver}.
  *
  * @author Juergen Hoeller
  * @author Ramnivas Laddad
@@ -97,7 +97,7 @@ public class AspectJWeavingEnabler
 	/**
 	 * ClassFileTransformer decorator that suppresses processing of AspectJ
 	 * classes in order to avoid potential LinkageErrors.
-	 * @seeorg.springframework.context.annotation.LoadTimeWeavingConfiguration
+	 * @see org.springframework.context.annotation.LoadTimeWeavingConfiguration
 	 */
 	private static class AspectJClassBypassingClassFileTransformer implements ClassFileTransformer {
 

@@ -26,8 +26,8 @@ package org.springframework.context;
  * @since 1.1.1
  * @see ApplicationContext
  * @see ApplicationEventPublisherAware
- * @seeorg.springframework.context.ApplicationEvent
- * @seeorg.springframework.context.event.EventPublicationInterceptor
+ * @see org.springframework.context.ApplicationEvent
+ * @see org.springframework.context.event.EventPublicationInterceptor
  */
 @FunctionalInterface
 public interface ApplicationEventPublisher {
@@ -37,7 +37,7 @@ public interface ApplicationEventPublisher {
 	 * application of an application event. Events may be framework events
 	 * (such as RequestHandledEvent) or application-specific events.
 	 * @param event the event to publish
-	 * @seeorg.springframework.web.context.support.RequestHandledEvent
+	 * @see org.springframework.web.context.support.RequestHandledEvent
 	 */
 	default void publishEvent(ApplicationEvent event) {
 		publishEvent((Object) event);

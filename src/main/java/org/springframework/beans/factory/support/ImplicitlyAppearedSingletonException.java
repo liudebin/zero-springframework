@@ -17,7 +17,7 @@
 package org.springframework.beans.factory.support;
 
 /**
- * Internal exception to be propagated from {@linkorg.springframework.beans.factory.support.ConstructorResolver},
+ * Internal exception to be propagated from {@link org.springframework.beans.factory.support.ConstructorResolver},
  * passed through to the initiating {@link DefaultSingletonBeanRegistry}
  * (without wrapping in a {@code BeanCreationException}).
  *

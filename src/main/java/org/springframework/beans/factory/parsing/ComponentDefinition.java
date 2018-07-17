@@ -28,17 +28,17 @@ import org.springframework.beans.factory.config.BeanReference;
  * Interface that describes the logical view of a set of {@link BeanDefinition BeanDefinitions}
  * and {@link BeanReference BeanReferences} as presented in some configuration context.
  *
- * <p>With the introduction of {@linkorg.springframework.beans.factory.xml.NamespaceHandler pluggable custom XML tags},
+ * <p>With the introduction of {@link org.springframework.beans.factory.xml.NamespaceHandler pluggable custom XML tags},
  * it is now possible for a single logical configuration entity, in this case an XML tag, to
  * create multiple {@link BeanDefinition BeanDefinitions} and {@link BeanReference RuntimeBeanReferences}
  * in order to provide more succinct configuration and greater convenience to end users. As such, it can
  * no longer be assumed that each configuration entity (e.g. XML tag) maps to one {@link BeanDefinition}.
  * For tool vendors and other users who wish to present visualization or support for configuring Spring
  * applications it is important that there is some mechanism in place to tie the {@link BeanDefinition BeanDefinitions}
- * in the {@linkorg.springframework.beans.factory.BeanFactory} back to the configuration data in a way
- * that has concrete meaning to the end user. As such, {@linkorg.springframework.beans.factory.xml.NamespaceHandler}
+ * in the {@link org.springframework.beans.factory.BeanFactory} back to the configuration data in a way
+ * that has concrete meaning to the end user. As such, {@link org.springframework.beans.factory.xml.NamespaceHandler}
  * implementations are able to publish events in the form of a {@code ComponentDefinition} for each
- * logical entity being configured. Third parties can then {@linkorg.springframework.beans.factory.parsing.ReaderEventListener subscribe to these events},
+ * logical entity being configured. Third parties can then {@link org.springframework.beans.factory.parsing.ReaderEventListener subscribe to these events},
  * allowing for a user-centric view of the bean metadata.
  *
  * <p>Each {@code ComponentDefinition} has a {@link #getSource source object} which is configuration-specific.
@@ -46,9 +46,9 @@ import org.springframework.beans.factory.config.BeanReference;
  * supplied configuration information. In addition to this, each {@link BeanDefinition} enclosed in a
  * {@code ComponentDefinition} has its own {@link BeanDefinition#getSource() source object} which may point
  * to a different, more specific, set of configuration data. Beyond this, individual pieces of bean metadata such
- * as the {@linkorg.springframework.beans.PropertyValue PropertyValues} may also have a source object giving an
+ * as the {@link org.springframework.beans.PropertyValue PropertyValues} may also have a source object giving an
  * even greater level of detail. Source object extraction is handled through the
- * {@linkorg.springframework.beans.factory.parsing.SourceExtractor} which can be customized as required.
+ * {@link org.springframework.beans.factory.parsing.SourceExtractor} which can be customized as required.
  *
  * <p>Whilst direct access to important {@link BeanReference BeanReferences} is provided through
  * {@link #getBeanReferences}, tools may wish to inspect all {@link BeanDefinition BeanDefinitions} to gather

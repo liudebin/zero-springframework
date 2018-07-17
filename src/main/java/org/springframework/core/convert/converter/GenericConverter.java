@@ -35,8 +35,8 @@ import java.util.Set;
  * process. This allows for resolving source and target field metadata such as annotations and
  * generics information, which can be used to influence the conversion logic.
  *
- * <p>This interface should generally not be used when the simpler {@linkorg.springframework.core.convert.converter.Converter} or
- * {@linkorg.springframework.core.convert.converter.ConverterFactory} interface is sufficient.
+ * <p>This interface should generally not be used when the simpler {@link org.springframework.core.convert.converter.Converter} or
+ * {@link org.springframework.core.convert.converter.ConverterFactory} interface is sufficient.
  *
  * <p>Implementations may additionally implement {@link ConditionalConverter}.
  *
@@ -44,7 +44,7 @@ import java.util.Set;
  * @author Juergen Hoeller
  * @since 3.0
  * @see TypeDescriptor
- * @seeorg.springframework.core.convert.converter.Converter
+ * @see org.springframework.core.convert.converter.Converter
  * @see ConverterFactory
  * @see ConditionalConverter
  */

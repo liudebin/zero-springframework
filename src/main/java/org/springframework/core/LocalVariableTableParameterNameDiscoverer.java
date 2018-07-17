@@ -33,7 +33,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Implementation of {@linkorg.springframework.core.ParameterNameDiscoverer} that uses the LocalVariableTable
+ * Implementation of {@link org.springframework.core.ParameterNameDiscoverer} that uses the LocalVariableTable
  * information in the method attributes to discover parameter names. Returns
  * {@code null} if the class file was compiled without debug information.
  *

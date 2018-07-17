@@ -27,13 +27,13 @@ import java.lang.annotation.*;
  * patterns sense), or something similar. This annotation is a general-purpose stereotype
  * and individual teams may narrow their semantics and use as appropriate.
  *
- * <p>This annotation serves as a specialization of {@linkorg.springframework.stereotype.Component @Component},
+ * <p>This annotation serves as a specialization of {@link org.springframework.stereotype.Component @Component},
  * allowing for implementation classes to be autodetected through classpath scanning.
  *
  * @author Juergen Hoeller
  * @since 2.5
- * @seeorg.springframework.stereotype.Component
- * @seeorg.springframework.stereotype.Repository
+ * @see org.springframework.stereotype.Component
+ * @see org.springframework.stereotype.Repository
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

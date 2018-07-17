@@ -22,7 +22,7 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
- * {@linkorg.springframework.core.env.PropertySource} implementation that extracts properties from a
+ * {@link org.springframework.core.env.PropertySource} implementation that extracts properties from a
  * {@link Properties} object.
  *
  * <p>Note that because a {@code Properties} object is technically an

@@ -32,7 +32,7 @@ import org.springframework.util.Assert;
  * <p>The config location defaults can be overridden via {@link #getConfigLocations},
  * Config locations can either denote concrete files like "/myfiles/context.xml"
  * or Ant-style patterns like "/myfiles/*-context.xml" (see the
- * {@linkorg.springframework.util.AntPathMatcher} javadoc for pattern details).
+ * {@link org.springframework.util.AntPathMatcher} javadoc for pattern details).
  *
  * <p>Note: In case of multiple config locations, later bean definitions will
  * override ones defined in earlier loaded files. This can be leveraged to
@@ -40,7 +40,7 @@ import org.springframework.util.Assert;
  *
  * <p><b>This is a simple, one-stop shop convenience ApplicationContext.
  * Consider using the {@link GenericApplicationContext} class in combination
- * with an {@linkorg.springframework.beans.factory.xml.XmlBeanDefinitionReader}
+ * with an {@link org.springframework.beans.factory.xml.XmlBeanDefinitionReader}
  * for more flexible context setup.</b>
  *
  * @author Rod Johnson
@@ -154,9 +154,9 @@ public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContex
 	 * @param path relative (or absolute) path within the class path
 	 * @param clazz the class to load resources with (basis for the given paths)
 	 * @throws BeansException if context creation failed
-	 * @seeorg.springframework.core.io.ClassPathResource#ClassPathResource(String, Class)
-	 * @seeorg.springframework.context.support.GenericApplicationContext
-	 * @seeorg.springframework.beans.factory.xml.XmlBeanDefinitionReader
+	 * @see org.springframework.core.io.ClassPathResource#ClassPathResource(String, Class)
+	 * @see org.springframework.context.support.GenericApplicationContext
+	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
 	 */
 	public ClassPathXmlApplicationContext(String path, Class<?> clazz) throws BeansException {
 		this(new String[] {path}, clazz);
@@ -168,9 +168,9 @@ public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContex
 	 * @param paths array of relative (or absolute) paths within the class path
 	 * @param clazz the class to load resources with (basis for the given paths)
 	 * @throws BeansException if context creation failed
-	 * @seeorg.springframework.core.io.ClassPathResource#ClassPathResource(String, Class)
-	 * @seeorg.springframework.context.support.GenericApplicationContext
-	 * @seeorg.springframework.beans.factory.xml.XmlBeanDefinitionReader
+	 * @see org.springframework.core.io.ClassPathResource#ClassPathResource(String, Class)
+	 * @see org.springframework.context.support.GenericApplicationContext
+	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
 	 */
 	public ClassPathXmlApplicationContext(String[] paths, Class<?> clazz) throws BeansException {
 		this(paths, clazz, null);
@@ -184,9 +184,9 @@ public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContex
 	 * @param clazz the class to load resources with (basis for the given paths)
 	 * @param parent the parent context
 	 * @throws BeansException if context creation failed
-	 * @seeorg.springframework.core.io.ClassPathResource#ClassPathResource(String, Class)
-	 * @seeorg.springframework.context.support.GenericApplicationContext
-	 * @seeorg.springframework.beans.factory.xml.XmlBeanDefinitionReader
+	 * @see org.springframework.core.io.ClassPathResource#ClassPathResource(String, Class)
+	 * @see org.springframework.context.support.GenericApplicationContext
+	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
 	 */
 	public ClassPathXmlApplicationContext(String[] paths, Class<?> clazz, @Nullable ApplicationContext parent)
 			throws BeansException {

@@ -19,16 +19,16 @@ package org.springframework.core.convert.converter;
 import org.springframework.core.convert.TypeDescriptor;
 
 /**
- * A {@linkorg.springframework.core.convert.converter.GenericConverter} that may conditionally execute based on attributes
+ * A {@link org.springframework.core.convert.converter.GenericConverter} that may conditionally execute based on attributes
  * of the {@code source} and {@code target} {@link TypeDescriptor}.
  *
- * <p>See {@linkorg.springframework.core.convert.converter.ConditionalConverter} for details.
+ * <p>See {@link org.springframework.core.convert.converter.ConditionalConverter} for details.
  *
  * @author Keith Donald
  * @author Phillip Webb
  * @since 3.0
- * @seeorg.springframework.core.convert.converter.GenericConverter
- * @seeorg.springframework.core.convert.converter.ConditionalConverter
+ * @see org.springframework.core.convert.converter.GenericConverter
+ * @see org.springframework.core.convert.converter.ConditionalConverter
  */
 public interface ConditionalGenericConverter extends GenericConverter, ConditionalConverter {
 

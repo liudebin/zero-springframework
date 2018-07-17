@@ -36,7 +36,7 @@ import java.beans.PropertyEditorSupport;
  *
  * @author Juergen Hoeller
  * @since 10.06.2003
- * @seeorg.springframework.validation.DataBinder#registerCustomEditor
+ * @see org.springframework.validation.DataBinder#registerCustomEditor
  */
 public class CustomBooleanEditor extends PropertyEditorSupport {
 

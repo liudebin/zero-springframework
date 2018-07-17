@@ -37,11 +37,11 @@ public interface AutowireCandidateResolver {
 	 * Determine whether the given bean definition qualifies as an
 	 * autowire candidate for the given dependency.
 	 * <p>The default implementation checks
-	 * {@linkorg.springframework.beans.factory.config.BeanDefinition#isAutowireCandidate()}.
+	 * {@link org.springframework.beans.factory.config.BeanDefinition#isAutowireCandidate()}.
 	 * @param bdHolder the bean definition including bean name and aliases
 	 * @param descriptor the descriptor for the target method parameter or field
 	 * @return whether the bean definition qualifies as autowire candidate
-	 * @seeorg.springframework.beans.factory.config.BeanDefinition#isAutowireCandidate()
+	 * @see org.springframework.beans.factory.config.BeanDefinition#isAutowireCandidate()
 	 */
 	default boolean isAutowireCandidate(BeanDefinitionHolder bdHolder, DependencyDescriptor descriptor) {
 		return bdHolder.getBeanDefinition().isAutowireCandidate();

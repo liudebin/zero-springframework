@@ -35,8 +35,8 @@ import java.io.IOException;
  * @author Juergen Hoeller
  * @since 3.0.3
  * @see InputSource
- * @seeorg.springframework.core.io.ResourceEditor
- * @seeorg.springframework.core.io.ResourceLoader
+ * @see org.springframework.core.io.ResourceEditor
+ * @see org.springframework.core.io.ResourceLoader
  * @see URLEditor
  * @see FileEditor
  */

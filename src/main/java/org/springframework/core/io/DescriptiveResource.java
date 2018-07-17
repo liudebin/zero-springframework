@@ -24,7 +24,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * Simple {@linkorg.springframework.core.io.Resource} implementation that holds a resource description
+ * Simple {@link org.springframework.core.io.Resource} implementation that holds a resource description
  * but does not point to an actually readable resource.
  *
  * <p>To be used as placeholder if a {@code Resource} argument is

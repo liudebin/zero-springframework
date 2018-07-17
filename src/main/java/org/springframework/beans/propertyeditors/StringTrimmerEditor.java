@@ -30,7 +30,7 @@ import java.beans.PropertyEditorSupport;
  * Needs to be explicitly registered, e.g. for command binding.
  *
  * @author Juergen Hoeller
- * @seeorg.springframework.validation.DataBinder#registerCustomEditor
+ * @see org.springframework.validation.DataBinder#registerCustomEditor
  */
 public class StringTrimmerEditor extends PropertyEditorSupport {
 

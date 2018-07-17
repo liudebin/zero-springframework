@@ -35,7 +35,7 @@ import java.io.Closeable;
  * SPI interface to be implemented by most if not all application contexts.
  * Provides facilities to configure an application context in addition
  * to the application context client methods in the
- * {@linkorg.springframework.context.ApplicationContext} interface.
+ * {@link org.springframework.context.ApplicationContext} interface.
  *
  * <p>Configuration and lifecycle methods are encapsulated here to avoid
  * making them obvious to ApplicationContext client code. The present
@@ -50,16 +50,16 @@ public interface ConfigurableApplicationContext extends ApplicationContext, Life
 	/**
 	 * Any number of these characters are considered delimiters between
 	 * multiple context config paths in a single String value.
-	 * @seeorg.springframework.context.support.AbstractXmlApplicationContext#setConfigLocation
-	 * @seeorg.springframework.web.context.ContextLoader#CONFIG_LOCATION_PARAM
-	 * @seeorg.springframework.web.servlet.FrameworkServlet#setContextConfigLocation
+	 * @see org.springframework.context.support.AbstractXmlApplicationContext#setConfigLocation
+	 * @see org.springframework.web.context.ContextLoader#CONFIG_LOCATION_PARAM
+	 * @see org.springframework.web.servlet.FrameworkServlet#setContextConfigLocation
 	 */
 	String CONFIG_LOCATION_DELIMITERS = ",; \t\n";
 
 	/**
 	 * Name of the ConversionService bean in the factory.
 	 * If none is supplied, default conversion rules apply.
-	 * @seeorg.springframework.core.convert.ConversionService
+	 * @see org.springframework.core.convert.ConversionService
 	 * @since 3.0
 	 */
 	String CONVERSION_SERVICE_BEAN_NAME = "conversionService";
@@ -69,7 +69,7 @@ public interface ConfigurableApplicationContext extends ApplicationContext, Life
 	 * the context will use a temporary ClassLoader for type matching, in order
 	 * to allow the LoadTimeWeaver to process all actual bean classes.
 	 * @since 2.5
-	 * @seeorg.springframework.instrument.classloading.LoadTimeWeaver
+	 * @see org.springframework.instrument.classloading.LoadTimeWeaver
 	 */
 	String LOAD_TIME_WEAVER_BEAN_NAME = "loadTimeWeaver";
 
@@ -104,7 +104,7 @@ public interface ConfigurableApplicationContext extends ApplicationContext, Life
 	 * a constructor if it isn't available when an object of this class is created,
 	 * for example in case of WebApplicationContext setup.
 	 * @param parent the parent context
-	 * @seeorg.springframework.web.context.ConfigurableWebApplicationContext
+	 * @see org.springframework.web.context.ConfigurableWebApplicationContext
 	 */
 	void setParent(@Nullable ApplicationContext parent);
 
@@ -138,8 +138,8 @@ public interface ConfigurableApplicationContext extends ApplicationContext, Life
 	 * on refresh if the context is not active yet, or on the fly with the
 	 * current event multicaster in case of a context that is already active.
 	 * @param listener the ApplicationListener to register
-	 * @seeorg.springframework.context.event.ContextRefreshedEvent
-	 * @seeorg.springframework.context.event.ContextClosedEvent
+	 * @see org.springframework.context.event.ContextRefreshedEvent
+	 * @see org.springframework.context.event.ContextClosedEvent
 	 */
 	void addApplicationListener(ApplicationListener<?> listener);
 

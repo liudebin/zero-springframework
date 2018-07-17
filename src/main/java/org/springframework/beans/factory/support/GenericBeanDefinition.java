@@ -35,7 +35,7 @@ import org.springframework.lang.Nullable;
  * @author Juergen Hoeller
  * @since 2.5
  * @see #setParentName
- * @seeorg.springframework.beans.factory.support.RootBeanDefinition
+ * @see org.springframework.beans.factory.support.RootBeanDefinition
  * @see ChildBeanDefinition
  */
 @SuppressWarnings("serial")

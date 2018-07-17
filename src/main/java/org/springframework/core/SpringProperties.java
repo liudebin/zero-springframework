@@ -40,10 +40,10 @@ import java.util.Properties;
  *
  * @author Juergen Hoeller
  * @since 3.2.7
- * @seeorg.springframework.core.env.AbstractEnvironment#IGNORE_GETENV_PROPERTY_NAME
- * @seeorg.springframework.beans.CachedIntrospectionResults#IGNORE_BEANINFO_PROPERTY_NAME
- * @seeorg.springframework.jdbc.core.StatementCreatorUtils#IGNORE_GETPARAMETERTYPE_PROPERTY_NAME
- * @seeorg.springframework.test.context.cache.ContextCache#MAX_CONTEXT_CACHE_SIZE_PROPERTY_NAME
+ * @see org.springframework.core.env.AbstractEnvironment#IGNORE_GETENV_PROPERTY_NAME
+ * @see org.springframework.beans.CachedIntrospectionResults#IGNORE_BEANINFO_PROPERTY_NAME
+ * @see org.springframework.jdbc.core.StatementCreatorUtils#IGNORE_GETPARAMETERTYPE_PROPERTY_NAME
+ * @see org.springframework.test.context.cache.ContextCache#MAX_CONTEXT_CACHE_SIZE_PROPERTY_NAME
  */
 public abstract class SpringProperties {
 

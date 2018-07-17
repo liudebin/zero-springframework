@@ -52,13 +52,13 @@ import java.util.*;
  * resolving values contained in bean definition objects
  * into the actual values applied to the target bean instance.
  *
- * <p>Operates on an {@linkorg.springframework.beans.factory.support.AbstractBeanFactory} and a plain
+ * <p>Operates on an {@link org.springframework.beans.factory.support.AbstractBeanFactory} and a plain
  * {@link BeanDefinition} object.
- * Used by {@linkorg.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory}.
+ * Used by {@link org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory}.
  *
  * @author Juergen Hoeller
  * @since 1.2
- * @seeorg.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory
+ * @see org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory
  */
 class BeanDefinitionValueResolver {
 

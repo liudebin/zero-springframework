@@ -27,7 +27,7 @@ import org.springframework.lang.Nullable;
 import java.beans.PropertyDescriptor;
 
 /**
- * Subinterface of {@linkorg.springframework.beans.factory.config.BeanPostProcessor} that adds a before-instantiation callback,
+ * Subinterface of {@link org.springframework.beans.factory.config.BeanPostProcessor} that adds a before-instantiation callback,
  * and a callback after instantiation but before explicit properties are set or
  * autowiring occurs.
  *
@@ -38,15 +38,15 @@ import java.beans.PropertyDescriptor;
  *
  * <p><b>NOTE:</b> This interface is a special purpose interface, mainly for
  * internal use within the framework. It is recommended to implement the plain
- * {@linkorg.springframework.beans.factory.config.BeanPostProcessor} interface as far as possible, or to derive from
+ * {@link org.springframework.beans.factory.config.BeanPostProcessor} interface as far as possible, or to derive from
  * {@link InstantiationAwareBeanPostProcessorAdapter} in order to be shielded
  * from extensions to this interface.
  *
  * @author Juergen Hoeller
  * @author Rod Johnson
  * @since 1.2
- * @seeorg.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator#setCustomTargetSourceCreators
- * @seeorg.springframework.aop.framework.autoproxy.target.LazyInitTargetSourceCreator
+ * @see org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator#setCustomTargetSourceCreators
+ * @see org.springframework.aop.framework.autoproxy.target.LazyInitTargetSourceCreator
  */
 public interface InstantiationAwareBeanPostProcessor extends BeanPostProcessor {
 
@@ -57,7 +57,7 @@ public interface InstantiationAwareBeanPostProcessor extends BeanPostProcessor {
 	 * <p>If a non-null object is returned by this method, the bean creation process
 	 * will be short-circuited. The only further processing applied is the
 	 * {@link #postProcessAfterInitialization} callback from the configured
-	 * {@linkorg.springframework.beans.factory.config.BeanPostProcessor BeanPostProcessors}.
+	 * {@link org.springframework.beans.factory.config.BeanPostProcessor BeanPostProcessors}.
 	 * <p>This callback will only be applied to bean definitions with a bean class.
 	 * In particular, it will not be applied to beans with a "factory-method".
 	 * <p>Post-processors may implement the extended
@@ -69,8 +69,8 @@ public interface InstantiationAwareBeanPostProcessor extends BeanPostProcessor {
 	 * @return the bean object to expose instead of a default instance of the target bean,
 	 * or {@code null} to proceed with default instantiation
 	 * @throws BeansException in case of errors
-	 * @seeorg.springframework.beans.factory.support.AbstractBeanDefinition#hasBeanClass
-	 * @seeorg.springframework.beans.factory.support.AbstractBeanDefinition#getFactoryMethodName
+	 * @see org.springframework.beans.factory.support.AbstractBeanDefinition#hasBeanClass
+	 * @see org.springframework.beans.factory.support.AbstractBeanDefinition#getFactoryMethodName
 	 */
 	@Nullable
 	default Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException {
@@ -81,7 +81,7 @@ public interface InstantiationAwareBeanPostProcessor extends BeanPostProcessor {
 	 * Perform operations after the bean has been instantiated, via a constructor or factory method,
 	 * but before Spring property population (from explicit properties or autowiring) occurs.
 	 * <p>This is the ideal callback for performing field injection on the given bean instance.
-	 * See Spring's own {@linkorg.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor}
+	 * See Spring's own {@link org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor}
 	 * for a typical example.
 	 * <p>The default implementation returns {@code true}.
 	 * @param bean the bean instance created, with properties not having been set yet
@@ -113,7 +113,7 @@ public interface InstantiationAwareBeanPostProcessor extends BeanPostProcessor {
 	 * (can be the passed-in PropertyValues instance), or {@code null}
 	 * to skip property population
 	 * @throws BeansException in case of errors
-	 * @seeorg.springframework.beans.MutablePropertyValues
+	 * @see org.springframework.beans.MutablePropertyValues
 	 */
 	@Nullable
 	default PropertyValues postProcessPropertyValues(

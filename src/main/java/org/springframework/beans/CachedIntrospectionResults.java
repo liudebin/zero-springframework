@@ -58,7 +58,7 @@ import java.util.concurrent.ConcurrentMap;
  * Prefer an arrangement where the Spring jars live in the same ClassLoader as the
  * application classes, which allows for clean caching along with the application's
  * lifecycle in any case. For a web application, consider declaring a local
- * {@linkorg.springframework.web.util.IntrospectorCleanupListener} in {@code web.xml}
+ * {@link org.springframework.web.util.IntrospectorCleanupListener} in {@code web.xml}
  * in case of a multi-ClassLoader layout, which will allow for effective caching as well.
  *
  * <p>In case of a non-clean ClassLoader arrangement without a cleanup listener having
@@ -88,7 +88,7 @@ public class CachedIntrospectionResults {
 	 * effectively: Prefer an arrangement where the Spring jars live in the same ClassLoader
 	 * as the application classes, which allows for clean caching along with the application's
 	 * lifecycle in any case. For a web application, consider declaring a local
-	 * {@linkorg.springframework.web.util.IntrospectorCleanupListener} in {@code web.xml}
+	 * {@link org.springframework.web.util.IntrospectorCleanupListener} in {@code web.xml}
 	 * in case of a multi-ClassLoader layout, which will allow for effective caching as well.
 	 * @see Introspector#getBeanInfo(Class, int)
 	 */

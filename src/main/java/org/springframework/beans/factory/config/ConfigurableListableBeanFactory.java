@@ -39,9 +39,9 @@ import java.util.Iterator;
  * 除 ConfigurableBeanFactory 之外， 提供了功能去分析、修改 bean definitions，和 预实例化 单例。
  * analyze and modify bean definitions, and to pre-instantiate singletons.
  *
- * <p>This subinterface of {@linkorg.springframework.beans.factory.BeanFactory}
+ * <p>This subinterface of {@link org.springframework.beans.factory.BeanFactory}
  * is not meant to be used in normal application code: Stick to
- * {@linkorg.springframework.beans.factory.BeanFactory} or
+ * {@link org.springframework.beans.factory.BeanFactory} or
  * {@link ListableBeanFactory} for typical
  * use cases. This interface is just meant to allow for framework-internal
  * plug'n'play even when needing access to bean factory configuration methods.
@@ -69,8 +69,8 @@ public interface ConfigurableListableBeanFactory
 	 * <p>By default, only the BeanFactoryAware interface is ignored.
 	 * For further types to ignore, invoke this method for each type.
 	 * @param ifc the dependency interface to ignore
-	 * @seeorg.springframework.beans.factory.BeanFactoryAware
-	 * @seeorg.springframework.context.ApplicationContextAware
+	 * @see org.springframework.beans.factory.BeanFactoryAware
+	 * @see org.springframework.context.ApplicationContextAware
 	 */
 	void ignoreDependencyInterface(Class<?> ifc);
 
@@ -87,7 +87,7 @@ public interface ConfigurableListableBeanFactory
 	 * as well if declared as an autowiring dependency (e.g. ListableBeanFactory),
 	 * as long as the given value actually implements the extended interface.
 	 * @param autowiredValue the corresponding autowired value. This may also be an
-	 * implementation of the {@linkorg.springframework.beans.factory.ObjectFactory}
+	 * implementation of the {@link org.springframework.beans.factory.ObjectFactory}
 	 * interface, which allows for lazy resolution of the actual target value.
 	 */
 	void registerResolvableDependency(Class<?> dependencyType, @Nullable Object autowiredValue);
@@ -162,7 +162,7 @@ public interface ConfigurableListableBeanFactory
 
 	/**
 	 * Ensure that all non-lazy-init singletons are instantiated, also considering
-	 * {@linkorg.springframework.beans.factory.FactoryBean FactoryBeans}.
+	 * {@link org.springframework.beans.factory.FactoryBean FactoryBeans}.
 	 * Typically invoked at the end of factory setup, if desired.
 	 * @throws BeansException if one of the singleton beans could not be created.
 	 * Note: This may have left the factory with some beans already initialized!

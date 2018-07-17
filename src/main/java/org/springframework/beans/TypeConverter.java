@@ -53,8 +53,8 @@ public interface TypeConverter {
 	 * @throws TypeMismatchException if type conversion failed
 	 * @see java.beans.PropertyEditor#setAsText(String)
 	 * @see java.beans.PropertyEditor#getValue()
-	 * @seeorg.springframework.core.convert.ConversionService
-	 * @seeorg.springframework.core.convert.converter.Converter
+	 * @see org.springframework.core.convert.ConversionService
+	 * @see org.springframework.core.convert.converter.Converter
 	 */
 	@Nullable
 	<T> T convertIfNecessary(@Nullable Object value, @Nullable Class<T> requiredType) throws TypeMismatchException;
@@ -72,8 +72,8 @@ public interface TypeConverter {
 	 * @throws TypeMismatchException if type conversion failed
 	 * @see java.beans.PropertyEditor#setAsText(String)
 	 * @see java.beans.PropertyEditor#getValue()
-	 * @seeorg.springframework.core.convert.ConversionService
-	 * @seeorg.springframework.core.convert.converter.Converter
+	 * @see org.springframework.core.convert.ConversionService
+	 * @see org.springframework.core.convert.converter.Converter
 	 */
 	@Nullable
 	<T> T convertIfNecessary(@Nullable Object value, @Nullable Class<T> requiredType,
@@ -92,8 +92,8 @@ public interface TypeConverter {
 	 * @throws TypeMismatchException if type conversion failed
 	 * @see java.beans.PropertyEditor#setAsText(String)
 	 * @see java.beans.PropertyEditor#getValue()
-	 * @seeorg.springframework.core.convert.ConversionService
-	 * @seeorg.springframework.core.convert.converter.Converter
+	 * @see org.springframework.core.convert.ConversionService
+	 * @see org.springframework.core.convert.converter.Converter
 	 */
 	@Nullable
 	<T> T convertIfNecessary(@Nullable Object value, @Nullable Class<T> requiredType, @Nullable Field field)

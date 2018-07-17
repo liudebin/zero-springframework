@@ -43,7 +43,7 @@ import java.util.Set;
  * @author Mark Fisher
  * @author Sam Brannen
  * @since 1.1.2
- * @seeorg.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory
+ * @see org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory
  */
 abstract class AutowireUtils {
 

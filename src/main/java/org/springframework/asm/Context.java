@@ -31,7 +31,7 @@
 package org.springframework.asm;
 
 /**
- * Information about a class being parsed in a {@linkorg.springframework.asm.ClassReader}.
+ * Information about a class being parsed in a {@link org.springframework.asm.ClassReader}.
  * 
  * @author Eric Bruneton
  */

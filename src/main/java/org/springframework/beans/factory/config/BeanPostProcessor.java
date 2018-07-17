@@ -38,7 +38,7 @@ import org.springframework.lang.Nullable;
  * @since 10.10.2003
  * @see InstantiationAwareBeanPostProcessor
  * @see DestructionAwareBeanPostProcessor
- * @seeorg.springframework.beans.factory.config.ConfigurableBeanFactory#addBeanPostProcessor
+ * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#addBeanPostProcessor
  * @see BeanFactoryPostProcessor
  */
 public interface BeanPostProcessor {
@@ -54,7 +54,7 @@ public interface BeanPostProcessor {
 	 * @return the bean instance to use, either the original or a wrapped one;
 	 * if {@code null}, no subsequent BeanPostProcessors will be invoked
 	 * @throws BeansException in case of errors
-	 * @seeorg.springframework.beans.factory.InitializingBean#afterPropertiesSet
+	 * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet
 	 */
 	@Nullable
 	default Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
@@ -79,8 +79,8 @@ public interface BeanPostProcessor {
 	 * @return the bean instance to use, either the original or a wrapped one;
 	 * if {@code null}, no subsequent BeanPostProcessors will be invoked
 	 * @throws BeansException in case of errors
-	 * @seeorg.springframework.beans.factory.InitializingBean#afterPropertiesSet
-	 * @seeorg.springframework.beans.factory.FactoryBean
+	 * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet
+	 * @see org.springframework.beans.factory.FactoryBean
 	 */
 	@Nullable
 	default Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {

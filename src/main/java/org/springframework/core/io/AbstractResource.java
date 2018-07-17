@@ -131,7 +131,7 @@ public abstract class AbstractResource implements Resource {
 	/**
 	 * This implementation returns {@link Channels#newChannel(InputStream)}
 	 * with the result of {@link #getInputStream()}.
-	 * <p>This is the same as in {@linkorg.springframework.core.io.Resource}'s corresponding default method
+	 * <p>This is the same as in {@link org.springframework.core.io.Resource}'s corresponding default method
 	 * but mirrored here for efficient JVM-level dispatching in a class hierarchy.
 	 */
 	@Override

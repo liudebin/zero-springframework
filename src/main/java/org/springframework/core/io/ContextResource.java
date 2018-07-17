@@ -21,11 +21,11 @@ package org.springframework.core.io;
  * 'context', e.g. from a {@link javax.servlet.ServletContext} but also
  * from plain classpath paths or relative file system paths (specified
  * without an explicit prefix, hence applying relative to the local
- * {@linkorg.springframework.core.io.ResourceLoader}'s context).
+ * {@link org.springframework.core.io.ResourceLoader}'s context).
  *
  * @author Juergen Hoeller
  * @since 2.5
- * @seeorg.springframework.web.context.support.ServletContextResource
+ * @see org.springframework.web.context.support.ServletContextResource
  */
 public interface ContextResource extends Resource {
 

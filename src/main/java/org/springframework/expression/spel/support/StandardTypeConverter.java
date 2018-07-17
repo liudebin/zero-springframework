@@ -36,7 +36,7 @@ import org.springframework.util.Assert;
  * @author Juergen Hoeller
  * @author Andy Clement
  * @since 3.0
- * @seeorg.springframework.core.convert.ConversionService
+ * @see org.springframework.core.convert.ConversionService
  */
 public class StandardTypeConverter implements TypeConverter {
 

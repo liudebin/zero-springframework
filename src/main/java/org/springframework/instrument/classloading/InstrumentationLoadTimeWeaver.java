@@ -35,7 +35,7 @@ import java.util.List;
  *
  * <p><code class="code">-javaagent:path/to/org.springframework.instrument.jar</code>
  *
- * <p>where {@codeorg.springframework.instrument.jar} is a JAR file containing
+ * <p>where {@code org.springframework.instrument.jar} is a JAR file containing
  * the {@link InstrumentationSavingAgent} class, as shipped with Spring.
  *
  * <p>In Eclipse, for example, set the "Run configuration"'s JVM args to be of the form:

@@ -34,7 +34,7 @@ import java.security.AccessController;
 import java.security.PrivilegedAction;
 
 /**
- * {@linkorg.springframework.beans.factory.config.BeanPostProcessor}
+ * {@link org.springframework.beans.factory.config.BeanPostProcessor}
  * implementation that passes the ApplicationContext to beans that
  * implement the {@link EnvironmentAware}, {@link EmbeddedValueResolverAware},
  * {@link ResourceLoaderAware}, {@link ApplicationEventPublisherAware},
@@ -49,13 +49,13 @@ import java.security.PrivilegedAction;
  * @author Costin Leau
  * @author Chris Beams
  * @since 10.10.2003
- * @seeorg.springframework.context.EnvironmentAware
- * @seeorg.springframework.context.EmbeddedValueResolverAware
- * @seeorg.springframework.context.ResourceLoaderAware
- * @seeorg.springframework.context.ApplicationEventPublisherAware
- * @seeorg.springframework.context.MessageSourceAware
- * @seeorg.springframework.context.ApplicationContextAware
- * @seeorg.springframework.context.support.AbstractApplicationContext#refresh()
+ * @see org.springframework.context.EnvironmentAware
+ * @see org.springframework.context.EmbeddedValueResolverAware
+ * @see org.springframework.context.ResourceLoaderAware
+ * @see org.springframework.context.ApplicationEventPublisherAware
+ * @see org.springframework.context.MessageSourceAware
+ * @see org.springframework.context.ApplicationContextAware
+ * @see org.springframework.context.support.AbstractApplicationContext#refresh()
  */
 class ApplicationContextAwareProcessor implements BeanPostProcessor {
 

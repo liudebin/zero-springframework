@@ -21,7 +21,7 @@ package org.springframework.asm;
  * of the ASM bytecode manipulation library (currently based on version 5.0).
  *
  * <p>See <a href="package-summary.html">package-level javadocs</a> for more
- * information on {@codeorg.springframework.asm}.
+ * information on {@code org.springframework.asm}.
  *
  * @author Chris Beams
  * @since 3.2
@@ -30,7 +30,7 @@ public final class SpringAsmInfo {
 
 	/**
 	 * The ASM compatibility version for Spring's ASM visitor implementations:
-	 * currently {@linkorg.springframework.asm.Opcodes#ASM5}.
+	 * currently {@link org.springframework.asm.Opcodes#ASM5}.
 	 */
 	public static final int ASM_VERSION = Opcodes.ASM5;
 

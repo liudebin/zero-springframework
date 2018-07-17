@@ -26,7 +26,7 @@ import java.lang.annotation.*;
  * @author Mark Fisher
  * @author Juergen Hoeller
  * @since 2.5
- * @seeorg.springframework.beans.factory.annotation.Autowired
+ * @see org.springframework.beans.factory.annotation.Autowired
  */
 @Target({ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER, ElementType.TYPE, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)

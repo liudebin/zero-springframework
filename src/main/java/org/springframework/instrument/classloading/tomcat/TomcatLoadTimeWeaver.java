@@ -32,7 +32,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * {@linkorg.springframework.instrument.classloading.LoadTimeWeaver} implementation
+ * {@link org.springframework.instrument.classloading.LoadTimeWeaver} implementation
  * for Tomcat's new {@code org.apache.tomcat.InstrumentableClassLoader}.
  * Also capable of handling Spring's TomcatInstrumentableClassLoader when encountered.
  *
@@ -54,7 +54,7 @@ public class TomcatLoadTimeWeaver implements LoadTimeWeaver {
 	/**
 	 * Create a new instance of the {@link TomcatLoadTimeWeaver} class using
 	 * the default {@link ClassLoader class loader}.
-	 * @seeorg.springframework.util.ClassUtils#getDefaultClassLoader()
+	 * @see org.springframework.util.ClassUtils#getDefaultClassLoader()
 	 */
 	public TomcatLoadTimeWeaver() {
 		this(ClassUtils.getDefaultClassLoader());

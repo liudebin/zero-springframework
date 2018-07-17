@@ -37,7 +37,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Default implementation of the {@link ResourceLoader} interface.
  * Used by {@link ResourceEditor}, and serves as base class for
- * {@linkorg.springframework.context.support.AbstractApplicationContext}.
+ * {@link org.springframework.context.support.AbstractApplicationContext}.
  * Can also be used standalone.
  *
  * <p>Will return a {@link UrlResource} if the location value is a URL,
@@ -47,7 +47,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author Juergen Hoeller
  * @since 10.03.2004
  * @see FileSystemResourceLoader
- * @seeorg.springframework.context.support.ClassPathXmlApplicationContext
+ * @see org.springframework.context.support.ClassPathXmlApplicationContext
  */
 public class DefaultResourceLoader implements ResourceLoader {
 
@@ -181,8 +181,8 @@ public class DefaultResourceLoader implements ResourceLoader {
 	 * @param path the path to the resource
 	 * @return the corresponding Resource handle
 	 * @see ClassPathResource
-	 * @seeorg.springframework.context.support.FileSystemXmlApplicationContext#getResourceByPath
-	 * @seeorg.springframework.web.context.support.XmlWebApplicationContext#getResourceByPath
+	 * @see org.springframework.context.support.FileSystemXmlApplicationContext#getResourceByPath
+	 * @see org.springframework.web.context.support.XmlWebApplicationContext#getResourceByPath
 	 */
 	protected Resource getResourceByPath(String path) {
 		return new ClassPathContextResource(path, getClassLoader());

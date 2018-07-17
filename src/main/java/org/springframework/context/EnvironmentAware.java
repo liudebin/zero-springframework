@@ -25,7 +25,7 @@ import org.springframework.core.env.Environment;
  *
  * @author Chris Beams
  * @since 3.1
- * @seeorg.springframework.core.env.EnvironmentCapable
+ * @see org.springframework.core.env.EnvironmentCapable
  */
 public interface EnvironmentAware extends Aware {
 

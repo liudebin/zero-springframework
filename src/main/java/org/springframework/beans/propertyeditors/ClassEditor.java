@@ -34,7 +34,7 @@ import java.beans.PropertyEditorSupport;
  * @author Rick Evans
  * @since 13.05.2003
  * @see Class#forName
- * @seeorg.springframework.util.ClassUtils#forName(String, ClassLoader)
+ * @see org.springframework.util.ClassUtils#forName(String, ClassLoader)
  */
 public class ClassEditor extends PropertyEditorSupport {
 

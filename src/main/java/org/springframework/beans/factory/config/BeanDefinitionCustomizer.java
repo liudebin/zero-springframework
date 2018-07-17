@@ -22,7 +22,7 @@ package org.springframework.beans.factory.config;
  *
  * @author Juergen Hoeller
  * @since 5.0
- * @seeorg.springframework.beans.factory.support.BeanDefinitionBuilder#applyCustomizers
+ * @see org.springframework.beans.factory.support.BeanDefinitionBuilder#applyCustomizers
  */
 @FunctionalInterface
 public interface BeanDefinitionCustomizer {

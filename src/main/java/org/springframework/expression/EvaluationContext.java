@@ -26,7 +26,7 @@ import java.util.List;
  * references are resolved when encountered during expression evaluation.
  *
  * <p>There is a default implementation of this EvaluationContext interface:
- * {@linkorg.springframework.expression.spel.support.StandardEvaluationContext}
+ * {@link org.springframework.expression.spel.support.StandardEvaluationContext}
  * which can be extended, rather than having to implement everything manually.
  *
  * @author Andy Clement

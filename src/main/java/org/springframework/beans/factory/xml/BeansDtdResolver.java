@@ -40,7 +40,7 @@ import java.io.IOException;
  * @author Juergen Hoeller
  * @author Colin Sampaleanu
  * @since 04.06.2003
- * @seeorg.springframework.beans.factory.xml.ResourceEntityResolver
+ * @see org.springframework.beans.factory.xml.ResourceEntityResolver
  */
 public class BeansDtdResolver implements EntityResolver {
 

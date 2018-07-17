@@ -23,19 +23,19 @@ import org.springframework.beans.factory.config.*;
 import org.springframework.lang.Nullable;
 
 /**
- * Strategy interface used by a {@linkorg.springframework.beans.factory.config.ConfigurableBeanFactory},
+ * Strategy interface used by a {@link org.springframework.beans.factory.config.ConfigurableBeanFactory},
  * representing a target scope to hold bean instances in.
  * This allows for extending the BeanFactory's standard scopes
- * {@linkorg.springframework.beans.factory.config.ConfigurableBeanFactory#SCOPE_SINGLETON "singleton"} and
- * {@linkorg.springframework.beans.factory.config.ConfigurableBeanFactory#SCOPE_PROTOTYPE "prototype"}
+ * {@link org.springframework.beans.factory.config.ConfigurableBeanFactory#SCOPE_SINGLETON "singleton"} and
+ * {@link org.springframework.beans.factory.config.ConfigurableBeanFactory#SCOPE_PROTOTYPE "prototype"}
  * with custom further scopes, registered for a
- * {@linkorg.springframework.beans.factory.config.ConfigurableBeanFactory#registerScope(String, Scope) specific key}.
+ * {@link org.springframework.beans.factory.config.ConfigurableBeanFactory#registerScope(String, Scope) specific key}.
  *
- * <p>{@linkorg.springframework.context.ApplicationContext} implementations
- * such as a {@linkorg.springframework.web.context.WebApplicationContext}
+ * <p>{@link org.springframework.context.ApplicationContext} implementations
+ * such as a {@link org.springframework.web.context.WebApplicationContext}
  * may register additional standard scopes specific to their environment,
- * e.g. {@linkorg.springframework.web.context.WebApplicationContext#SCOPE_REQUEST "request"}
- * and {@linkorg.springframework.web.context.WebApplicationContext#SCOPE_SESSION "session"},
+ * e.g. {@link org.springframework.web.context.WebApplicationContext#SCOPE_REQUEST "request"}
+ * and {@link org.springframework.web.context.WebApplicationContext#SCOPE_SESSION "session"},
  * based on this Scope SPI.
  *
  * <p>Even if its primary use is for extended scopes in a web environment,
@@ -54,11 +54,11 @@ import org.springframework.lang.Nullable;
  * @author Juergen Hoeller
  * @author Rob Harrop
  * @since 2.0
- * @seeorg.springframework.beans.factory.config.ConfigurableBeanFactory#registerScope
+ * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#registerScope
  * @see CustomScopeConfigurer
- * @seeorg.springframework.aop.scope.ScopedProxyFactoryBean
- * @seeorg.springframework.web.context.request.RequestScope
- * @seeorg.springframework.web.context.request.SessionScope
+ * @see org.springframework.aop.scope.ScopedProxyFactoryBean
+ * @see org.springframework.web.context.request.RequestScope
+ * @see org.springframework.web.context.request.SessionScope
  */
 public interface Scope {
 
@@ -120,8 +120,8 @@ public interface Scope {
 	 * Furthermore, the Runnable will usually be serializable, provided
 	 * that its target object is serializable as well.
 	 * @throws IllegalStateException if the underlying scope is not currently active
-	 * @seeorg.springframework.beans.factory.DisposableBean
-	 * @seeorg.springframework.beans.factory.support.AbstractBeanDefinition#getDestroyMethodName()
+	 * @see org.springframework.beans.factory.DisposableBean
+	 * @see org.springframework.beans.factory.support.AbstractBeanDefinition#getDestroyMethodName()
 	 * @see DestructionAwareBeanPostProcessor
 	 */
 	void registerDestructionCallback(String name, Runnable callback);

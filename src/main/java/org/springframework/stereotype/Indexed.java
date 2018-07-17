@@ -29,10 +29,10 @@ import java.lang.annotation.*;
  * implements or extends from the annotated element. The stereotype is the
  * fully qualified name of the annotated element.
  *
- * <p>Consider the default {@linkorg.springframework.stereotype.Component} annotation that is meta-annotated
- * with this annotation. If a component is annotated with {@linkorg.springframework.stereotype.Component},
+ * <p>Consider the default {@link org.springframework.stereotype.Component} annotation that is meta-annotated
+ * with this annotation. If a component is annotated with {@link org.springframework.stereotype.Component},
  * an entry for that component will be added to the index using the
- * {@codeorg.springframework.stereotype.Component} stereotype.
+ * {@code org.springframework.stereotype.Component} stereotype.
  *
  * <p>This annotation is also honored on meta-annotations. Consider this
  * custom annotation:
@@ -48,9 +48,9 @@ import java.lang.annotation.*;
  * </pre>
  *
  * If the above annotation is present on a type, it will be indexed with two
- * stereotypes: {@codeorg.springframework.stereotype.Component} and
+ * stereotypes: {@code org.springframework.stereotype.Component} and
  * {@code com.example.PrivilegedService}. While {@link Service} isn't directly
- * annotated with {@code Indexed}, it is meta-annotated with {@linkorg.springframework.stereotype.Component}.
+ * annotated with {@code Indexed}, it is meta-annotated with {@link org.springframework.stereotype.Component}.
  *
  * <p>It is also possible to index all implementations of a certain interface or
  * all the subclasses of a given class by adding {@code @Indexed} on it.

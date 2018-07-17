@@ -36,7 +36,7 @@ import java.io.IOException;
  * {@code Resource} properties instead of using a {@code String} location property.
  *
  * <p>The path may contain {@code ${...}} placeholders, to be
- * resolved as {@linkorg.springframework.core.env.Environment} properties:
+ * resolved as {@link org.springframework.core.env.Environment} properties:
  * e.g. {@code ${user.dir}}. Unresolvable placeholders are ignored by default.
  *
  * <p>Delegates to a {@link ResourceLoader} to do the heavy lifting,

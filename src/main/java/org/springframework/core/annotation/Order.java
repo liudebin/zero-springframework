@@ -40,14 +40,14 @@ import java.lang.annotation.*;
  * hand, are typically based on the {@link Ordered} interface in order to
  * allow for programmatically configurable ordering of each <i>instance</i>.
  *
- * <p>Consult the Javadoc for {@linkorg.springframework.core.OrderComparator
+ * <p>Consult the Javadoc for {@link org.springframework.core.OrderComparator
  * OrderComparator} for details on the sort semantics for non-ordered objects.
  *
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @since 2.0
  * @see Ordered
- * @seeorg.springframework.core.annotation.AnnotationAwareOrderComparator
+ * @see org.springframework.core.annotation.AnnotationAwareOrderComparator
  * @see OrderUtils
  * @see javax.annotation.Priority
  */

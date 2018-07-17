@@ -31,7 +31,7 @@ package org.springframework.asm;
 
 
 /**
- * An {@linkorg.springframework.asm.AnnotationVisitor} that generates annotations in bytecode form.
+ * An {@link org.springframework.asm.AnnotationVisitor} that generates annotations in bytecode form.
  * 
  * @author Eric Bruneton
  * @author Eugene Kuleshov

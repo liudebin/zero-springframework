@@ -69,7 +69,7 @@ public interface BeanDefinitionReader {
 	 * for loading bean definitions from a resource location (or location pattern).
 	 * This is a convenience to avoid explicit ResourceLoader handling.
 	 * @see #loadBeanDefinitions(String)
-	 * @seeorg.springframework.core.io.support.ResourcePatternResolver
+	 * @see org.springframework.core.io.support.ResourcePatternResolver
 	 */
 	@Nullable
     ResourceLoader getResourceLoader();

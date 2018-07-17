@@ -28,7 +28,7 @@ import org.springframework.util.Assert;
 
 /**
  * EL bean resolver that operates against a Spring
- * {@linkorg.springframework.beans.factory.BeanFactory}.
+ * {@link org.springframework.beans.factory.BeanFactory}.
  *
  * @author Juergen Hoeller
  * @since 3.0.4

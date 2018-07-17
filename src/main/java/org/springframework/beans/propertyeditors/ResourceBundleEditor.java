@@ -48,8 +48,8 @@ import java.util.ResourceBundle;
  *    &lt;property name="messages" value="com/messages/DialogMessages"/&gt;
  * &lt;/bean&gt;</pre>
  *
- * <p>A 'properly configured' Spring {@linkorg.springframework.context.ApplicationContext container}
- * might contain a {@linkorg.springframework.beans.factory.config.CustomEditorConfigurer}
+ * <p>A 'properly configured' Spring {@link org.springframework.context.ApplicationContext container}
+ * might contain a {@link org.springframework.beans.factory.config.CustomEditorConfigurer}
  * definition such that the conversion can be effected transparently:
  *
  * <pre class="code"> &lt;bean class="org.springframework.beans.factory.config.CustomEditorConfigurer"&gt;

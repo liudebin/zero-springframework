@@ -28,9 +28,9 @@ import org.springframework.lang.Nullable;
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @author Stephane Nicoll
- * @seeorg.springframework.beans.factory.BeanFactory#getBean(String)
- * @seeorg.springframework.beans.factory.BeanFactory#getBean(Class)
- * @seeorg.springframework.beans.factory.NoUniqueBeanDefinitionException
+ * @see org.springframework.beans.factory.BeanFactory#getBean(String)
+ * @see org.springframework.beans.factory.BeanFactory#getBean(Class)
+ * @see org.springframework.beans.factory.NoUniqueBeanDefinitionException
  */
 @SuppressWarnings("serial")
 public class NoSuchBeanDefinitionException extends BeansException {

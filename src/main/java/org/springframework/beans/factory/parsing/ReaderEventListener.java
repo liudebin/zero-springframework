@@ -33,7 +33,7 @@ public interface ReaderEventListener extends EventListener {
 	/**
 	 * Notification that the given defaults has been registered.
 	 * @param defaultsDefinition a descriptor for the defaults
-	 * @seeorg.springframework.beans.factory.xml.DocumentDefaultsDefinition
+	 * @see org.springframework.beans.factory.xml.DocumentDefaultsDefinition
 	 */
 	void defaultsRegistered(DefaultsDefinition defaultsDefinition);
 

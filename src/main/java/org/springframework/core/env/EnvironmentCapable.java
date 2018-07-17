@@ -29,10 +29,10 @@ import org.springframework.core.env.Environment;
  * with the environment if indeed it is available.
  * 所有的Spring application contexts 都是 EnvironmentCapable，而且该接口主要用于执行instanceof检查框架方法，接受BeanFactory 实例，
  * 的情况下，可能会或可能不会ApplicationContext实例为了与环境互动的如果它是可用的。
- * <p>As mentioned, {@linkorg.springframework.context.ApplicationContext ApplicationContext}
+ * <p>As mentioned, {@link org.springframework.context.ApplicationContext ApplicationContext}
  * extends EnvironmentCapable, and thus exposes a {@link #getEnvironment()} method; however,
- * {@linkorg.springframework.context.ConfigurableApplicationContext ConfigurableApplicationContext}
- * redefines {@linkorg.springframework.context.ConfigurableApplicationContext#getEnvironment
+ * {@link org.springframework.context.ConfigurableApplicationContext ConfigurableApplicationContext}
+ * redefines {@link org.springframework.context.ConfigurableApplicationContext#getEnvironment
  * getEnvironment()} and narrows the signature to return a {@link ConfigurableEnvironment}.
  * The effect is that an Environment object is 'read-only' until it is being accessed from
  * a ConfigurableApplicationContext, at which point it too may be configured.
@@ -42,7 +42,7 @@ import org.springframework.core.env.Environment;
  * @since 3.1
  * @see Environment
  * @see ConfigurableEnvironment
- * @seeorg.springframework.context.ConfigurableApplicationContext#getEnvironment()
+ * @see org.springframework.context.ConfigurableApplicationContext#getEnvironment()
  */
 public interface EnvironmentCapable { // capable =  ~ of sth 有什么什么的能力
 

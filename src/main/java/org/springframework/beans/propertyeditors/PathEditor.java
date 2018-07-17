@@ -46,7 +46,7 @@ import java.nio.file.Paths;
  * @see Path
  * @see Paths#get(URI)
  * @see ResourceEditor
- * @seeorg.springframework.core.io.ResourceLoader
+ * @see org.springframework.core.io.ResourceLoader
  * @see FileEditor
  * @see URLEditor
  */

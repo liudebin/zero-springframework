@@ -32,7 +32,7 @@ import org.springframework.beans.FatalBeanException;
  *
  * @author Juergen Hoeller
  * @since 30.10.2003
- * @seeorg.springframework.beans.factory.FactoryBean#getObject()
+ * @see org.springframework.beans.factory.FactoryBean#getObject()
  */
 @SuppressWarnings("serial")
 public class FactoryBeanNotInitializedException extends FatalBeanException {

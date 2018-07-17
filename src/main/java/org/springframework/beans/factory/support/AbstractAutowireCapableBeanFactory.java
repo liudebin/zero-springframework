@@ -244,7 +244,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 	 * 对于要忽略的其他类型，请为每个类型调用此方法。
 	 *
 	 * @see BeanFactoryAware
-	 * @seeorg.springframework.context.ApplicationContextAware
+	 * @see org.springframework.context.ApplicationContextAware
 	 */
 	public void ignoreDependencyInterface(Class<?> ifc) {
 		this.ignoredDependencyInterfaces.add(ifc);

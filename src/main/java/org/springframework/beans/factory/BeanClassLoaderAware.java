@@ -26,7 +26,7 @@ package org.springframework.beans.factory;
  * being loaded from a shared class loader.
  *
  * <p>For a list of all bean lifecycle methods, see the
- * {@linkorg.springframework.beans.factory.BeanFactory BeanFactory javadocs}.
+ * {@link org.springframework.beans.factory.BeanFactory BeanFactory javadocs}.
  *
  * @author Juergen Hoeller
  * @author Chris Beams

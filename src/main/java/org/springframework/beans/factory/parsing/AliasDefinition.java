@@ -29,7 +29,7 @@ import org.springframework.util.Assert;
  *
  * @author Juergen Hoeller
  * @since 2.0
- * @seeorg.springframework.beans.factory.parsing.ReaderEventListener#aliasRegistered(AliasDefinition)
+ * @see org.springframework.beans.factory.parsing.ReaderEventListener#aliasRegistered(AliasDefinition)
  */
 public class AliasDefinition implements BeanMetadataElement {
 

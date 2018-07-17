@@ -29,7 +29,7 @@ import org.springframework.stereotype.Component;
 import java.lang.annotation.*;
 
 /**
- * Indicates that a class declares one or more {@linkorg.springframework.context.annotation.Bean @Bean} methods and
+ * Indicates that a class declares one or more {@link org.springframework.context.annotation.Bean @Bean} methods and
  * may be processed by the Spring container to generate bean definitions and
  * service requests for those beans at runtime, for example:
  *
@@ -49,7 +49,7 @@ import java.lang.annotation.*;
  *
  * {@code @Configuration} classes are typically bootstrapped using either
  * {@link AnnotationConfigApplicationContext} or its web-capable variant,
- * {@linkorg.springframework.web.context.support.AnnotationConfigWebApplicationContext
+ * {@link org.springframework.web.context.support.AnnotationConfigWebApplicationContext
  * AnnotationConfigWebApplicationContext}. A simple example with the former follows:
  *
  * <pre class="code">
@@ -61,7 +61,7 @@ import java.lang.annotation.*;
  * </pre>
  *
  * See {@link AnnotationConfigApplicationContext} Javadoc for further details and see
- * {@linkorg.springframework.web.context.support.AnnotationConfigWebApplicationContext
+ * {@link org.springframework.web.context.support.AnnotationConfigWebApplicationContext
  * AnnotationConfigWebApplicationContext} for {@code web.xml} configuration instructions.
  *
  * <h3>Via Spring {@code <beans>} XML</h3>
@@ -120,7 +120,7 @@ import java.lang.annotation.*;
  * <h3>Using the {@code Environment} API</h3>
  *
  * Externalized values may be looked up by injecting the Spring
- * {@linkorg.springframework.core.env.Environment} into a {@code @Configuration}
+ * {@link org.springframework.core.env.Environment} into a {@code @Configuration}
  * class the usual (e.g. using the {@code @Autowired} annotation):
  *
  * <pre class="code">
@@ -140,7 +140,7 @@ import java.lang.annotation.*;
  * Properties resolved through the {@code Environment} reside in one or more "property
  * source" objects, and {@code @Configuration} classes may contribute property sources to
  * the {@code Environment} object using
- * the {@linkorg.springframework.core.env.PropertySources @PropertySources} annotation:
+ * the {@link org.springframework.core.env.PropertySources @PropertySources} annotation:
  *
  * <pre class="code">
  * &#064;Configuration
@@ -155,8 +155,8 @@ import java.lang.annotation.*;
  *     }
  * }</pre>
  *
- * See {@linkorg.springframework.core.env.Environment Environment}
- * and {@linkorg.springframework.context.annotation.PropertySource @PropertySource} Javadoc for further details.
+ * See {@link org.springframework.core.env.Environment Environment}
+ * and {@link org.springframework.context.annotation.PropertySource @PropertySource} Javadoc for further details.
  *
  * <h3>Using the {@code @Value} annotation</h3>
  *
@@ -177,11 +177,11 @@ import java.lang.annotation.*;
  * }</pre>
  *
  * This approach is most useful when using Spring's
- * {@linkorg.springframework.context.support.PropertySourcesPlaceholderConfigurer
+ * {@link org.springframework.context.support.PropertySourcesPlaceholderConfigurer
  * PropertySourcesPlaceholderConfigurer}, usually enabled via XML with
  * {@code <context:property-placeholder/>}.  See the section below on composing
  * {@code @Configuration} classes with Spring XML using {@code @ImportResource},
- * see {@link Value @Value} Javadoc, and see {@linkorg.springframework.context.annotation.Bean @Bean} Javadoc for details on working with
+ * see {@link Value @Value} Javadoc, and see {@link org.springframework.context.annotation.Bean @Bean} Javadoc for details on working with
  * {@code BeanFactoryPostProcessor} types such as
  * {@code PropertySourcesPlaceholderConfigurer}.
  *
@@ -269,7 +269,7 @@ import java.lang.annotation.*;
  *     public DataSource productionDatabase() { ... }
  * }</pre>
  *
- * See the {@link Profile @Profile} and {@linkorg.springframework.core.env.Environment}
+ * See the {@link Profile @Profile} and {@link org.springframework.core.env.Environment}
  * javadocs for further details.
  *
  * <h3>With Spring XML using the {@code @ImportResource} annotation</h3>
@@ -365,11 +365,11 @@ import java.lang.annotation.*;
  * annotation driven transaction management, and even Spring MVC can be enabled and
  * configured from {@code @Configuration}
  * classes using their respective "{@code @Enable}" annotations. See
- * {@linkorg.springframework.scheduling.annotation.EnableAsync @EnableAsync},
- * {@linkorg.springframework.scheduling.annotation.EnableScheduling @EnableScheduling},
- * {@linkorg.springframework.transaction.annotation.EnableTransactionManagement @EnableTransactionManagement},
+ * {@link org.springframework.scheduling.annotation.EnableAsync @EnableAsync},
+ * {@link org.springframework.scheduling.annotation.EnableScheduling @EnableScheduling},
+ * {@link org.springframework.transaction.annotation.EnableTransactionManagement @EnableTransactionManagement},
  * {@link EnableAspectJAutoProxy @EnableAspectJAutoProxy},
- * and {@linkorg.springframework.web.servlet.config.annotation.EnableWebMvc @EnableWebMvc}
+ * and {@link org.springframework.web.servlet.config.annotation.EnableWebMvc @EnableWebMvc}
  * for details.
  *
  * <h2>Constraints when authoring {@code @Configuration} classes</h2>
@@ -397,8 +397,8 @@ import java.lang.annotation.*;
  * @see PropertySource
  * @see AnnotationConfigApplicationContext
  * @see ConfigurationClassPostProcessor
- * @seeorg.springframework.core.env.Environment
- * @seeorg.springframework.test.context.ContextConfiguration
+ * @see org.springframework.core.env.Environment
+ * @see org.springframework.test.context.ContextConfiguration
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
@@ -415,7 +415,7 @@ public @interface Configuration {
 	 * If the Configuration class is registered as a traditional XML bean definition,
 	 * the name/id of the bean element will take precedence.
 	 * @return the specified bean name, if any
-	 * @seeorg.springframework.beans.factory.support.DefaultBeanNameGenerator
+	 * @see org.springframework.beans.factory.support.DefaultBeanNameGenerator
 	 */
 	String value() default "";
 

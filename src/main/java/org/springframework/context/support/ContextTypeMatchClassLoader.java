@@ -35,7 +35,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author Juergen Hoeller
  * @since 2.5
  * @see AbstractApplicationContext
- * @seeorg.springframework.beans.factory.config.ConfigurableBeanFactory#setTempClassLoader
+ * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#setTempClassLoader
  */
 class ContextTypeMatchClassLoader extends DecoratingClassLoader implements SmartClassLoader {
 

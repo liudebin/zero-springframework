@@ -27,7 +27,7 @@ import org.springframework.lang.Nullable;
  * @author Chris Beams
  * @author Juergen Hoeller
  * @since 3.1
- * @seeorg.springframework.core.env.Environment
+ * @see org.springframework.core.env.Environment
  * @see PropertySourcesPropertyResolver
  */
 public interface PropertyResolver {
@@ -101,7 +101,7 @@ public interface PropertyResolver {
 	 * @return the resolved String (never {@code null})
 	 * @throws IllegalArgumentException if given text is {@code null}
 	 * @see #resolveRequiredPlaceholders
-	 * @seeorg.springframework.util.SystemPropertyUtils#resolvePlaceholders(String)
+	 * @see org.springframework.util.SystemPropertyUtils#resolvePlaceholders(String)
 	 */
 	String resolvePlaceholders(String text);
 
@@ -112,7 +112,7 @@ public interface PropertyResolver {
 	 * @return the resolved String (never {@code null})
 	 * @throws IllegalArgumentException if given text is {@code null}
 	 * or if any placeholders are unresolvable
-	 * @seeorg.springframework.util.SystemPropertyUtils#resolvePlaceholders(String, boolean)
+	 * @see org.springframework.util.SystemPropertyUtils#resolvePlaceholders(String, boolean)
 	 */
 	String resolveRequiredPlaceholders(String text) throws IllegalArgumentException;
 

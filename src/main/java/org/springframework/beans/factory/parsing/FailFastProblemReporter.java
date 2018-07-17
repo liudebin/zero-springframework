@@ -21,7 +21,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.lang.Nullable;
 
 /**
- * Simple {@linkorg.springframework.beans.factory.parsing.ProblemReporter} implementation that exhibits fail-fast
+ * Simple {@link org.springframework.beans.factory.parsing.ProblemReporter} implementation that exhibits fail-fast
  * behavior when errors are encountered.
  *
  * <p>The first error encountered results in a {@link BeanDefinitionParsingException}

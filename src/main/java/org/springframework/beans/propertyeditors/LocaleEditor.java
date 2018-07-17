@@ -31,7 +31,7 @@ import java.beans.PropertyEditorSupport;
  * @author Juergen Hoeller
  * @since 26.05.2003
  * @see java.util.Locale
- * @seeorg.springframework.util.StringUtils#parseLocaleString
+ * @see org.springframework.util.StringUtils#parseLocaleString
  */
 public class LocaleEditor extends PropertyEditorSupport {
 

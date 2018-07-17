@@ -31,9 +31,9 @@ import java.util.Map;
 
 /**
  * {@link LinkedHashMap} subclass representing annotation attribute
- * <em>key-value</em> pairs as read by {@linkorg.springframework.core.annotation.AnnotationUtils},
- * {@linkorg.springframework.core.annotation.AnnotatedElementUtils}, and Spring's reflection- and ASM-based
- * {@linkorg.springframework.core.type.AnnotationMetadata} implementations.
+ * <em>key-value</em> pairs as read by {@link org.springframework.core.annotation.AnnotationUtils},
+ * {@link org.springframework.core.annotation.AnnotatedElementUtils}, and Spring's reflection- and ASM-based
+ * {@link org.springframework.core.type.AnnotationMetadata} implementations.
  *
  * <p>Provides 'pseudo-reification' to avoid noisy Map generics in the calling
  * code as well as convenience methods for looking up annotation attributes
@@ -43,7 +43,7 @@ import java.util.Map;
  * @author Sam Brannen
  * @author Juergen Hoeller
  * @since 3.1.1
- * @seeorg.springframework.core.annotation.AnnotationUtils#getAnnotationAttributes
+ * @see org.springframework.core.annotation.AnnotationUtils#getAnnotationAttributes
  * @see AnnotatedElementUtils
  */
 @SuppressWarnings("serial")

@@ -30,7 +30,7 @@ import java.lang.annotation.*;
  * may narrow their semantics and use as appropriate.
  *
  * <p>A class thus annotated is eligible for Spring
- * {@linkorg.springframework.dao.DataAccessException DataAccessException} translation
+ * {@link org.springframework.dao.DataAccessException DataAccessException} translation
  * when used in conjunction with a {@link
  *org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor
  * PersistenceExceptionTranslationPostProcessor}. The annotated class is also clarified as
@@ -38,16 +38,16 @@ import java.lang.annotation.*;
  * aspects, etc.
  *
  * <p>As of Spring 2.5, this annotation also serves as a specialization of
- * {@linkorg.springframework.stereotype.Component @Component}, allowing for implementation classes to be autodetected
+ * {@link org.springframework.stereotype.Component @Component}, allowing for implementation classes to be autodetected
  * through classpath scanning.
  *
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @since 2.0
- * @seeorg.springframework.stereotype.Component
+ * @see org.springframework.stereotype.Component
  * @see Service
- * @seeorg.springframework.dao.DataAccessException
- * @seeorg.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor
+ * @see org.springframework.dao.DataAccessException
+ * @see org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

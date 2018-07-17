@@ -27,10 +27,10 @@ import org.springframework.lang.Nullable;
  *
  * @author Juergen Hoeller
  * @since 2.0
- * @seeorg.springframework.core.NestedRuntimeException
+ * @see org.springframework.core.NestedRuntimeException
  * @see NestedCheckedException
  * @see NestedIOException
- * @seeorg.springframework.web.util.NestedServletException
+ * @see org.springframework.web.util.NestedServletException
  */
 public abstract class NestedExceptionUtils {
 

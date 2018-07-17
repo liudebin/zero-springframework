@@ -86,7 +86,7 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 	 * character in variable names. Assuming that Spring's {@link SystemEnvironmentPropertySource}
 	 * is in use, this property may be specified as an environment variable as
 	 * {@code SPRING_PROFILES_ACTIVE}.
-	 * @seeorg.springframework.core.env.ConfigurableEnvironment#setActiveProfiles
+	 * @see org.springframework.core.env.ConfigurableEnvironment#setActiveProfiles
 	 */
 	public static final String ACTIVE_PROFILES_PROPERTY_NAME = "spring.profiles.active";
 
@@ -97,7 +97,7 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 	 * character in variable names. Assuming that Spring's {@link SystemEnvironmentPropertySource}
 	 * is in use, this property may be specified as an environment variable as
 	 * {@code SPRING_PROFILES_DEFAULT}.
-	 * @seeorg.springframework.core.env.ConfigurableEnvironment#setDefaultProfiles
+	 * @see org.springframework.core.env.ConfigurableEnvironment#setDefaultProfiles
 	 */
 	public static final String DEFAULT_PROFILES_PROPERTY_NAME = "spring.profiles.default";
 
@@ -106,8 +106,8 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 	 * explicitly and no active profile names are explicitly set, this profile will
 	 * automatically be activated by default.
 	 * @see #getReservedDefaultProfiles
-	 * @seeorg.springframework.core.env.ConfigurableEnvironment#setDefaultProfiles
-	 * @seeorg.springframework.core.env.ConfigurableEnvironment#setActiveProfiles
+	 * @see org.springframework.core.env.ConfigurableEnvironment#setDefaultProfiles
+	 * @see org.springframework.core.env.ConfigurableEnvironment#setActiveProfiles
 	 * @see AbstractEnvironment#DEFAULT_PROFILES_PROPERTY_NAME
 	 * @see AbstractEnvironment#ACTIVE_PROFILES_PROPERTY_NAME
 	 */
@@ -129,7 +129,7 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 	/**
 	 * Create a new {@code Environment} instance, calling back to
 	 * {@link #customizePropertySources(org.springframework.core.env.MutablePropertySources)} during construction to
-	 * allow subclasses to contribute or manipulate {@linkorg.springframework.core.env.PropertySource} instances as
+	 * allow subclasses to contribute or manipulate {@link org.springframework.core.env.PropertySource} instances as
 	 * appropriate.
 	 * @see #customizePropertySources(org.springframework.core.env.MutablePropertySources)
 	 */
@@ -143,12 +143,12 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 
 
 	/**
-	 * Customize the set of {@linkorg.springframework.core.env.PropertySource} objects to be searched by this
+	 * Customize the set of {@link org.springframework.core.env.PropertySource} objects to be searched by this
 	 * {@code Environment} during calls to {@link #getProperty(String)} and related
 	 * methods.
 	 *
 	 * <p>Subclasses that override this method are encouraged to add property
-	 * sources using {@linkorg.springframework.core.env.MutablePropertySources#addLast(org.springframework.core.env.PropertySource)} such that
+	 * sources using {@link org.springframework.core.env.MutablePropertySources#addLast(org.springframework.core.env.PropertySource)} such that
 	 * further subclasses may call {@code super.customizePropertySources()} with
 	 * predictable results. For example:
 	 * <pre class="code">
@@ -188,14 +188,14 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 	 * The search order is now C, D, A, B as desired.
 	 *
 	 * <p>Beyond these recommendations, subclasses may use any of the {@code add&#42;},
-	 * {@code remove}, or {@code replace} methods exposed by {@linkorg.springframework.core.env.MutablePropertySources}
+	 * {@code remove}, or {@code replace} methods exposed by {@link org.springframework.core.env.MutablePropertySources}
 	 * in order to create the exact arrangement of property sources desired.
 	 *
 	 * <p>The base implementation registers no property sources.
 	 *
-	 * <p>Note that clients of any {@linkorg.springframework.core.env.ConfigurableEnvironment} may further customize
+	 * <p>Note that clients of any {@link org.springframework.core.env.ConfigurableEnvironment} may further customize
 	 * property sources via the {@link #getPropertySources()} accessor, typically within
-	 * an {@linkorg.springframework.context.ApplicationContextInitializer
+	 * an {@link org.springframework.context.ApplicationContextInitializer
 	 * ApplicationContextInitializer}. For example:
 	 * <pre class="code">
 	 * ConfigurableEnvironment env = new StandardEnvironment();
@@ -213,9 +213,9 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 	 * subclass constructor. Note that <em>assigning</em> values to instance variables is
 	 * not problematic; it is only attempting to read default values that must be avoided.
 	 *
-	 * @seeorg.springframework.core.env.MutablePropertySources
+	 * @see org.springframework.core.env.MutablePropertySources
 	 * @see PropertySourcesPropertyResolver
-	 * @seeorg.springframework.context.ApplicationContextInitializer
+	 * @see org.springframework.context.ApplicationContextInitializer
 	 */
 	protected void customizePropertySources(MutablePropertySources propertySources) {
 	}

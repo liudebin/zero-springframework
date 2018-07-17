@@ -39,7 +39,7 @@ import java.io.Serializable;
  * @author Rob Harrop
  * @author Juergen Hoeller
  * @since 13 May 2001
- * @seeorg.springframework.beans.PropertyValues
+ * @see org.springframework.beans.PropertyValues
  * @see BeanWrapper
  */
 @SuppressWarnings("serial")

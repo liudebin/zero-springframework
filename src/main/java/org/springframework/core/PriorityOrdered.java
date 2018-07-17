@@ -26,7 +26,7 @@ package org.springframework.core;
  * it is particularly important to recognize <em>prioritized</em> objects
  * first, without even obtaining the remaining objects. A typical example:
  * prioritized post-processors in a Spring
- * {@linkorg.springframework.context.ApplicationContext}.
+ * {@link org.springframework.context.ApplicationContext}.
  *
  * <p>Note: {@code PriorityOrdered} post-processor beans are initialized in
  * a special phase, ahead of other post-processor beans. This subtly
@@ -35,8 +35,8 @@ package org.springframework.core;
  *
  * @author Juergen Hoeller
  * @since 2.5
- * @seeorg.springframework.beans.factory.config.PropertyOverrideConfigurer
- * @seeorg.springframework.beans.factory.config.PropertyPlaceholderConfigurer
+ * @see org.springframework.beans.factory.config.PropertyOverrideConfigurer
+ * @see org.springframework.beans.factory.config.PropertyPlaceholderConfigurer
  */
 public interface PriorityOrdered extends Ordered {
 

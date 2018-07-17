@@ -22,7 +22,7 @@ import java.io.Serializable;
 import java.util.*;
 
 /**
- * Simple implementation of {@linkorg.springframework.util.MultiValueMap} that wraps a {@link LinkedHashMap},
+ * Simple implementation of {@link org.springframework.util.MultiValueMap} that wraps a {@link LinkedHashMap},
  * storing multiple values in a {@link LinkedList}.
  *
  * <p>This Map implementation is generally not thread-safe. It is primarily designed

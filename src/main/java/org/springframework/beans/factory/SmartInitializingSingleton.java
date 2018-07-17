@@ -18,35 +18,35 @@ package org.springframework.beans.factory;
 
 /**
  * Callback interface triggered at the end of the singleton pre-instantiation phase
- * during {@linkorg.springframework.beans.factory.BeanFactory} bootstrap. This interface can be implemented by
+ * during {@link org.springframework.beans.factory.BeanFactory} bootstrap. This interface can be implemented by
  * singleton beans in order to perform some initialization after the regular
  * singleton instantiation algorithm, avoiding side effects with accidental early
- * initialization (e.g. from {@linkorg.springframework.beans.factory.ListableBeanFactory#getBeansOfType} calls).
+ * initialization (e.g. from {@link org.springframework.beans.factory.ListableBeanFactory#getBeansOfType} calls).
  * In that sense, it is an alternative to {@link InitializingBean} which gets
  * triggered right at the end of a bean's local construction phase.
  *
  * <p>This callback variant is somewhat similar to
- * {@linkorg.springframework.context.event.ContextRefreshedEvent} but doesn't
- * require an implementation of {@linkorg.springframework.context.ApplicationListener},
+ * {@link org.springframework.context.event.ContextRefreshedEvent} but doesn't
+ * require an implementation of {@link org.springframework.context.ApplicationListener},
  * with no need to filter context references across a context hierarchy etc.
  * It also implies a more minimal dependency on just the {@code beans} package
- * and is being honored by standalone {@linkorg.springframework.beans.factory.ListableBeanFactory} implementations,
- * not just in an {@linkorg.springframework.context.ApplicationContext} environment.
+ * and is being honored by standalone {@link org.springframework.beans.factory.ListableBeanFactory} implementations,
+ * not just in an {@link org.springframework.context.ApplicationContext} environment.
  *
  * <p><b>NOTE:</b> If you intend to start/manage asynchronous tasks, preferably
- * implement {@linkorg.springframework.context.Lifecycle} instead which offers
+ * implement {@link org.springframework.context.Lifecycle} instead which offers
  * a richer model for runtime management and allows for phased startup/shutdown.
  *
  * @author Juergen Hoeller
  * @since 4.1
- * @seeorg.springframework.beans.factory.config.ConfigurableListableBeanFactory#preInstantiateSingletons()
+ * @see org.springframework.beans.factory.config.ConfigurableListableBeanFactory#preInstantiateSingletons()
  */
 public interface SmartInitializingSingleton {
 
 	/**
 	 * Invoked right at the end of the singleton pre-instantiation phase,
 	 * with a guarantee that all regular singleton beans have been created
-	 * already. {@linkorg.springframework.beans.factory.ListableBeanFactory#getBeansOfType} calls within
+	 * already. {@link org.springframework.beans.factory.ListableBeanFactory#getBeansOfType} calls within
 	 * this method won't trigger accidental side effects during bootstrap.
 	 * <p><b>NOTE:</b> This callback won't be triggered for singleton beans
 	 * lazily initialized on demand after {@link BeanFactory} bootstrap,

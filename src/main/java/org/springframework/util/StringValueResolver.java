@@ -20,13 +20,13 @@ import org.springframework.lang.Nullable;
 
 /**
  * Simple strategy interface for resolving a String value.
- * Used by {@linkorg.springframework.beans.factory.config.ConfigurableBeanFactory}.
+ * Used by {@link org.springframework.beans.factory.config.ConfigurableBeanFactory}.
  *
  * @author Juergen Hoeller
  * @since 2.5
- * @seeorg.springframework.beans.factory.config.ConfigurableBeanFactory#resolveAliases
- * @seeorg.springframework.beans.factory.config.BeanDefinitionVisitor#BeanDefinitionVisitor(StringValueResolver)
- * @seeorg.springframework.beans.factory.config.PropertyPlaceholderConfigurer
+ * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#resolveAliases
+ * @see org.springframework.beans.factory.config.BeanDefinitionVisitor#BeanDefinitionVisitor(StringValueResolver)
+ * @see org.springframework.beans.factory.config.PropertyPlaceholderConfigurer
  */
 @FunctionalInterface
 public interface StringValueResolver {

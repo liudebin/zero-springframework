@@ -27,7 +27,7 @@ import org.springframework.util.Assert;
  * @author Mark Fisher
  * @author Juergen Hoeller
  * @since 2.5
- * @seeorg.springframework.beans.factory.annotation.Qualifier
+ * @see org.springframework.beans.factory.annotation.Qualifier
  */
 @SuppressWarnings("serial")
 public class AutowireCandidateQualifier extends BeanMetadataAttributeAccessor {

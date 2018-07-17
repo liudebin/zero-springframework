@@ -32,7 +32,7 @@ import org.springframework.util.StringUtils;
  * of specified config locations. Serves as base class for XML-based application
  * context implementations such as {@link ClassPathXmlApplicationContext} and
  * {@link FileSystemXmlApplicationContext}, as well as
- * {@linkorg.springframework.web.context.support.XmlWebApplicationContext}.
+ * {@link org.springframework.web.context.support.XmlWebApplicationContext}.
  *
  * @author Juergen Hoeller
  * @since 2.5.2
@@ -123,7 +123,7 @@ public abstract class AbstractRefreshableConfigApplicationContext extends Abstra
 	 * environment property values if necessary. Applied to config locations.
 	 * @param path the original file path
 	 * @return the resolved file path
-	 * @seeorg.springframework.core.env.Environment#resolveRequiredPlaceholders(String)
+	 * @see org.springframework.core.env.Environment#resolveRequiredPlaceholders(String)
 	 */
 	protected String resolvePath(String path) {
 		return getEnvironment().resolveRequiredPlaceholders(path);

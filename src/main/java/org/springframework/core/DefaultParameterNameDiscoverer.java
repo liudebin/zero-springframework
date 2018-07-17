@@ -19,7 +19,7 @@ package org.springframework.core;
 import org.springframework.core.*;
 
 /**
- * Default implementation of the {@linkorg.springframework.core.ParameterNameDiscoverer} strategy interface,
+ * Default implementation of the {@link org.springframework.core.ParameterNameDiscoverer} strategy interface,
  * using the Java 8 standard reflection mechanism (if available), and falling back
  * to the ASM-based {@link LocalVariableTableParameterNameDiscoverer} for checking
  * debug information in the class file.

@@ -20,7 +20,7 @@ import java.lang.annotation.*;
 
 /**
  * An annotation that indicates 'lookup' methods, to be overridden by the container
- * to redirect them back to the {@linkorg.springframework.beans.factory.BeanFactory}
+ * to redirect them back to the {@link org.springframework.beans.factory.BeanFactory}
  * for a {@code getBean} call. This is essentially an annotation-based version of the
  * XML {@code lookup-method} attribute, resulting in the same runtime arrangement.
  *
@@ -46,8 +46,8 @@ import java.lang.annotation.*;
  *
  * @author Juergen Hoeller
  * @since 4.1
- * @seeorg.springframework.beans.factory.BeanFactory#getBean(Class, Object...)
- * @seeorg.springframework.beans.factory.BeanFactory#getBean(String, Object...)
+ * @see org.springframework.beans.factory.BeanFactory#getBean(Class, Object...)
+ * @see org.springframework.beans.factory.BeanFactory#getBean(String, Object...)
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

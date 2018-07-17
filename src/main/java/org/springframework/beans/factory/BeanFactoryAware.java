@@ -20,7 +20,7 @@ import org.springframework.beans.BeansException;
 
 /**
  * Interface to be implemented by beans that wish to be aware of their
- * owning {@linkorg.springframework.beans.factory.BeanFactory}.
+ * owning {@link org.springframework.beans.factory.BeanFactory}.
  *
  * <p>For example, beans can look up collaborating beans via the factory
  * (Dependency Lookup). Note that most beans will choose to receive references
@@ -28,15 +28,15 @@ import org.springframework.beans.BeansException;
  * arguments (Dependency Injection).
  *
  * <p>For a list of all bean lifecycle methods, see the
- * {@linkorg.springframework.beans.factory.BeanFactory BeanFactory javadocs}.
+ * {@link org.springframework.beans.factory.BeanFactory BeanFactory javadocs}.
  *
  * @author Rod Johnson
  * @author Chris Beams
  * @since 11.03.2003
- * @seeorg.springframework.beans.factory.BeanNameAware
+ * @see org.springframework.beans.factory.BeanNameAware
  * @see BeanClassLoaderAware
  * @see InitializingBean
- * @seeorg.springframework.context.ApplicationContextAware
+ * @see org.springframework.context.ApplicationContextAware
  */
 public interface BeanFactoryAware extends Aware {
 

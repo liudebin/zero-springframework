@@ -67,7 +67,7 @@ import org.springframework.lang.Nullable;
  * Spring的依赖注入功能是通过这个BeanFactory接口及其子接口实现的。
  *
  * <p>Normally a BeanFactory will load bean definitions stored in a configuration
- * source (such as an XML document), and use the {@codeorg.springframework.beans}
+ * source (such as an XML document), and use the {@code org.springframework.beans}
  * package to configure the beans. However, an implementation could simply return
  * Java objects it creates as necessary directly in Java code. There are no
  * constraints on how the definitions could be stored: LDAP, RDBMS, XML,
@@ -125,17 +125,17 @@ import org.springframework.lang.Nullable;
  * @see BeanNameAware#setBeanName
  * @see BeanClassLoaderAware#setBeanClassLoader
  * @see BeanFactoryAware#setBeanFactory
- * @seeorg.springframework.context.ResourceLoaderAware#setResourceLoader
- * @seeorg.springframework.context.ApplicationEventPublisherAware#setApplicationEventPublisher
- * @seeorg.springframework.context.MessageSourceAware#setMessageSource
- * @seeorg.springframework.context.ApplicationContextAware#setApplicationContext
- * @seeorg.springframework.web.context.ServletContextAware#setServletContext
- * @seeorg.springframework.beans.factory.config.BeanPostProcessor#postProcessBeforeInitialization
+ * @see org.springframework.context.ResourceLoaderAware#setResourceLoader
+ * @see org.springframework.context.ApplicationEventPublisherAware#setApplicationEventPublisher
+ * @see org.springframework.context.MessageSourceAware#setMessageSource
+ * @see org.springframework.context.ApplicationContextAware#setApplicationContext
+ * @see org.springframework.web.context.ServletContextAware#setServletContext
+ * @see org.springframework.beans.factory.config.BeanPostProcessor#postProcessBeforeInitialization
  * @see InitializingBean#afterPropertiesSet
- * @seeorg.springframework.beans.factory.support.RootBeanDefinition#getInitMethodName
- * @seeorg.springframework.beans.factory.config.BeanPostProcessor#postProcessAfterInitialization
+ * @see org.springframework.beans.factory.support.RootBeanDefinition#getInitMethodName
+ * @see org.springframework.beans.factory.config.BeanPostProcessor#postProcessAfterInitialization
  * @see DisposableBean#destroy
- * @seeorg.springframework.beans.factory.support.RootBeanDefinition#getDestroyMethodName
+ * @see org.springframework.beans.factory.support.RootBeanDefinition#getDestroyMethodName
  */
 public interface BeanFactory {
 

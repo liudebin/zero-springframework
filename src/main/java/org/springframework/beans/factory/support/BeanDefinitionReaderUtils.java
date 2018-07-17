@@ -34,7 +34,7 @@ import org.springframework.util.StringUtils;
  * @author Rob Harrop
  * @since 1.1
  * @see PropertiesBeanDefinitionReader
- * @seeorg.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader
+ * @see org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader
  */
 public class BeanDefinitionReaderUtils {
 

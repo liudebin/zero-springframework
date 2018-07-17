@@ -23,12 +23,12 @@ import org.springframework.util.ResourceUtils;
 
 /**
  * Strategy interface for loading resources (e.. class path or file system
- * resources). An {@linkorg.springframework.context.ApplicationContext}
+ * resources). An {@link org.springframework.context.ApplicationContext}
  * is required to provide this functionality, plus extended
- * {@linkorg.springframework.core.io.support.ResourcePatternResolver} support.
+ * {@link org.springframework.core.io.support.ResourcePatternResolver} support.
  *
  * 加载资源的策略接口
- * <p>{@linkorg.springframework.core.io.DefaultResourceLoader} is a standalone implementation that is
+ * <p>{@link org.springframework.core.io.DefaultResourceLoader} is a standalone implementation that is
 // * usable outside an ApplicationContext, also used by {@link ResourceEditor}.
  *
  * <p>Bean properties of type Resource and Resource array can be populated
@@ -38,9 +38,9 @@ import org.springframework.util.ResourceUtils;
  * @author Juergen Hoeller
  * @since 10.03.2004
  * @see Resource
- * @seeorg.springframework.core.io.support.ResourcePatternResolver
- * @seeorg.springframework.context.ApplicationContext
- * @seeorg.springframework.context.ResourceLoaderAware
+ * @see org.springframework.core.io.support.ResourcePatternResolver
+ * @see org.springframework.context.ApplicationContext
+ * @see org.springframework.context.ResourceLoaderAware
  */
 // 定义资源加载器，主要应用于根据给定的资源文件地址返回相应的Resource
 public interface ResourceLoader {
@@ -76,7 +76,7 @@ public interface ResourceLoader {
 	 * in a uniform manner with the ResourceLoader, rather than relying
 	 * on the thread context ClassLoader.
 	 * @return the ClassLoader
-	 * @seeorg.springframework.util.ClassUtils#getDefaultClassLoader()
+	 * @see org.springframework.util.ClassUtils#getDefaultClassLoader()
 	 */
 	@Nullable
 	ClassLoader getClassLoader();

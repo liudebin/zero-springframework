@@ -18,7 +18,6 @@ package org.springframework.beans.factory.annotation;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.PropertyValues;
 import org.springframework.beans.factory.support.RootBeanDefinition;
@@ -38,9 +37,9 @@ import java.util.Set;
  * Internal class for managing injection metadata.
  * Not intended for direct use in applications.
  *
- * <p>Used by {@linkorg.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor},
- * {@linkorg.springframework.context.annotation.CommonAnnotationBeanPostProcessor} and
- * {@linkorg.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor}.
+ * <p>Used by {@link org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor},
+ * {@link org.springframework.context.annotation.CommonAnnotationBeanPostProcessor} and
+ * {@link org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor}.
  *
  * @author Juergen Hoeller
  * @since 2.5

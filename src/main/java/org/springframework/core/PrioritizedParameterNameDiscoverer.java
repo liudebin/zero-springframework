@@ -22,7 +22,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * {@linkorg.springframework.core.ParameterNameDiscoverer} implementation that tries several discoverer
+ * {@link org.springframework.core.ParameterNameDiscoverer} implementation that tries several discoverer
  * delegates in succession. Those added first in the {@code addDiscoverer} method
  * have highest priority. If one returns {@code null}, the next will be tried.
  *
@@ -38,7 +38,7 @@ public class PrioritizedParameterNameDiscoverer implements ParameterNameDiscover
 
 
 	/**
-	 * Add a further {@linkorg.springframework.core.ParameterNameDiscoverer} delegate to the list of
+	 * Add a further {@link org.springframework.core.ParameterNameDiscoverer} delegate to the list of
 	 * discoverers that this {@code PrioritizedParameterNameDiscoverer} checks.
 	 */
 	public void addDiscoverer(ParameterNameDiscoverer pnd) {

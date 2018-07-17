@@ -40,8 +40,8 @@ import org.springframework.lang.Nullable;
  * @author Rob Harrop
  * @since 19.03.2004
  * @see ConfigurableListableBeanFactory#getBeanDefinition
- * @seeorg.springframework.beans.factory.support.RootBeanDefinition
- * @seeorg.springframework.beans.factory.support.ChildBeanDefinition
+ * @see org.springframework.beans.factory.support.RootBeanDefinition
+ * @see org.springframework.beans.factory.support.ChildBeanDefinition
  */
 public interface BeanDefinition extends AttributeAccessor, BeanMetadataElement {
 
@@ -69,10 +69,10 @@ public interface BeanDefinition extends AttributeAccessor, BeanMetadataElement {
 	/**
 	 * Role hint indicating that a {@code BeanDefinition} is a supporting
 	 * part of some larger configuration, typically an outer
-	 * {@linkorg.springframework.beans.factory.parsing.ComponentDefinition}.
+	 * {@link org.springframework.beans.factory.parsing.ComponentDefinition}.
 	 * {@code SUPPORT} beans are considered important enough to be aware
 	 * of when looking more closely at a particular
-	 * {@linkorg.springframework.beans.factory.parsing.ComponentDefinition},
+	 * {@link org.springframework.beans.factory.parsing.ComponentDefinition},
 	 * but not when looking at the overall configuration of an application.
 	 */
 	int ROLE_SUPPORT = 1;
@@ -81,7 +81,7 @@ public interface BeanDefinition extends AttributeAccessor, BeanMetadataElement {
 	 * Role hint indicating that a {@code BeanDefinition} is providing an
 	 * entirely background role and has no relevance to the end-user. This hint is
 	 * used when registering beans that are completely part of the internal workings
-	 * of a {@linkorg.springframework.beans.factory.parsing.ComponentDefinition}.
+	 * of a {@link org.springframework.beans.factory.parsing.ComponentDefinition}.
 	 */
 	int ROLE_INFRASTRUCTURE = 2;
 
