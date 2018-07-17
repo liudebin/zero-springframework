@@ -1,12 +1,12 @@
 package zero;
 
 import org.junit.Test;
-import zero.org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import zero.org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import zero.org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-import zero.org.springframework.beans.factory.xml.XmlBeanFactory;
-import zero.org.springframework.beans.factory.BeanFactory;
-import zero.org.springframework.core.io.ClassPathResource;
+import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.core.io.ClassPathResource;
 
 /**
  * ApplicationContext的测试用例

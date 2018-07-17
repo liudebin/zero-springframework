@@ -1,4 +1,4 @@
-package zero.org.springframework.util;
+package org.springframework.util;
 
 import org.junit.Assert;
 import org.junit.Test;
