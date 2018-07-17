@@ -1,4 +1,4 @@
-package zero;
+package zero.test;
 
 import org.junit.Test;
 
@@ -26,6 +26,8 @@ public class CustomTest extends AbstractTest {
     @Test
     public void testSpecial() {
         int i = 1 << 30; // int 的最大长度
+        int j = i + 1+1;
         logger.info("{}", i);
+        logger.info("{}", j);
     }
 }
