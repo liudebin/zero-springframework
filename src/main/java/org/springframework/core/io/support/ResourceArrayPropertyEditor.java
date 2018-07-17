@@ -18,6 +18,11 @@ package org.springframework.core.io.support;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.core.env.Environment;
+import org.springframework.core.env.StandardEnvironment;
+import org.springframework.core.io.Resource;
+import org.springframework.lang.Nullable;
+import org.springframework.util.Assert;
 import org.springframework.util.Assert;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.PropertyResolver;

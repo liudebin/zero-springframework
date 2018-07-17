@@ -18,6 +18,8 @@ package org.springframework.beans;
 
 import org.springframework.lang.Nullable;
 import org.springframework.util.StringUtils;
+import org.springframework.lang.Nullable;
+import org.springframework.util.StringUtils;
 
 import java.io.Serializable;
 import java.util.*;

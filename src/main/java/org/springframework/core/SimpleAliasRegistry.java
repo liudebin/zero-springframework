@@ -16,6 +16,7 @@
 
 package org.springframework.core;
 
+import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 import org.springframework.util.StringValueResolver;
@@ -27,13 +28,13 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Simple implementation of the {@link org.springframework.core.AliasRegistry} interface.
+ * Simple implementation of the {@link AliasRegistry} interface.
  * <br/>AliasRegistry 接口的简单的实现<br/>
  *
  * Serves as(担任，充当) base class for
- * {@link org.springframework.beans.factory.support.BeanDefinitionRegistry}
+ * {@link BeanDefinitionRegistry}
  * implementations.
- * <br/> 起 AliasRegistry 的基本类，类似于BeanDefinitionRegistry。
+ * <br/> 充当 AliasRegistry 的基本类，类似于BeanDefinitionRegistry。
  *
  * @author Juergen Hoeller
  * @since 2.5.2
@@ -190,7 +191,7 @@ public class SimpleAliasRegistry implements AliasRegistry {
 
 	/**
 	 * Determine the raw name, resolving aliases to canonical names.
-     * 判定未加工的名字，解析 别名 到 规范的名字。 循环解析。
+     * 判定未加工的名字，解析 别名 到 规范的名字。 循环解析。 之前在代码中使用过，结果死循环了
 	 * @param name the user-specified name
 	 * @return the transformed name
 	 */

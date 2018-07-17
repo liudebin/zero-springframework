@@ -17,6 +17,7 @@
 package org.springframework.core.io;
 
 import org.springframework.util.ResourceUtils;
+import org.springframework.util.ResourceUtils;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -27,7 +28,7 @@ import java.nio.channels.ReadableByteChannel;
 
 /**
  * Abstract base class for resources which resolve URLs into File references,
- * such as {@link org.springframework.core.io.UrlResource} or {@link ClassPathResource}.
+ * such as {@link UrlResource} or {@link ClassPathResource}.
  * 将URL解析为文件引用 的 Resources抽象基类。
  * 如 UrlResource 或 ClassPathResource
  *

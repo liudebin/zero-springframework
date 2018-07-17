@@ -3,14 +3,16 @@
 	2014-10-27 16:42 -->
 
 <configuration scan="true" scanPeriod="10 second" debug="false">
+
+    <property name="log.root.level" value="trace" />
     <!--scan="true" scanPeriod="10 second" 支持动态修改 -->
 
-    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
-        <resetJUL>true</resetJUL>
-    </contextListener>
-
-    <!-- To enable JMX Management -->
-    <jmxConfigurator/>
+    <!--<contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">-->
+        <!--<resetJUL>true</resetJUL>-->
+    <!--</contextListener>-->
+<!---->
+     <!--To enable JMX Management -->
+    <!--<jmxConfigurator/>-->
 
     <!--<property name="logPath" value="/JAVA_Files/pay/log"/>-->
 
@@ -22,10 +24,14 @@
         </encoder>
     </appender>
 
+    <!--<logger name="org.springframework" level="trace"/>-->
+    <logger name="org.springframework" level="TRACE"/>
+    <!--<logger name="org" level="DEBUG"/>-->
+    <!--<logger name="org.springframework.beans" level="DEBUG"/>-->
 
     <!-- 异常错误日志文件配置 -->
 
-    <root level="debug">
+    <root level="TRACE">
         <appender-ref ref="console"/>
     </root>
 

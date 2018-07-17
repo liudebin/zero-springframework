@@ -18,12 +18,14 @@ package org.springframework.core.env;
 
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
+import org.springframework.lang.Nullable;
+import org.springframework.util.Assert;
 
 import java.util.Map;
 
 /**
  * Specialization of {@link org.springframework.core.env.MapPropertySource} designed for use with
- * {@linkplain org.springframework.core.env.AbstractEnvironment#getSystemEnvironment() system environment variables}.
+ * {@linkplainorg.springframework.core.env.AbstractEnvironment#getSystemEnvironment() system environment variables}.
  * Compensates for constraints in Bash and other shells that do not allow for variables
  * containing the period character and/or hyphen character; also allows for uppercase
  * variations on property names for more idiomatic shell use.

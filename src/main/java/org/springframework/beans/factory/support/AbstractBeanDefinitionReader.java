@@ -18,8 +18,10 @@ package org.springframework.beans.factory.support;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.core.env.EnvironmentCapable;
+import org.springframework.core.env.StandardEnvironment;
+import org.springframework.core.io.Resource;
 import org.springframework.beans.factory.BeanDefinitionStoreException;
-import org.springframework.beans.factory.support.*;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.EnvironmentCapable;
 import org.springframework.core.env.StandardEnvironment;
@@ -93,7 +95,7 @@ public abstract class AbstractBeanDefinitionReader implements EnvironmentCapable
 		if (this.registry instanceof ResourceLoader) {
 			this.resourceLoader = (ResourceLoader) this.registry;
 		}
-		else {
+		else {// 0.0
 			this.resourceLoader = new PathMatchingResourcePatternResolver();
 		}
 
@@ -101,7 +103,7 @@ public abstract class AbstractBeanDefinitionReader implements EnvironmentCapable
 		if (this.registry instanceof EnvironmentCapable) {
 			this.environment = ((EnvironmentCapable) this.registry).getEnvironment();
 		}
-		else {
+		else {// 0.0
 			this.environment = new StandardEnvironment();
 		}
 	}

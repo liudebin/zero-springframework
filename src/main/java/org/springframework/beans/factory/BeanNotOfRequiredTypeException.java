@@ -16,6 +16,7 @@
 
 package org.springframework.beans.factory;
 
+import org.springframework.util.ClassUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.util.ClassUtils;
 

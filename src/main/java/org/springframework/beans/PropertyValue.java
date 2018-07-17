@@ -16,6 +16,9 @@
 
 package org.springframework.beans;
 
+import org.springframework.lang.Nullable;
+import org.springframework.util.Assert;
+import org.springframework.util.ObjectUtils;
 import org.springframework.util.ObjectUtils;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;

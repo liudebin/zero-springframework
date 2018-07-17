@@ -16,6 +16,7 @@
 
 package org.springframework.beans.factory.xml;
 
+import org.springframework.lang.Nullable;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanDefinitionHolder;
 import org.springframework.beans.factory.xml.*;

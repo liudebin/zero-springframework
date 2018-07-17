@@ -16,12 +16,17 @@
 
 package org.springframework.beans.factory.support;
 
+import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
+import org.springframework.core.io.Resource;
+import org.springframework.lang.Nullable;
+import org.springframework.util.Assert;
+import org.springframework.util.ClassUtils;
+import org.springframework.util.StringUtils;
 import org.springframework.beans.BeanMetadataAttributeAccessor;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.ConstructorArgumentValues;
-import org.springframework.beans.factory.support.*;
 import org.springframework.core.io.DescriptiveResource;
 import org.springframework.core.io.Resource;
 import org.springframework.lang.Nullable;
@@ -35,6 +40,8 @@ import java.util.*;
 import java.util.function.Supplier;
 
 /**
+ *
+ * 是 配置文件 <bean> 属性的容器内部表现形式。属性与<bean> 标签的配置属性一一对应的
  * Base class for concrete, full-fledged {@link BeanDefinition} classes,
  * factoring out common properties of {@link GenericBeanDefinition},
  * {@link RootBeanDefinition}, and {@link ChildBeanDefinition}.
@@ -59,7 +66,7 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	 * Constant for the default scope name: {@code ""}, equivalent to singleton
 	 * status unless overridden from a parent bean definition (if applicable).
 	 */
-	public static final String SCOPE_DEFAULT = "";
+	public static final String SCOPE_DEFAULT = ""; // 等价于 singleton
 
 	/**
 	 * Constant that indicates no autowiring at all.
@@ -135,7 +142,7 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 
 
 	@Nullable
-	private volatile Object beanClass;
+	private volatile Object beanClass; // class
 
 	@Nullable
 	private String scope = SCOPE_DEFAULT;
@@ -151,17 +158,20 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	@Nullable
 	private String[] dependsOn;
 
-	private boolean autowireCandidate = true;
+	// 如果为 false ,则不会被注入其他bean，但可以被其他bean注入。
+	private boolean autowireCandidate = true; // 是不是注入别的bean的候选
 
+	//为 true 时，多个类似的bean注入到其他bean中，可以作为最重要的那个
 	private boolean primary = false;
 
 	private final Map<String, AutowireCandidateQualifier> qualifiers = new LinkedHashMap<>(0);
 
 	@Nullable
-	private Supplier<?> instanceSupplier;
+	private Supplier<?> instanceSupplier; //提供实例？？？
 
 	private boolean nonPublicAccessAllowed = true;
 
+	// 多个构造函数时，采用宽松的解析和选择。
 	private boolean lenientConstructorResolution = true;
 
 	@Nullable
@@ -733,6 +743,7 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	/**
 	 * Specify the factory bean to use, if any.
 	 * This the name of the bean to call the specified factory method on.
+     * 指定要使用的工厂bean，如果有的话。这是调用指定工厂方法的bean的名称。
 	 * @see #setFactoryMethodName
 	 */
 	@Override
@@ -754,6 +765,8 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	 * constructor arguments, or with no arguments if none are specified.
 	 * The method will be invoked on the specified factory bean, if any,
 	 * or otherwise as a static method on the local bean class.
+	 * 指定工厂方法(如果有的话)。此方法将使用构造函数参数调用，如果没有指定参数，则不使用任何参数。
+     * 该方法将在指定的工厂bean(如果有的话)上调用，或者作为本地bean类上的静态方法调用。
 	 * @see #setFactoryBeanName
 	 * @see #setBeanClassName
 	 */
@@ -817,6 +830,7 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	}
 
 	/**
+     * 0.0
 	 * Return information about methods to be overridden by the IoC
 	 * container. This will be empty if there are no method overrides.
 	 * <p>Never returns {@code null}.
@@ -996,6 +1010,7 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	 * @throws BeanDefinitionValidationException in case of validation failure
 	 */
 	public void validate() throws BeanDefinitionValidationException {
+//	    methodOverrides 如果不为空，则 factoryMethodName 为空 0.0
 		if (!getMethodOverrides().isEmpty() && getFactoryMethodName() != null) {
 			throw new BeanDefinitionValidationException(
 					"Cannot combine static factory method with method overrides: " +
@@ -1029,6 +1044,7 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	 * Validate and prepare the given method override.
 	 * Checks for existence of a method with the specified name,
 	 * marking it as not overloaded if none found.
+     * 如果同名名称的方法数量为 1 标记为不是   overloaded 方法
 	 * @param mo the MethodOverride object to validate
 	 * @throws BeanDefinitionValidationException in case of validation failure
 	 */

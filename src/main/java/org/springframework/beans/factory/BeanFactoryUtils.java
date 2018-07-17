@@ -16,6 +16,9 @@
 
 package org.springframework.beans.factory;
 
+import org.springframework.lang.Nullable;
+import org.springframework.util.Assert;
+import org.springframework.util.StringUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.core.ResolvableType;
 import org.springframework.lang.Nullable;
@@ -338,8 +341,8 @@ public abstract class BeanFactoryUtils {
 	 * @param lbf the bean factory
 	 * @param type type of bean to match
 	 * @return the matching bean instance
-	 * @throws org.springframework.beans.factory.NoSuchBeanDefinitionException if no bean of the given type was found
-	 * @throws org.springframework.beans.factory.NoUniqueBeanDefinitionException if more than one bean of the given type was found
+	 * @throwsorg.springframework.beans.factory.NoSuchBeanDefinitionException if no bean of the given type was found
+	 * @throwsorg.springframework.beans.factory.NoUniqueBeanDefinitionException if more than one bean of the given type was found
 	 * @throws BeansException if the bean could not be created
 	 */
 	public static <T> T beanOfTypeIncludingAncestors(ListableBeanFactory lbf, Class<T> type)
@@ -374,8 +377,8 @@ public abstract class BeanFactoryUtils {
 	 * eagerly initialized to determine their type: So be aware that passing in "true"
 	 * for this flag will initialize FactoryBeans and "factory-bean" references.
 	 * @return the matching bean instance
-	 * @throws org.springframework.beans.factory.NoSuchBeanDefinitionException if no bean of the given type was found
-	 * @throws org.springframework.beans.factory.NoUniqueBeanDefinitionException if more than one bean of the given type was found
+	 * @throwsorg.springframework.beans.factory.NoSuchBeanDefinitionException if no bean of the given type was found
+	 * @throwsorg.springframework.beans.factory.NoUniqueBeanDefinitionException if more than one bean of the given type was found
 	 * @throws BeansException if the bean could not be created
 	 */
 	public static <T> T beanOfTypeIncludingAncestors(
@@ -398,8 +401,8 @@ public abstract class BeanFactoryUtils {
 	 * @param lbf the bean factory
 	 * @param type type of bean to match
 	 * @return the matching bean instance
-	 * @throws org.springframework.beans.factory.NoSuchBeanDefinitionException if no bean of the given type was found
-	 * @throws org.springframework.beans.factory.NoUniqueBeanDefinitionException if more than one bean of the given type was found
+	 * @throwsorg.springframework.beans.factory.NoSuchBeanDefinitionException if no bean of the given type was found
+	 * @throwsorg.springframework.beans.factory.NoUniqueBeanDefinitionException if more than one bean of the given type was found
 	 * @throws BeansException if the bean could not be created
 	 */
 	public static <T> T beanOfType(ListableBeanFactory lbf, Class<T> type) throws BeansException {
@@ -428,8 +431,8 @@ public abstract class BeanFactoryUtils {
 	 * eagerly initialized to determine their type: So be aware that passing in "true"
 	 * for this flag will initialize FactoryBeans and "factory-bean" references.
 	 * @return the matching bean instance
-	 * @throws org.springframework.beans.factory.NoSuchBeanDefinitionException if no bean of the given type was found
-	 * @throws org.springframework.beans.factory.NoUniqueBeanDefinitionException if more than one bean of the given type was found
+	 * @throwsorg.springframework.beans.factory.NoSuchBeanDefinitionException if no bean of the given type was found
+	 * @throwsorg.springframework.beans.factory.NoUniqueBeanDefinitionException if more than one bean of the given type was found
 	 * @throws BeansException if the bean could not be created
 	 */
 	public static <T> T beanOfType(
@@ -446,8 +449,8 @@ public abstract class BeanFactoryUtils {
 	 * @param type type of bean to match
 	 * @param matchingBeans all matching beans found
 	 * @return the unique bean instance
-	 * @throws org.springframework.beans.factory.NoSuchBeanDefinitionException if no bean of the given type was found
-	 * @throws org.springframework.beans.factory.NoUniqueBeanDefinitionException if more than one bean of the given type was found
+	 * @throwsorg.springframework.beans.factory.NoSuchBeanDefinitionException if no bean of the given type was found
+	 * @throwsorg.springframework.beans.factory.NoUniqueBeanDefinitionException if more than one bean of the given type was found
 	 */
 	private static <T> T uniqueBean(Class<T> type, Map<String, T> matchingBeans) {
 		int nrFound = matchingBeans.size();

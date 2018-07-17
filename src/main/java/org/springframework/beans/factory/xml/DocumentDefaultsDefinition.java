@@ -16,6 +16,7 @@
 
 package org.springframework.beans.factory.xml;
 
+import org.springframework.lang.Nullable;
 import org.springframework.beans.factory.parsing.DefaultsDefinition;
 import org.springframework.lang.Nullable;
 
@@ -24,6 +25,8 @@ import org.springframework.lang.Nullable;
  * level in a standard Spring XML bean definition document:
  * {@code default-lazy-init}, {@code default-autowire}, etc.
  *
+ * 简单的 JavaBean，在一个标准的 Spring XML bean definition 文档，保存 beans 级别指定的默认值，。：
+ *  default-lazy-init, default-autowire 等
  * @author Juergen Hoeller
  * @since 2.0.2
  */

@@ -16,6 +16,8 @@
 
 package org.springframework.beans;
 
+import org.springframework.core.MethodParameter;
+import org.springframework.core.convert.ConverterNotFoundException;
 import org.springframework.beans.*;
 import org.springframework.beans.TypeConverter;
 import org.springframework.core.MethodParameter;

@@ -17,27 +17,35 @@
 package org.springframework.beans.factory.xml;
 
 import org.springframework.beans.factory.BeanDefinitionStoreException;
+import org.springframework.beans.factory.parsing.ReaderContext;
+import org.springframework.beans.factory.parsing.ReaderEventListener;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
+import org.springframework.lang.Nullable;
+import org.w3c.dom.Document;
+import org.xml.sax.InputSource;
+import org.springframework.beans.factory.BeanDefinitionStoreException;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.parsing.ProblemReporter;
 import org.springframework.beans.factory.parsing.ReaderContext;
 import org.springframework.beans.factory.parsing.ReaderEventListener;
 import org.springframework.beans.factory.parsing.SourceExtractor;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.beans.factory.xml.*;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.lang.Nullable;
-import org.w3c.dom.Document;
-import org.xml.sax.InputSource;
 
 import java.io.StringReader;
 
 /**
- * 0.0
  * Extension of {@link ReaderContext},
- * specific to use with an {@link org.springframework.beans.factory.xml.XmlBeanDefinitionReader}. Provides access to the
- * {@link NamespaceHandlerResolver} configured in the {@link org.springframework.beans.factory.xml.XmlBeanDefinitionReader}.
+ * specific to use with an {@link XmlBeanDefinitionReader}. Provides access to the
+ * {@link NamespaceHandlerResolver} configured in the {@link XmlBeanDefinitionReader}.
+ *
+ * ReaderContext 的 扩展。
+ * 具体到使用 XmlBeanDefinitionReader。
+ * 暴露 XmlBeanDefinitionReader指定的 NamespaceHandlerResolver 的访问。
  *
  * @author Rob Harrop
  * @author Juergen Hoeller

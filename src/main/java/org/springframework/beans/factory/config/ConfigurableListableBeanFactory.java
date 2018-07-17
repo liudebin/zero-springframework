@@ -16,6 +16,10 @@
 
 package org.springframework.beans.factory.config;
 
+import org.springframework.beans.factory.ListableBeanFactory;
+import org.springframework.beans.factory.NoSuchBeanDefinitionException;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.lang.Nullable;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
@@ -31,7 +35,7 @@ import java.util.Iterator;
  * Configuration interface to be implemented by most listable bean factories.
  *
  * 大多数可序列化的 Bean Factories 会实现  Configuration interface。
- * In addition to {@link org.springframework.beans.factory.config.ConfigurableBeanFactory}, it provides facilities to
+ * In addition to {@link ConfigurableBeanFactory}, it provides facilities to
  * 除 ConfigurableBeanFactory 之外， 提供了功能去分析、修改 bean definitions，和 预实例化 单例。
  * analyze and modify bean definitions, and to pre-instantiate singletons.
  *
@@ -45,7 +49,7 @@ import java.util.Iterator;
  * 内部使用
  * @author Juergen Hoeller
  * @since 03.11.2003
- * @see org.springframework.context.support.AbstractApplicationContext#getBeanFactory()
+ * @see AbstractApplicationContext#getBeanFactory()
  */
 public interface ConfigurableListableBeanFactory
 		extends ListableBeanFactory, AutowireCapableBeanFactory, ConfigurableBeanFactory {

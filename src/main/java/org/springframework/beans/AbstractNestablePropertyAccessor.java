@@ -18,6 +18,8 @@ package org.springframework.beans;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.core.convert.ConverterNotFoundException;
+import org.springframework.util.StringUtils;
 import org.springframework.core.CollectionFactory;
 import org.springframework.core.ResolvableType;
 import org.springframework.core.convert.ConversionException;

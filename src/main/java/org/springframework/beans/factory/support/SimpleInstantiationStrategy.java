@@ -16,6 +16,8 @@
 
 package org.springframework.beans.factory.support;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.util.StringUtils;
 import org.springframework.beans.BeanInstantiationException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.BeanFactory;
@@ -60,6 +62,8 @@ public class SimpleInstantiationStrategy implements InstantiationStrategy {
 	@Override
 	public Object instantiate(RootBeanDefinition bd, @Nullable String beanName, BeanFactory owner) {
 		// Don't override the class with CGLIB if no overrides.
+		// 如果有需要覆盖或者动态替换的方法则当然需要使用cglib进行动态代理，因为可以在创建代理的同时，将动态方法织入类中。
+        // 但是如果没有需要动态修改的方法，为了方便直接反射就可以了。
 		if (bd.getMethodOverrides().isEmpty()) {
 			Constructor<?> constructorToUse;
 			synchronized (bd.constructorArgumentLock) {

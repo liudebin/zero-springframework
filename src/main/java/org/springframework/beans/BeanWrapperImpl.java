@@ -16,6 +16,10 @@
 
 package org.springframework.beans;
 
+import org.springframework.core.convert.Property;
+import org.springframework.core.convert.TypeDescriptor;
+import org.springframework.lang.Nullable;
+import org.springframework.util.ReflectionUtils;
 import org.springframework.beans.*;
 import org.springframework.beans.CachedIntrospectionResults;
 import org.springframework.beans.GenericTypeAwarePropertyDescriptor;

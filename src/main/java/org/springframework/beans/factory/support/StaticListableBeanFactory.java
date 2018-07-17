@@ -16,6 +16,8 @@
 
 package org.springframework.beans.factory.support;
 
+import org.springframework.beans.factory.*;
+import org.springframework.util.StringUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.BeanIsNotAFactoryException;
@@ -109,7 +111,7 @@ public class StaticListableBeanFactory implements ListableBeanFactory {
 		// Don't let calling code try to dereference the
 		// bean factory if the bean isn't a factory
 		if (BeanFactoryUtils.isFactoryDereference(name) && !(bean instanceof FactoryBean)) {
-			throw new BeanIsNotAFactoryException(beanName, bean.getClass());
+			throw new org.springframework.beans.factory.BeanIsNotAFactoryException(beanName, bean.getClass());
 		}
 
 		if (bean instanceof FactoryBean && !BeanFactoryUtils.isFactoryDereference(name)) {

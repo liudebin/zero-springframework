@@ -17,6 +17,7 @@
 package org.springframework.core.annotation;
 
 import org.springframework.core.Ordered;
+import org.springframework.core.Ordered;
 import org.springframework.core.annotation.*;
 import org.springframework.core.annotation.OrderUtils;
 

@@ -17,6 +17,7 @@
 package org.springframework.core;
 
 import org.springframework.util.Assert;
+import org.springframework.util.Assert;
 
 /**
  * {@link InheritableThreadLocal} subclass that exposes a specified name

@@ -16,6 +16,7 @@
 
 package org.springframework.core.io;
 
+import org.springframework.util.ResourceUtils;
 import org.springframework.core.io.*;
 import org.springframework.lang.Nullable;
 import org.springframework.util.ResourceUtils;

@@ -17,6 +17,7 @@
 package org.springframework.beans;
 
 import org.springframework.lang.Nullable;
+import org.springframework.lang.Nullable;
 
 /**
  * Interface representing an object whose value set can be merged with

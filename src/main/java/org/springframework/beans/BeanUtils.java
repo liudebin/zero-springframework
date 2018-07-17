@@ -18,6 +18,9 @@ package org.springframework.beans;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.core.MethodParameter;
+import org.springframework.lang.Nullable;
+import org.springframework.util.*;
 import org.springframework.beans.*;
 import org.springframework.core.MethodParameter;
 import org.springframework.lang.Nullable;
@@ -80,6 +83,7 @@ public abstract class BeanUtils {
 	}
 
 	/**
+	 * 实例化类 使用 无参构造函数
 	 * Instantiate a class using its no-arg constructor.
 	 * <p>Note that this method tries to set the constructor accessible
 	 * if given a non-accessible (that is, non-public) constructor.

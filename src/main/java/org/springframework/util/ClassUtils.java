@@ -155,7 +155,7 @@ public abstract class ClassUtils {
 	public static ClassLoader getDefaultClassLoader() {
 		ClassLoader cl = null;
 		try {
-			cl = Thread.currentThread().getContextClassLoader();
+			cl = Thread.currentThread().getContextClassLoader(); //sun.misc.Launcher 内部类 AppClassLoader
 		}
 		catch (Throwable ex) {
 			// Cannot access thread context ClassLoader - falling back...
@@ -201,6 +201,9 @@ public abstract class ClassUtils {
 	 * for primitives (e.g. "int") and array class names (e.g. "String[]").
 	 * Furthermore, it is also capable of resolving inner class names in Java source
 	 * style (e.g. "java.lang.Thread.State" instead of "java.lang.Thread$State").
+	 * Class.forName()的替代类
+     * 也返回原语(例如“int”)和数组类名(例如“String”)的。
+     * 此外，它还能够以Java源代码样式解析内部类名(例如“java.lang.Thread.State”而不是“java.lang.Thread$State”)。
 	 * @param name the name of the Class
 	 * @param classLoader the class loader to use
 	 * (may be {@code null}, which indicates the default class loader)

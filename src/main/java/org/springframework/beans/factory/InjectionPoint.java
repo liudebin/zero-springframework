@@ -16,6 +16,7 @@
 
 package org.springframework.beans.factory;
 
+import org.springframework.core.MethodParameter;
 import org.springframework.beans.factory.UnsatisfiedDependencyException;
 import org.springframework.core.MethodParameter;
 import org.springframework.lang.Nullable;

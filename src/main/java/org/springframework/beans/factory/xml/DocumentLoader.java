@@ -16,7 +16,6 @@
 
 package org.springframework.beans.factory.xml;
 
-import org.springframework.beans.factory.xml.DefaultDocumentLoader;
 import org.w3c.dom.Document;
 import org.xml.sax.EntityResolver;
 import org.xml.sax.ErrorHandler;

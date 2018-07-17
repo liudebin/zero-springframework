@@ -19,6 +19,9 @@ package org.springframework.beans.factory.parsing;
 import org.springframework.core.io.Resource;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
+import org.springframework.core.io.Resource;
+import org.springframework.lang.Nullable;
+import org.springframework.util.Assert;
 
 /**
  * Class that models an arbitrary location in a {@link Resource resource}.

@@ -16,6 +16,8 @@
 
 package org.springframework.core.io.support;
 
+import org.springframework.core.io.Resource;
+import org.springframework.util.StringUtils;
 import org.springframework.core.env.PropertiesPropertySource;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;

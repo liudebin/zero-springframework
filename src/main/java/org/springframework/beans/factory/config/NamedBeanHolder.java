@@ -16,6 +16,8 @@
 
 package org.springframework.beans.factory.config;
 
+import org.springframework.beans.factory.NamedBean;
+import org.springframework.util.Assert;
 import org.springframework.util.Assert;
 import org.springframework.beans.factory.NamedBean;
 
@@ -24,7 +26,7 @@ import org.springframework.beans.factory.NamedBean;
  *
  * @author Juergen Hoeller
  * @since 4.3.3
- * @see org.springframework.beans.factory.config.AutowireCapableBeanFactory#resolveNamedBean(Class)
+// * @see org.springframework.beans.factory.config.AutowireCapableBeanFactory#resolveNamedBean(Class)
  */
 public class NamedBeanHolder<T> implements NamedBean {
 

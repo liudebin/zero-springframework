@@ -18,6 +18,7 @@ package org.springframework.core.env;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.util.StringUtils;
 import org.springframework.core.SpringProperties;
 import org.springframework.core.convert.support.ConfigurableConversionService;
 import org.springframework.core.env.*;
@@ -46,22 +47,22 @@ import java.util.Set;
  子类应该有助于通过保护产权的来源customizepropertysources（mutablepropertysources）挂钩，而客户要定制使用configurableenvironment。getpropertysources()和对mutablepropertysources API。
  看到 configurableenvironment javadoc的用法示例。
 
- * Abstract base class for {@link org.springframework.core.env.Environment} implementations. Supports the notion of
+ * Abstract base class for {@link Environment} implementations. Supports the notion of
  * reserved default profile names and enables specifying active and default profiles
  * through the {@link #ACTIVE_PROFILES_PROPERTY_NAME} and
  * {@link #DEFAULT_PROFILES_PROPERTY_NAME} properties.
  *
- * <p>Concrete subclasses differ primarily on which {@link org.springframework.core.env.PropertySource} objects they
+ * <p>Concrete subclasses differ primarily on which {@link PropertySource} objects they
  * add by default. {@code AbstractEnvironment} adds none. Subclasses should contribute
- * property sources through the protected {@link #customizePropertySources(org.springframework.core.env.MutablePropertySources)}
- * hook, while clients should customize using {@link org.springframework.core.env.ConfigurableEnvironment#getPropertySources()}
- * and working against the {@link org.springframework.core.env.MutablePropertySources} API.
- * See {@link org.springframework.core.env.ConfigurableEnvironment} javadoc for usage examples.
+ * property sources through the protected {@link #customizePropertySources(MutablePropertySources)}
+ * hook, while clients should customize using {@link ConfigurableEnvironment#getPropertySources()}
+ * and working against the {@link MutablePropertySources} API.
+ * See {@link ConfigurableEnvironment} javadoc for usage examples.
  *
  * @author Chris Beams
  * @author Juergen Hoeller
  * @since 3.1
- * @see org.springframework.core.env.ConfigurableEnvironment
+ * @see ConfigurableEnvironment
  * @see StandardEnvironment
  */
 public abstract class AbstractEnvironment implements ConfigurableEnvironment {
@@ -355,6 +356,7 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 	/**
 	 * Return whether the given profile is active, or if active profiles are empty
 	 * whether the profile should be active by default.
+	 * 返回给定的配置文件是否处于活动状态, 或者如果活动配置文件为空, 则该配置文件是否应在默认情况下处于活动状态。
 	 * @throws IllegalArgumentException per {@link #validateProfile(String)}
 	 */
 	protected boolean isProfileActive(String profile) {

@@ -16,6 +16,7 @@
 
 package org.springframework.beans.factory;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.lang.Nullable;
 
 /**
@@ -31,7 +32,7 @@ import org.springframework.lang.Nullable;
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @since 07.07.2003
- * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#setParentBeanFactory
+ * @see ConfigurableBeanFactory#setParentBeanFactory
  */
 public interface HierarchicalBeanFactory extends BeanFactory {
 

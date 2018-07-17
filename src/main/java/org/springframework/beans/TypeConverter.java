@@ -16,6 +16,8 @@
 
 package org.springframework.beans;
 
+import org.springframework.core.MethodParameter;
+import org.springframework.lang.Nullable;
 import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.beans.PropertyEditorRegistry;
 import org.springframework.beans.SimpleTypeConverter;

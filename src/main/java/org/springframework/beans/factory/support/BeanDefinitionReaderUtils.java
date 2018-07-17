@@ -58,13 +58,17 @@ public class BeanDefinitionReaderUtils {
 	public static AbstractBeanDefinition createBeanDefinition(
 			@Nullable String parentName, @Nullable String className, @Nullable ClassLoader classLoader) throws ClassNotFoundException {
 
+		//ConstructorArgumentValues 为初始化
+        //PropertyValues 为初始化
 		GenericBeanDefinition bd = new GenericBeanDefinition();
 		bd.setParentName(parentName);
 		if (className != null) {
 			if (classLoader != null) {
+//				加载的是类对象
 				bd.setBeanClass(ClassUtils.forName(className, classLoader));
 			}
 			else {
+//				类的名字
 				bd.setBeanClassName(className);
 			}
 		}
@@ -80,7 +84,7 @@ public class BeanDefinitionReaderUtils {
 	 * @return the generated bean name
 	 * @throws BeanDefinitionStoreException if no unique name can be generated
 	 * for the given bean definition
-	 * @see #generateBeanName(BeanDefinition, org.springframework.beans.factory.support.BeanDefinitionRegistry, boolean)
+	 * @see #generateBeanName(BeanDefinition, BeanDefinitionRegistry, boolean)
 	 */
 	public static String generateBeanName(BeanDefinition beanDefinition, BeanDefinitionRegistry registry)
 			throws BeanDefinitionStoreException {
@@ -138,6 +142,7 @@ public class BeanDefinitionReaderUtils {
 
 	/**
 	 * Register the given bean definition with the given bean factory.
+	 * 向给定bean工厂注册给定bean定义
 	 * @param definitionHolder the bean definition including name and aliases
 	 * @param registry the bean factory to register with
 	 * @throws BeanDefinitionStoreException if registration failed
@@ -147,6 +152,7 @@ public class BeanDefinitionReaderUtils {
 			throws BeanDefinitionStoreException {
 
 		// Register bean definition under primary name.
+//        在主名称下注册bean定义。
 		String beanName = definitionHolder.getBeanName();
 		registry.registerBeanDefinition(beanName, definitionHolder.getBeanDefinition());
 

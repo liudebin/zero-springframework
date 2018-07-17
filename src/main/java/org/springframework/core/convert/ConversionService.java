@@ -17,6 +17,7 @@
 package org.springframework.core.convert;
 
 import org.springframework.lang.Nullable;
+import org.springframework.lang.Nullable;
 
 /**
  * A service interface for type conversion. This is the entry point into the convert system.
@@ -48,7 +49,7 @@ public interface ConversionService {
 	 * Return {@code true} if objects of {@code sourceType} can be converted to the {@code targetType}.
 	 * The TypeDescriptors provide additional context about the source and target locations
 	 * where conversion would occur, often object fields or property locations.
-	 * <p>If this method returns {@code true}, it means {@link #convert(Object, org.springframework.core.convert.TypeDescriptor, org.springframework.core.convert.TypeDescriptor)}
+	 * <p>If this method returns {@code true}, it means {@link #convert(Object, TypeDescriptor, TypeDescriptor)}
 	 * is capable of converting an instance of {@code sourceType} to {@code targetType}.
 	 * <p>Special note on collections, arrays, and maps types:
 	 * For conversion between collection, array, and map types, this method will return {@code true}

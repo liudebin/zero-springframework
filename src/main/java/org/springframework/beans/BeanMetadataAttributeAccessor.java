@@ -16,6 +16,7 @@
 
 package org.springframework.beans;
 
+import org.springframework.lang.Nullable;
 import org.springframework.core.AttributeAccessorSupport;
 import org.springframework.lang.Nullable;
 

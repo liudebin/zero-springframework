@@ -19,6 +19,9 @@ package org.springframework.beans.factory;
 import org.springframework.beans.FatalBeanException;
 import org.springframework.core.NestedRuntimeException;
 import org.springframework.lang.Nullable;
+import org.springframework.beans.FatalBeanException;
+import org.springframework.core.NestedRuntimeException;
+import org.springframework.lang.Nullable;
 
 import java.io.PrintStream;
 import java.io.PrintWriter;

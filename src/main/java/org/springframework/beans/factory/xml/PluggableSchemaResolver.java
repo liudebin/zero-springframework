@@ -18,6 +18,11 @@ package org.springframework.beans.factory.xml;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.PropertiesLoaderUtils;
+import org.springframework.lang.Nullable;
+import org.springframework.util.Assert;
+import org.springframework.util.CollectionUtils;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
@@ -37,6 +42,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * {@link EntityResolver} implementation that attempts to resolve schema URLs into
  * local {@link ClassPathResource classpath resources} using a set of mappings files.
  *
+ * 实现了 EntityResolver ，尝试使用 ClassPathResource 解析 schema URLs，获取对应的文件。
+ * 默认到 META-INT/Spring.schemas 文件中找到systemid 所对应的XSD文件并加载
  * <p>By default, this class will look for mapping files in the classpath using the pattern:
  * {@code META-INF/spring.schemas} allowing for multiple files to exist on the
  * classpath at any one time.

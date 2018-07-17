@@ -21,6 +21,11 @@ import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
+import org.springframework.lang.Nullable;
+import org.springframework.util.Assert;
+import org.springframework.util.ClassUtils;
+import org.springframework.util.ObjectUtils;
+import org.springframework.util.StringUtils;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -28,14 +33,14 @@ import java.io.InputStream;
 import java.net.URL;
 
 /**
- * {@link org.springframework.core.io.Resource} implementation for class path resources. Uses either a
+ * {@link Resource} implementation for class path resources. Uses either a
  * given {@link ClassLoader} or a given {@link Class} for loading resources.
  *
  * 使用一个给定的 ClassLoader 或 Class 加载 资源文件。
  * <p>Supports resolution as {@code java.io.File} if the class path
  * resource resides in the file system, but not for resources in a JAR.
  * Always supports resolution as URL.
- *
+ * 如果类路径资源驻留在文件系统中，而不是JAR中的资源，则支持作为文件的解析。始终支持作为URL的解析。
  * @author Juergen Hoeller
  * @author Sam Brannen
  * @since 28.12.2003
@@ -163,6 +168,7 @@ public class ClassPathResource extends AbstractFileResolvingResource {
 
 	/**
 	 * This implementation opens an InputStream for the given class path resource.
+	 * 这个实现，通过给定的class path resource  打开一个 inputStream
 	 * @see ClassLoader#getResourceAsStream(String)
 	 * @see Class#getResourceAsStream(String)
 	 */

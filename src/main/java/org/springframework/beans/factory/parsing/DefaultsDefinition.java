@@ -17,7 +17,8 @@
 package org.springframework.beans.factory.parsing;
 
 import org.springframework.beans.BeanMetadataElement;
-import org.springframework.beans.factory.parsing.*;
+import org.springframework.beans.factory.xml.DocumentDefaultsDefinition;
+import org.springframework.beans.BeanMetadataElement;
 
 /**
  * Marker interface for a defaults definition,
@@ -25,11 +26,13 @@ import org.springframework.beans.factory.parsing.*;
  *
  * <p>Concrete implementations are typically based on 'document defaults',
  * for example specified at the root tag level within an XML document.
+ * 用于默认定义的标记接口, 扩展 BeanMetadataElement 接口，以继承资源暴露方法。
  *
+ * 具体实现通常基于 "文档默认值", 例如在 xml 文档中的指定根标记级别
  * @author Juergen Hoeller
  * @since 2.0.2
- * @see org.springframework.beans.factory.xml.DocumentDefaultsDefinition
- * @see org.springframework.beans.factory.parsing.ReaderEventListener#defaultsRegistered(DefaultsDefinition)
+ * @see DocumentDefaultsDefinition
+ * @see ReaderEventListener#defaultsRegistered(DefaultsDefinition)
  */
 public interface DefaultsDefinition extends BeanMetadataElement {
 

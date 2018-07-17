@@ -16,6 +16,7 @@
 
 package org.springframework.beans.factory;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.BeanFactoryUtils;
@@ -29,7 +30,9 @@ import java.util.Map;
 /**
 
  注：随着getBeanDefinitionCount和containsbeandefinition例外，在这个接口中的方法不适用于频繁调用。实现可能很慢。
- * Extension of the {@link org.springframework.beans.factory.BeanFactory} interface to be implemented by bean factories
+
+
+ * Extension of the {@link BeanFactory} interface to be implemented by bean factories
  * that can enumerate（枚举） all their bean instances, rather than attempting bean lookup
  * by name one by one as requested by clients. BeanFactory implementations that
  * preload all their bean definitions (such as XML-based factories) may implement
@@ -40,7 +43,7 @@ import java.util.Map;
  *
  * <p>If this is a {@link HierarchicalBeanFactory}, the return values will <i>not</i>
  * take any BeanFactory hierarchy into account, but will relate only to the beans
- * defined in the current factory. Use the {@link org.springframework.beans.factory.BeanFactoryUtils} helper class
+ * defined in the current factory. Use the {@link BeanFactoryUtils} helper class
  * to consider beans in ancestor factories too.
  *
  * 如果这是一个 HierarchicalBeanFactory，返回值将不会考虑任何BeanFactory的层次，但只与定义的当前bean的工厂关联。使
@@ -48,7 +51,7 @@ import java.util.Map;
  *
  * <p>The methods in this interface will just respect bean definitions of this factory.
  * They will ignore any singleton beans that have been registered by other means like
- * {@link org.springframework.beans.factory.config.ConfigurableBeanFactory}'s
+ * {@link ConfigurableBeanFactory}'s
  * {@code registerSingleton} method, with the exception of
  * {@code getBeanNamesOfType} and {@code getBeansOfType} which will check
  * such manually registered singletons too. Of course, BeanFactory's {@code getBean}
@@ -69,7 +72,7 @@ import java.util.Map;
  * @author Juergen Hoeller
  * @since 16 April 2001
  * @see HierarchicalBeanFactory
- * @see org.springframework.beans.factory.BeanFactoryUtils
+ * @see BeanFactoryUtils
  */
 public interface ListableBeanFactory extends BeanFactory {
 
@@ -285,7 +288,7 @@ public interface ListableBeanFactory extends BeanFactory {
 	 * @param beanName the name of the bean to look for annotations on
 	 * @param annotationType the annotation class to look for
 	 * @return the annotation of the given type if found, or {@code null} otherwise
-	 * @throws org.springframework.beans.factory.NoSuchBeanDefinitionException if there is no bean with the given name
+	 * @throwsorg.springframework.beans.factory.NoSuchBeanDefinitionException if there is no bean with the given name
 	 * @since 3.0
 	 */
 	@Nullable

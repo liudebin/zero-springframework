@@ -27,9 +27,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * component(组成，成分)
  * ComponentDefinition based on a standard BeanDefinition, exposing the given bean
  * definition as well as inner bean definitions and bean references for the given bean.
- *
+ * 基于标准BeanDefinition的 组合定义
+ * 公开给定的bean定义，以及对给定bean的内部bean定义和bean引用。
  * @author Rob Harrop
  * @author Juergen Hoeller
  * @since 2.0
@@ -66,6 +68,7 @@ public class BeanComponentDefinition extends BeanDefinitionHolder implements Com
 	 * Create a new BeanComponentDefinition for the given bean.
 	 * @param holder the BeanDefinitionHolder encapsulating the
 	 * bean definition as well as the name of the bean
+     *               封装bean定义和bean名称的BeanDefinitionHolder
 	 */
 	public BeanComponentDefinition(BeanDefinitionHolder holder) {
 		super(holder);

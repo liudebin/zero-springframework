@@ -17,10 +17,11 @@
 package org.springframework.beans.factory.support;
 
 import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.config.BeanDefinition;
 
 /**
- * Default implementation of the {@link org.springframework.beans.factory.support.BeanNameGenerator} interface, delegating to
- * {@link org.springframework.beans.factory.support.BeanDefinitionReaderUtils#generateBeanName(BeanDefinition, org.springframework.beans.factory.support.BeanDefinitionRegistry)}.
+ * Default implementation of the {@link BeanNameGenerator} interface, delegating to
+ * {@link BeanDefinitionReaderUtils#generateBeanName(BeanDefinition, BeanDefinitionRegistry)}.
  *
  * @author Juergen Hoeller
  * @since 2.0.3

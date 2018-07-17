@@ -17,6 +17,7 @@
 package org.springframework.beans.factory.config;
 
 import org.springframework.beans.BeanMetadataElement;
+import org.springframework.beans.BeanMetadataElement;
 import org.springframework.beans.factory.config.*;
 
 /**

@@ -21,6 +21,9 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.core.io.*;
 import org.springframework.lang.Nullable;
 import org.springframework.util.*;
+import org.springframework.core.io.*;
+import org.springframework.lang.Nullable;
+import org.springframework.util.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -33,7 +36,7 @@ import java.util.jar.JarFile;
 import java.util.zip.ZipException;
 
 /**
- * A {@link org.springframework.core.io.support.ResourcePatternResolver} implementation that is able to resolve a
+ * A {@link ResourcePatternResolver} implementation that is able to resolve a
  * specified resource location path into one or more matching Resources.
  * The source path may be a simple path which has a one-to-one mapping to a
  * target {@link Resource}, or alternatively

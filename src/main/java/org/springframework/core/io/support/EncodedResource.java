@@ -20,6 +20,10 @@ import org.springframework.core.io.InputStreamSource;
 import org.springframework.core.io.Resource;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
+import org.springframework.core.io.InputStreamSource;
+import org.springframework.core.io.Resource;
+import org.springframework.lang.Nullable;
+import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
 
 import java.io.IOException;
@@ -29,6 +33,9 @@ import java.io.Reader;
 import java.nio.charset.Charset;
 
 /**
+ *
+ * 根据资源文件的编码进行处理，获取相应的 InputStreamReader
+ *
  * Holder that combines a {@link Resource} descriptor with a specific encoding
  * or {@code Charset} to be used for reading from the resource.
  *

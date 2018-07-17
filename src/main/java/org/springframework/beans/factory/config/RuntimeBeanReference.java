@@ -17,12 +17,13 @@
 package org.springframework.beans.factory.config;
 
 import org.springframework.lang.Nullable;
+import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 
 /**
  * Immutable placeholder class used for a property value object when it's
  * a reference to another bean in the factory, to be resolved at runtime.
- *
+ * 不可变占位符类，当属性值对象是工厂中另一个bean的引用时，它将在运行时解析。
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @see org.springframework.beans.factory.config.BeanDefinition#getPropertyValues()

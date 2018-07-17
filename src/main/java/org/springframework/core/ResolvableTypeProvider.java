@@ -17,6 +17,7 @@
 package org.springframework.core;
 
 import org.springframework.lang.Nullable;
+import org.springframework.lang.Nullable;
 
 /**
  * Any object can implement this interface to provide its actual {@link org.springframework.core.ResolvableType}.

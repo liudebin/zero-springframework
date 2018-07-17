@@ -16,9 +16,7 @@
 
 package org.springframework.beans.factory;
 
-import org.springframework.beans.factory.*;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.ListableBeanFactory;
+import org.springframework.lang.Nullable;
 import org.springframework.lang.Nullable;
 
 /**
@@ -76,6 +74,11 @@ public interface FactoryBean<T> {
 	 * @return an instance of the bean (can be {@code null})
 	 * @throws Exception in case of creation errors
 	 * @see FactoryBeanNotInitializedException
+	 */
+	/**
+	 * 返回由FactoryBean 创建的bean实例，如果是isSingleton() 返回true，则该实例会放到Spring容器中单例实例缓存中。
+	 * @return
+	 * @throws Exception
 	 */
 	@Nullable
 	T getObject() throws Exception;

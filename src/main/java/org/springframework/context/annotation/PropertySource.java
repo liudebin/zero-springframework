@@ -16,6 +16,8 @@
 
 package org.springframework.context.annotation;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.support.PropertySourceFactory;
 import org.springframework.core.io.support.PropertySourceFactory;
 
 import java.lang.annotation.*;
@@ -49,7 +51,7 @@ import java.lang.annotation.*;
  * }</pre>
  *
  * Notice that the {@code Environment} object is @{@link
- * org.springframework.beans.factory.annotation.Autowired Autowired} into the
+ * Autowired Autowired} into the
  * configuration class and then used when populating the {@code TestBean} object. Given
  * the configuration above, a call to {@code testBean.getName()} will return "myTestBean".
  *

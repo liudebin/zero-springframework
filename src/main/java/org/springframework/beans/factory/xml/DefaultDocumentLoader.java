@@ -30,7 +30,9 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 /**
- * Spring's default {@link org.springframework.beans.factory.xml.DocumentLoader} implementation.
+ * Spring's default {@link DocumentLoader} implementation.
+ *
+ * Spring 默认的 DocumentLoader 的实现类。
  *
  * Spring 默认的 DocumentLoader 的实现类。
  *

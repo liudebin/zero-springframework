@@ -17,6 +17,7 @@
 package org.springframework.util.xml;
 
 import org.springframework.util.Assert;
+import org.springframework.util.Assert;
 import org.w3c.dom.*;
 import org.xml.sax.Attributes;
 import org.xml.sax.ContentHandler;

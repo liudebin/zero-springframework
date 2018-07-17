@@ -17,10 +17,14 @@
 package org.springframework.beans.factory.parsing;
 
 import org.springframework.beans.BeanMetadataElement;
+import org.springframework.beans.factory.config.BeanReference;
+import org.springframework.beans.BeanMetadataElement;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanReference;
 
 /**
+ * 描述在同一配置的Context中一组BeanDefinition和BeanReference的逻辑视图的接口
+ *
  * Interface that describes the logical view of a set of {@link BeanDefinition BeanDefinitions}
  * and {@link BeanReference BeanReferences} as presented in some configuration context.
  *

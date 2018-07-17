@@ -18,6 +18,8 @@ package org.springframework.beans;
 
 import org.springframework.lang.Nullable;
 import org.springframework.util.ObjectUtils;
+import org.springframework.lang.Nullable;
+import org.springframework.util.ObjectUtils;
 
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;

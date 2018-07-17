@@ -16,6 +16,8 @@
 
 package org.springframework.beans.factory.xml;
 
+import org.springframework.lang.Nullable;
+import org.springframework.util.Assert;
 import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -25,6 +27,13 @@ import org.springframework.util.Assert;
 import java.io.IOException;
 
 /**
+ *
+ * 如果SAX应用程序需要定义自定义处理外部实体，
+ * 则必须实现 EntityResolver 接口并使用 setEntityResolver 方法向 SAX 驱动器注册一个实例。
+ * 对于解析一个XML SAX首先读取该XML文档上的声明，根据声明去虚招相应的 DTD/XSD 定义，以便对文档进行验证。
+ * 寻找的规则是：
+ *  通过网络（声明中的地址）下载相应的DTD声明，并进行验证。
+ *  EntityResolver的作用是项目本身可以提供一个如何寻找 DTD/XSD 声明的方法。
  * {@link EntityResolver} implementation that delegates to a {@link BeansDtdResolver}
  * and a {@link PluggableSchemaResolver} for DTDs and XML schemas, respectively.
  * EntityResolver 的实现 ，BeansDtdResolver 和 PluggableSchemaResolver 分别代表了 DTDs 和 Xml.

@@ -18,6 +18,7 @@ package org.springframework.core.env;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
@@ -42,7 +43,7 @@ import org.springframework.util.ObjectUtils;
  * as well as the {@link #named(String)} and {@link #toString()} methods for details.
  *
  * <p>Note that when working with @{@link
- * org.springframework.context.annotation.Configuration Configuration} classes that
+ * Configuration Configuration} classes that
  * the @{@link org.springframework.context.annotation.PropertySource PropertySource}
  * annotation provides a convenient and declarative way of adding property sources to the
  * enclosing {@code Environment}.

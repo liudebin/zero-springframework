@@ -18,6 +18,8 @@ package org.springframework.core.io;
 
 import org.springframework.core.NestedIOException;
 import org.springframework.util.ResourceUtils;
+import org.springframework.core.NestedIOException;
+import org.springframework.util.ResourceUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -30,7 +32,7 @@ import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 
 /**
- * Convenience base class for {@link org.springframework.core.io.Resource} implementations,
+ * Convenience base class for {@link Resource} implementations,
  * pre-implementing typical behavior.
  *
  * <p>The "exists" method will check whether a File or InputStream can

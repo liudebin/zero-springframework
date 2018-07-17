@@ -16,6 +16,15 @@
 
 package org.springframework.core.convert.support;
 
+import org.springframework.core.DecoratingProxy;
+import org.springframework.core.ResolvableType;
+import org.springframework.core.convert.*;
+import org.springframework.core.convert.converter.*;
+import org.springframework.lang.Nullable;
+import org.springframework.util.Assert;
+import org.springframework.util.ClassUtils;
+import org.springframework.util.ConcurrentReferenceHashMap;
+import org.springframework.util.StringUtils;
 import org.springframework.core.convert.ConverterNotFoundException;
 import org.springframework.core.DecoratingProxy;
 import org.springframework.core.ResolvableType;
@@ -103,7 +112,7 @@ public class GenericConversionService implements ConfigurableConversionService {
 					"ConverterFactory [" + factory.getClass().getName() + "]; does the class parameterize those types?");
 		}
 		addConverter(new ConverterFactoryAdapter(factory,
-				new ConvertiblePair(typeInfo[0].resolve(Object.class), typeInfo[1].resolve(Object.class))));
+				new GenericConverter.ConvertiblePair(typeInfo[0].resolve(Object.class), typeInfo[1].resolve(Object.class))));
 	}
 
 	@Override
@@ -484,24 +493,24 @@ public class GenericConversionService implements ConfigurableConversionService {
 
 		private final Set<GenericConverter> globalConverters = new LinkedHashSet<>();
 
-		private final Map<ConvertiblePair, ConvertersForPair> converters = new LinkedHashMap<>(36);
+		private final Map<GenericConverter.ConvertiblePair, ConvertersForPair> converters = new LinkedHashMap<>(36);
 
 		public void add(GenericConverter converter) {
-			Set<ConvertiblePair> convertibleTypes = converter.getConvertibleTypes();
+			Set<GenericConverter.ConvertiblePair> convertibleTypes = converter.getConvertibleTypes();
 			if (convertibleTypes == null) {
 				Assert.state(converter instanceof ConditionalConverter,
 						"Only conditional converters may return null convertible types");
 				this.globalConverters.add(converter);
 			}
 			else {
-				for (ConvertiblePair convertiblePair : convertibleTypes) {
+				for (GenericConverter.ConvertiblePair convertiblePair : convertibleTypes) {
 					ConvertersForPair convertersForPair = getMatchableConverters(convertiblePair);
 					convertersForPair.add(converter);
 				}
 			}
 		}
 
-		private ConvertersForPair getMatchableConverters(ConvertiblePair convertiblePair) {
+		private ConvertersForPair getMatchableConverters(GenericConverter.ConvertiblePair convertiblePair) {
 			ConvertersForPair convertersForPair = this.converters.get(convertiblePair);
 			if (convertersForPair == null) {
 				convertersForPair = new ConvertersForPair();
@@ -511,7 +520,7 @@ public class GenericConversionService implements ConfigurableConversionService {
 		}
 
 		public void remove(Class<?> sourceType, Class<?> targetType) {
-			this.converters.remove(new ConvertiblePair(sourceType, targetType));
+			this.converters.remove(new GenericConverter.ConvertiblePair(sourceType, targetType));
 		}
 
 		/**
@@ -529,7 +538,7 @@ public class GenericConversionService implements ConfigurableConversionService {
 			List<Class<?>> targetCandidates = getClassHierarchy(targetType.getType());
 			for (Class<?> sourceCandidate : sourceCandidates) {
 				for (Class<?> targetCandidate : targetCandidates) {
-					ConvertiblePair convertiblePair = new ConvertiblePair(sourceCandidate, targetCandidate);
+					GenericConverter.ConvertiblePair convertiblePair = new GenericConverter.ConvertiblePair(sourceCandidate, targetCandidate);
 					GenericConverter converter = getRegisteredConverter(sourceType, targetType, convertiblePair);
 					if (converter != null) {
 						return converter;
@@ -541,7 +550,7 @@ public class GenericConversionService implements ConfigurableConversionService {
 
 		@Nullable
 		private GenericConverter getRegisteredConverter(TypeDescriptor sourceType,
-				TypeDescriptor targetType, ConvertiblePair convertiblePair) {
+				TypeDescriptor targetType, GenericConverter.ConvertiblePair convertiblePair) {
 
 			// Check specifically registered converters
 			ConvertersForPair convertersForPair = this.converters.get(convertiblePair);
@@ -635,7 +644,7 @@ public class GenericConversionService implements ConfigurableConversionService {
 
 
 	/**
-	 * Manages converters registered with a specific {@link ConvertiblePair}.
+	 * Manages converters registered with a specific {@link GenericConverter.ConvertiblePair}.
 	 */
 	private static class ConvertersForPair {
 

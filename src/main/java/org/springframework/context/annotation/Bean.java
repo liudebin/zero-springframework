@@ -16,6 +16,8 @@
 
 package org.springframework.context.annotation;
 
+import org.springframework.beans.factory.support.AbstractBeanDefinition;
+import org.springframework.core.annotation.AliasFor;
 import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.beans.factory.support.AbstractBeanDefinition;
 import org.springframework.context.annotation.*;

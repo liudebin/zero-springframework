@@ -18,11 +18,13 @@ package org.springframework.beans;
 
 import org.springframework.core.NestedRuntimeException;
 import org.springframework.lang.Nullable;
+import org.springframework.core.NestedRuntimeException;
+import org.springframework.lang.Nullable;
 
 /**
  * Abstract superclass for all exceptions thrown in the beans package
  * and subpackages.
- *
+ * 对 异常都做了分包处理
  * <p>Note that this is a runtime (unchecked) exception. Beans exceptions
  * are usually fatal; there is no reason for them to be checked.
  *

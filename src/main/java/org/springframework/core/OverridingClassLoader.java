@@ -43,7 +43,7 @@ public class OverridingClassLoader extends  DecoratingClassLoader {
 	private static final String CLASS_FILE_SUFFIX = ".class";
 
 	static {
-		ClassLoader.registerAsParallelCapable();
+		registerAsParallelCapable();
 	}
 
 

@@ -17,6 +17,9 @@
 package org.springframework.beans;
 
 import org.apache.commons.logging.LogFactory;
+import org.springframework.core.MethodParameter;
+import org.springframework.util.ClassUtils;
+import org.springframework.util.StringUtils;
 import org.springframework.beans.PropertyDescriptorUtils;
 import org.springframework.core.BridgeMethodResolver;
 import org.springframework.core.GenericTypeResolver;

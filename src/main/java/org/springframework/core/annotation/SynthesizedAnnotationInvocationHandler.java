@@ -16,6 +16,7 @@
 
 package org.springframework.core.annotation;
 
+import org.springframework.util.StringUtils;
 import org.springframework.core.annotation.*;
 import org.springframework.core.annotation.AnnotationConfigurationException;
 import org.springframework.core.annotation.AnnotationUtils;

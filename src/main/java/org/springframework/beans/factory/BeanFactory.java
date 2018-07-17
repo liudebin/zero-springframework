@@ -16,6 +16,7 @@
 
 package org.springframework.beans.factory;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.core.ResolvableType;
@@ -27,7 +28,7 @@ import org.springframework.lang.Nullable;
  * This is the basic client view of a bean container;
  * 这是bean容器的基本定义。
  * further interfaces such as {@link ListableBeanFactory} and
- * {@link org.springframework.beans.factory.config.ConfigurableBeanFactory}
+ * {@link ConfigurableBeanFactory}
  * are available for specific purposes.
  *
  * <p>This interface is implemented by objects that hold a number of bean definitions,

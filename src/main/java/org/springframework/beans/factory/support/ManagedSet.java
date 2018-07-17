@@ -19,6 +19,9 @@ package org.springframework.beans.factory.support;
 import org.springframework.beans.BeanMetadataElement;
 import org.springframework.beans.Mergeable;
 import org.springframework.lang.Nullable;
+import org.springframework.beans.BeanMetadataElement;
+import org.springframework.beans.Mergeable;
+import org.springframework.lang.Nullable;
 
 import java.util.LinkedHashSet;
 import java.util.Set;

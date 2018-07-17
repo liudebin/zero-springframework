@@ -19,6 +19,12 @@ package org.springframework.beans.factory.support;
 import org.springframework.beans.factory.BeanDefinitionStoreException;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.context.support.GenericApplicationContext;
+import org.springframework.core.AliasRegistry;
+import org.springframework.beans.factory.BeanDefinitionStoreException;
+import org.springframework.beans.factory.NoSuchBeanDefinitionException;
+import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.*;
 import org.springframework.core.AliasRegistry;
 
@@ -26,7 +32,7 @@ import org.springframework.core.AliasRegistry;
  * Interface for registries that hold bean definitions, for example RootBeanDefinition
  * and ChildBeanDefinition instances. Typically implemented by BeanFactories that
  * internally work with the AbstractBeanDefinition hierarchy.
- * 登记持有的bean定义接口，例如RootBeanDefinition和ChildBeanDefinition实例。
+ * bean定义的登记接口，例如RootBeanDefinition和ChildBeanDefinition实例。
  * 通常被 BeanFactories 实现 内部使用 AbstractBeanDefinition 层次工作。
  *
  * <p>This is the only interface in Spring's bean factory packages that encapsulates
@@ -49,9 +55,9 @@ import org.springframework.core.AliasRegistry;
  * @see AbstractBeanDefinition
  * @see RootBeanDefinition
  * @see ChildBeanDefinition
- * @see org.springframework.beans.factory.support.DefaultListableBeanFactory
- * @see org.springframework.context.support.GenericApplicationContext
- * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
+ * @see DefaultListableBeanFactory
+ * @see GenericApplicationContext
+ * @see XmlBeanDefinitionReader
  * @see PropertiesBeanDefinitionReader
  */
 public interface BeanDefinitionRegistry extends AliasRegistry {

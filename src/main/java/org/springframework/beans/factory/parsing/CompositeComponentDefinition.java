@@ -18,6 +18,8 @@ package org.springframework.beans.factory.parsing;
 
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
+import org.springframework.lang.Nullable;
+import org.springframework.util.Assert;
 
 import java.util.LinkedList;
 import java.util.List;

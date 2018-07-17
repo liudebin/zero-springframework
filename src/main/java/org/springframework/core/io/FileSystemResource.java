@@ -16,6 +16,8 @@
 
 package org.springframework.core.io;
 
+import org.springframework.util.Assert;
+import org.springframework.util.StringUtils;
 import org.springframework.core.io.*;
 import org.springframework.core.io.Resource;
 import org.springframework.util.Assert;

@@ -20,6 +20,9 @@ package org.springframework.core.io.support;
 import org.springframework.core.io.Resource;
 import org.springframework.lang.Nullable;
 import org.springframework.util.*;
+import org.springframework.core.io.Resource;
+import org.springframework.lang.Nullable;
+import org.springframework.util.*;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -49,7 +52,7 @@ public abstract class PropertiesLoaderUtils {
 	/**
 	 * Load properties from the given EncodedResource,
 	 * potentially defining a specific encoding for the properties file.
-	 * @see #fillProperties(Properties, org.springframework.core.io.support.EncodedResource)
+	 * @see #fillProperties(Properties, EncodedResource)
 	 */
 	public static Properties loadProperties(EncodedResource resource) throws IOException {
 		Properties props = new Properties();

@@ -32,7 +32,7 @@ import java.lang.annotation.*;
  * <p>A class thus annotated is eligible for Spring
  * {@link org.springframework.dao.DataAccessException DataAccessException} translation
  * when used in conjunction with a {@link
- * org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor
+ *org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor
  * PersistenceExceptionTranslationPostProcessor}. The annotated class is also clarified as
  * to its role in the overall application architecture for the purpose of tooling,
  * aspects, etc.
@@ -52,7 +52,7 @@ import java.lang.annotation.*;
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@org.springframework.stereotype.Component
+@Component
 public @interface Repository {
 
 	/**

@@ -17,6 +17,7 @@
 package org.springframework.beans.factory.support;
 
 import org.springframework.beans.FatalBeanException;
+import org.springframework.beans.FatalBeanException;
 
 /**
  * Exception thrown when the validation of a bean definition failed.

@@ -22,6 +22,7 @@ import java.util.EventListener;
  * Interface that receives callbacks for component, alias and import
  * registrations during a bean definition reading process.
  *
+ * 该接口在bean定义读取过程中接收组件、别名和导入注册的回调。
  * @author Rob Harrop
  * @author Juergen Hoeller
  * @since 2.0

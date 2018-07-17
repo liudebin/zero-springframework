@@ -16,6 +16,7 @@
 
 package org.springframework.util.xml;
 
+import org.springframework.util.StringUtils;
 import org.springframework.lang.Nullable;
 import org.springframework.util.StringUtils;
 
@@ -76,6 +77,7 @@ public class XmlValidationModeDetector {
 
 
 	/**
+     * 如果不是DTD 即为 XSD
 	 * Detect the validation mode for the XML document in the supplied {@link InputStream}.
 	 * Note that the supplied {@link InputStream} is closed by this method before returning.
 	 * @param inputStream the InputStream to parse
@@ -91,6 +93,7 @@ public class XmlValidationModeDetector {
 			String content;
 			while ((content = reader.readLine()) != null) {
 				content = consumeCommentTokens(content);
+				//如果读取的行时空或者是注释则略过
 				if (this.inComment || !StringUtils.hasText(content)) {
 					continue;
 				}

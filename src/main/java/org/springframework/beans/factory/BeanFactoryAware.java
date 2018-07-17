@@ -17,9 +17,6 @@
 package org.springframework.beans.factory;
 
 import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.*;
-import org.springframework.beans.factory.Aware;
-import org.springframework.beans.factory.BeanFactory;
 
 /**
  * Interface to be implemented by beans that wish to be aware of their

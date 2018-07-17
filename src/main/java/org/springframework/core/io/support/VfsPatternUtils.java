@@ -18,6 +18,8 @@ package org.springframework.core.io.support;
 
 import org.springframework.core.io.VfsUtils;
 import org.springframework.lang.Nullable;
+import org.springframework.core.io.VfsUtils;
+import org.springframework.lang.Nullable;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationHandler;

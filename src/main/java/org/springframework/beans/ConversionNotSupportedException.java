@@ -17,6 +17,7 @@
 package org.springframework.beans;
 
 import org.springframework.lang.Nullable;
+import org.springframework.lang.Nullable;
 
 import java.beans.PropertyChangeEvent;
 
@@ -37,7 +38,7 @@ public class ConversionNotSupportedException extends TypeMismatchException {
 	 * @param cause the root cause (may be {@code null})
 	 */
 	public ConversionNotSupportedException(PropertyChangeEvent propertyChangeEvent,
-			@Nullable Class<?> requiredType, @Nullable Throwable cause) {
+                                           @Nullable Class<?> requiredType, @Nullable Throwable cause) {
 		super(propertyChangeEvent, requiredType, cause);
 	}
 

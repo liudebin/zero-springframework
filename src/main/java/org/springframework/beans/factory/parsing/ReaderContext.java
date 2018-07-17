@@ -17,12 +17,13 @@
 package org.springframework.beans.factory.parsing;
 
 import org.springframework.core.io.Resource;
+import org.springframework.core.io.Resource;
 import org.springframework.lang.Nullable;
 
 /**
  * 0.0
  * Context that gets passed along a bean definition reading process,
- * encapsulating all relevant configuration as well as state.
+ * encapsulating（囊括） all relevant configuration as well as state.
  *
  * 为在bean定义读取过程中传递的上下文，封装所有相关配置和状态。
  *
@@ -86,7 +87,7 @@ public class ReaderContext {
 	}
 
 	/**
-	 * Raise a fatal error.
+	 * Raise a fatal（致命的，重要的） error.
 	 */
 	public void fatal(String message, @Nullable Object source, @Nullable  ParseState parseState, @Nullable Throwable cause) {
 		Location location = new Location(getResource(), source);

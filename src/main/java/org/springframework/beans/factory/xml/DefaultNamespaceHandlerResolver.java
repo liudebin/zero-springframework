@@ -18,6 +18,7 @@ package org.springframework.beans.factory.xml;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.util.CollectionUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.FatalBeanException;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
@@ -32,7 +33,7 @@ import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Default implementation of the {@link org.springframework.beans.factory.xml.NamespaceHandlerResolver} interface.
+ * Default implementation of the {@link NamespaceHandlerResolver} interface.
  * Resolves namespace URIs to implementation classes based on the mappings
  * contained in mapping file.
  *
@@ -43,8 +44,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author Rob Harrop
  * @author Juergen Hoeller
  * @since 2.0
- * @see org.springframework.beans.factory.xml.NamespaceHandler
- * @see org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader
+ * @see NamespaceHandler
+ * @see DefaultBeanDefinitionDocumentReader
  */
 public class DefaultNamespaceHandlerResolver implements NamespaceHandlerResolver {
 

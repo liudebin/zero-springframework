@@ -17,10 +17,13 @@
 package org.springframework.beans;
 
 import org.springframework.lang.Nullable;
+import org.springframework.lang.Nullable;
 
 /**
+ * 不可恢复的
  * Thrown on an unrecoverable problem encountered in the
  * beans packages or sub-packages, e.g. bad class or field.
+ *
  *
  * @author Rod Johnson
  */

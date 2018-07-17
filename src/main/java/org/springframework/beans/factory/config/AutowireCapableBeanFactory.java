@@ -16,9 +16,10 @@
 
 package org.springframework.beans.factory.config;
 
+import org.springframework.beans.factory.*;
+import org.springframework.context.ApplicationContext;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.TypeConverter;
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
 import org.springframework.beans.factory.config.*;
@@ -35,7 +36,7 @@ import java.util.Set;
  * <p> 如果想提供已经存在的bean实例的自动装配功能，需要实现 这个BeanFactory扩展的接口。
  * <p>This subinterface of BeanFactory is not meant to be used in normal
  * application code: stick to {@link BeanFactory}
- * or {@link org.springframework.beans.factory.ListableBeanFactory} for
+ * or {@link ListableBeanFactory} for
  * typical use cases.
  *
  * <p> 这个BeanFactory的子接口，并不是意味着是能正常使用的应用程序代码：坚守 BeanFactory或 ListableBeanFactory 是典型用例。
@@ -48,7 +49,7 @@ import java.util.Set;
  * 其他框架的集成代码可以利用此接口来连接和填充Spring不控制生命周期的现有bean实例。这对于WebWork的行动和Tapestry页面对象是非常有用的，例如。
  *
  * <p>Note that this interface is not implemented by
- * {@link org.springframework.context.ApplicationContext} facades,
+ * {@link ApplicationContext} facades,
  * as it is hardly ever used by application code. That said, it is available
  * from an application context too, accessible through ApplicationContext's
  * {@link org.springframework.context.ApplicationContext#getAutowireCapableBeanFactory()}
@@ -57,7 +58,7 @@ import java.util.Set;
  *  <p>注意，这个接口不是由 ApplicationContext 正面实现，因为它是很难被应用程序代码使用。
  *  就是说，它可以从一个应用程序的上下文中，或通过 ApplicationContext 的 getAutowireCapableBeanFactory 方法获得。
  *
- * <p>You may also implement the {@link org.springframework.beans.factory.BeanFactoryAware}
+ * <p>You may also implement the {@link BeanFactoryAware}
  * interface, which exposes the internal BeanFactory even when running in an
  * ApplicationContext, to get access to an AutowireCapableBeanFactory:
  * simply cast the passed-in BeanFactory to AutowireCapableBeanFactory.
@@ -66,8 +67,8 @@ import java.util.Set;
  * 将通过在BeanFactory AutowireCapableBeanFactory。
  * @author Juergen Hoeller
  * @since 04.12.2003
- * @see org.springframework.beans.factory.BeanFactoryAware
- * @see org.springframework.beans.factory.config.ConfigurableListableBeanFactory
+ * @see BeanFactoryAware
+ * @see ConfigurableListableBeanFactory
 // * @see org.springframework.context.ApplicationContext#getAutowireCapableBeanFactory()
  */
 // 能自动装配的 BeanFactory

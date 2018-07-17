@@ -17,13 +17,13 @@
 package org.springframework.beans.factory.xml;
 
 import org.springframework.beans.factory.BeanDefinitionStoreException;
-import org.springframework.beans.factory.xml.*;
+import org.springframework.beans.factory.BeanDefinitionStoreException;
 import org.w3c.dom.Document;
 
 /**
  * Serial Peripheral Interface 串行外设接口
  * SPI for parsing an XML document that contains Spring bean definitions.
- * Used by {@link org.springframework.beans.factory.xml.XmlBeanDefinitionReader} for actually parsing a DOM document.
+ * Used by {@link XmlBeanDefinitionReader} for actually parsing a DOM document.
  *
  * <p>Instantiated per document to parse: implementations can hold
  * state in instance variables during the execution of the
@@ -33,7 +33,7 @@ import org.w3c.dom.Document;
  * @author Juergen Hoeller
  * @author Rob Harrop
  * @since 18.12.2003
- * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader#setDocumentReaderClass
+ * @see XmlBeanDefinitionReader#setDocumentReaderClass
  */
 // 定义读取Document 并 注册 BeanDefinition 的功能
 public interface BeanDefinitionDocumentReader {

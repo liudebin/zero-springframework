@@ -16,6 +16,9 @@
 
 package org.springframework.beans.factory.support;
 
+import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.FactoryBeanNotInitializedException;
+import org.springframework.lang.Nullable;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.BeanCurrentlyInCreationException;
@@ -34,7 +37,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  * <br>对于单例的登记需要 FactoryBean 实例的支撑基类，集成 DefaultSingletonBeanRegistry 的单点管理。
  * <p>
- * <p>Serves as base class for {@link org.springframework.beans.factory.support.AbstractBeanFactory}.
+ * <p>Serves as base class for {@link AbstractBeanFactory}.
  *
  * AbstractBeanFactory 的基类
  *
@@ -44,6 +47,9 @@ import java.util.concurrent.ConcurrentHashMap;
 public abstract class FactoryBeanRegistrySupport extends DefaultSingletonBeanRegistry {
 
 	/** Cache of singleton objects created by FactoryBeans: FactoryBean name --> object */
+    /**
+     * FactoryBean 创建的 单例的缓存，FactoryBeanName - object
+     */
 	private final Map<String, Object> factoryBeanObjectCache = new ConcurrentHashMap<>(16);
 
 
@@ -86,7 +92,7 @@ public abstract class FactoryBeanRegistrySupport extends DefaultSingletonBeanReg
 	}
 
 	/**
-	 * Obtain an object to expose from the given FactoryBean.
+	 * Obtain （获得) an object to expose(暴露) from the given FactoryBean.
 	 * @param factory the FactoryBean instance
 	 * @param beanName the name of the bean
 	 * @param shouldPostProcess whether the bean is subject to post-processing
@@ -98,6 +104,7 @@ public abstract class FactoryBeanRegistrySupport extends DefaultSingletonBeanReg
 	protected Object getObjectFromFactoryBean(FactoryBean<?> factory, String beanName, boolean shouldPostProcess) {
 		if (factory.isSingleton() && containsSingleton(beanName)) {
 			synchronized (getSingletonMutex()) {
+			    //尝试从 factoryBean 缓存获取
 				Object object = this.factoryBeanObjectCache.get(beanName);
 				if (object == null) {
 					object = doGetObjectFromFactoryBean(factory, beanName);
@@ -127,6 +134,7 @@ public abstract class FactoryBeanRegistrySupport extends DefaultSingletonBeanReg
 			Object object = doGetObjectFromFactoryBean(factory, beanName);
 			if (object != null && shouldPostProcess) {
 				try {
+					//调用ObjectFactory的后处理器
 					object = postProcessObjectFromFactoryBean(object, beanName);
 				}
 				catch (Throwable ex) {
@@ -138,6 +146,7 @@ public abstract class FactoryBeanRegistrySupport extends DefaultSingletonBeanReg
 	}
 
 	/**
+     * 从给定的 FactoryBean中获取一个 对象
 	 * Obtain an object to expose from the given FactoryBean.
 	 * @param factory the FactoryBean instance
 	 * @param beanName the name of the bean
@@ -162,6 +171,7 @@ public abstract class FactoryBeanRegistrySupport extends DefaultSingletonBeanReg
 				}
 			}
 			else {
+			    // 直接调用 getObject方法
 				object = factory.getObject();
 			}
 		}

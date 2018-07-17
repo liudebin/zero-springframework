@@ -17,6 +17,10 @@
 package org.springframework.beans.factory.support;
 
 import org.springframework.beans.factory.BeanDefinitionStoreException;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
+import org.springframework.lang.Nullable;
+import org.springframework.beans.factory.BeanDefinitionStoreException;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.BeanNameGenerator;
 import org.springframework.core.io.Resource;
@@ -68,7 +72,7 @@ public interface BeanDefinitionReader {
 	 * @see org.springframework.core.io.support.ResourcePatternResolver
 	 */
 	@Nullable
-	ResourceLoader getResourceLoader();
+    ResourceLoader getResourceLoader();
 
 	/**
 	 * Return the class loader to use for bean classes.

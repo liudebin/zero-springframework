@@ -16,6 +16,7 @@
 
 package org.springframework.core.env;
 
+import org.springframework.core.convert.converter.ConverterRegistry;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.core.convert.converter.ConverterRegistry;
 

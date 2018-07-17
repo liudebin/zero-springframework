@@ -16,6 +16,7 @@
 
 package org.springframework.core.env;
 
+import org.springframework.context.EnvironmentAware;
 import org.springframework.core.env.*;
 
 /**
@@ -43,7 +44,7 @@ import org.springframework.core.env.*;
  * and resolving properties from them.
  *
  * <p>Beans managed within an {@code ApplicationContext} may register to be {@link
- * org.springframework.context.EnvironmentAware EnvironmentAware} or {@code @Inject} the
+ * EnvironmentAware EnvironmentAware} or {@code @Inject} the
  * {@code Environment} in order to query profile state or resolve properties directly.
  *
  * <p>In most cases, however, application-level beans should not need to interact with the

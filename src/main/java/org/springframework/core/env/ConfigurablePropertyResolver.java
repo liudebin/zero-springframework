@@ -16,11 +16,13 @@
 
 package org.springframework.core.env;
 
+import org.springframework.core.convert.*;
+import org.springframework.lang.Nullable;
 import org.springframework.core.convert.support.ConfigurableConversionService;
 import org.springframework.lang.Nullable;
 
 /**
- * Configuration interface to be implemented by most if not all {@link org.springframework.core.env.PropertyResolver}
+ * Configuration interface to be implemented by most if not all {@link PropertyResolver}
  * types. Provides facilities for accessing and customizing the
  * {@link org.springframework.core.convert.ConversionService ConversionService}
  * used when converting property values from one type to another.
