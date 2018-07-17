@@ -17,12 +17,10 @@
 package org.springframework.beans.factory.config;
 
 import org.springframework.beans.factory.*;
-import org.springframework.context.ApplicationContext;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.TypeConverter;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
-import org.springframework.beans.factory.config.*;
 import org.springframework.lang.Nullable;
 
 import java.util.Set;

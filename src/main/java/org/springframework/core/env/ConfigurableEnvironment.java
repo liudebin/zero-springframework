@@ -16,8 +16,6 @@
 
 package org.springframework.core.env;
 
-import org.springframework.context.support.AbstractApplicationContext;
-
 import java.util.Map;
 
 /**

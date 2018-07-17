@@ -18,12 +18,14 @@ package org.springframework.context.support;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.context.*;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.context.*;
+import org.springframework.context.Lifecycle;
+import org.springframework.context.LifecycleProcessor;
+import org.springframework.context.Phased;
+import org.springframework.context.SmartLifecycle;
 
 import java.util.*;
 import java.util.concurrent.CountDownLatch;
@@ -163,7 +165,7 @@ public class DefaultLifecycleProcessor implements LifecycleProcessor, BeanFactor
 					bean.start();
 				}
 				catch (Throwable ex) {
-					throw new ApplicationContextException("Failed to start bean '" + beanName + "'", ex);
+//					throw new ApplicationContextException("Failed to start bean '" + beanName + "'", ex);
 				}
 				if (logger.isDebugEnabled()) {
 					logger.debug("Successfully started bean '" + beanName + "'");

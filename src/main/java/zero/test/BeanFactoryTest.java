@@ -21,6 +21,8 @@ public class BeanFactoryTest extends AbstractTest {
     public void testLoad() {
         BeanFactory beanFactory=new XmlBeanFactory(new ClassPathResource("applicationContext.xml"));
         App app = (App) beanFactory.getBean("app");
+        System.out.println(app.getClass());
+        System.out.println(beanFactory.getBean("app").getClass());
         app.sayHi();
     }
 

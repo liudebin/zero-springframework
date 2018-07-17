@@ -20,12 +20,6 @@ import org.springframework.beans.factory.BeanDefinitionStoreException;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-import org.springframework.context.support.GenericApplicationContext;
-import org.springframework.core.AliasRegistry;
-import org.springframework.beans.factory.BeanDefinitionStoreException;
-import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.support.*;
 import org.springframework.core.AliasRegistry;
 
 /**

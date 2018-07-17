@@ -18,16 +18,8 @@ package org.springframework.beans.factory.config;
 
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.lang.Nullable;
 import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.ListableBeanFactory;
-import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.beans.factory.config.*;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.beans.factory.config.DependencyDescriptor;
-import org.springframework.lang.Nullable;
 
 import java.util.Iterator;
 

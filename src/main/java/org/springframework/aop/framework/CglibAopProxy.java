@@ -212,6 +212,7 @@ class CglibAopProxy implements AopProxy, Serializable {
 	 * {@link Enhancer} implementation.
 	 */
 	protected Enhancer createEnhancer() {
+		System.out.println("enhancer");
 		return new Enhancer();
 	}
 

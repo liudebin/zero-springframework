@@ -27,3 +27,5 @@ zero 目录层级被删掉后，代码成功了。
 ## simple 
     精简到最简单 - 20180717
 
+1. 去除applicationcontext 相关
+2. 只保留xml配置文件相关的解析。
