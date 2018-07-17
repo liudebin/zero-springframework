@@ -16,9 +16,6 @@
 
 package org.springframework.core.env;
 
-import org.springframework.context.EnvironmentAware;
-import org.springframework.core.env.*;
-
 /**
  * Interface representing the environment in which the current application is running.
  * 代表了当前程序执行的环境的 接口。
