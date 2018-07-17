@@ -13,15 +13,15 @@
     <!--profile="test"-->
    <bean id="app" class="zero.test.App"/>
     <!--,; 都可以分割-->
-    <bean id="car" name="122334,232423523 11111" class="zero.test.FactoryBeanTest">
-       <property name="appInfo" value="zero,0.0.1,test"/>
-   </bean>
+    <!--<bean id="car" name="122334,232423523 11111" class="zero.test.FactoryBeanTest">-->
+       <!--<property name="appInfo" value="zero,0.0.1,test"/>-->
+   <!--</bean>-->
     <alias name="app" alias="appAlias"/>
 
     <!-- 配置使Spring采用CGLIB代理 -->
     <aop:aspectj-autoproxy proxy-target-class="true" />
     <!--<aop:aspectj-autoproxy/>-->
 
-    <bean id="myInterceptor" class="zero.test.MyInterceptor"/>
+    <!--<bean id="myInterceptor" class="zero.test.MyInterceptor"/>-->
 
 </beans>
