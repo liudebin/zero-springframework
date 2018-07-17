@@ -28,4 +28,9 @@ zero 目录层级被删掉后，代码成功了。
     精简到最简单 - 20180717
 
 1. 去除applicationcontext 相关
-2. 只保留xml配置文件相关的解析。
+2. 去除 task 
+3. 去除 aop？  - 删除ApplicationContext里的aop配置和aop包即可。
+4. 去除 注解？
+
+
+最终 只保留xml配置文件相关的解析。

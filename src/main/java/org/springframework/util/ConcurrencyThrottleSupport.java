@@ -18,7 +18,7 @@ package org.springframework.util;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.aop.interceptor.ConcurrencyThrottleInterceptor;
+//import org.springframework.aop.interceptor.ConcurrencyThrottleInterceptor;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

@@ -16,8 +16,8 @@
 
 package org.springframework.beans.factory.xml;
 
-import org.springframework.aop.config.AbstractInterceptorDrivenBeanDefinitionDecorator;
-import org.springframework.aop.framework.ProxyFactoryBean;
+//import org.springframework.aop.config.AbstractInterceptorDrivenBeanDefinitionDecorator;
+//import org.springframework.aop.framework.ProxyFactoryBean;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanDefinitionHolder;
