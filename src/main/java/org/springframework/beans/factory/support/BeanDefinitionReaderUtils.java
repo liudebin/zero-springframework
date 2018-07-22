@@ -62,7 +62,9 @@ public class BeanDefinitionReaderUtils {
         //PropertyValues 为初始化
 		GenericBeanDefinition bd = new GenericBeanDefinition();
 		bd.setParentName(parentName);
+
 		if (className != null) {
+		    // 基本不会走到这一步，也就是说值是设定了 beanClassName,而没有设定Class对象。
 			if (classLoader != null) {
 //				加载的是类对象
 				bd.setBeanClass(ClassUtils.forName(className, classLoader));

@@ -18,15 +18,6 @@ package org.springframework.beans.factory.xml;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.config.*;
-import org.springframework.beans.factory.parsing.*;
-import org.springframework.beans.factory.support.*;
-import org.springframework.util.*;
-import org.springframework.util.xml.DomUtils;
-import org.w3c.dom.Element;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 import org.springframework.beans.BeanMetadataAttribute;
 import org.springframework.beans.BeanMetadataAttributeAccessor;
 import org.springframework.beans.PropertyValue;
@@ -36,6 +27,10 @@ import org.springframework.beans.factory.support.*;
 import org.springframework.lang.Nullable;
 import org.springframework.util.*;
 import org.springframework.util.xml.DomUtils;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import java.util.*;
 
@@ -46,7 +41,9 @@ import java.util.*;
  * Intended（预期，打算） for use by both the main parser（解析器） and any extension
  * {@link BeanDefinitionParser BeanDefinitionParsers} or
  * {@link BeanDefinitionDecorator BeanDefinitionDecorators}.
- * 用于分析XMLBean定义的有状态委托类。打算供主解析器和任何扩展
+ *
+ *
+ * 用于分析XML Bean定义的有状态 委托类。预期是供主解析器和任何扩展类使用
  * Bean定义解析器
  * 或
  * Bean定义代理 使用。
@@ -394,7 +391,11 @@ public class BeanDefinitionParserDelegate {
 		return parseBeanDefinitionElement(ele, null);
 	}
 
-	/**
+	/** 0.0 20180718
+     *
+     * 此处对 containingBean 的作用 不理解。一直贯穿始终，结果还是没看懂
+     *
+     *
 	 * Parses the supplied {@code <bean>} element. May return {@code null}
 	 * if there were errors during parse. Errors are reported to the
 	 * {@link ProblemReporter}.
@@ -500,7 +501,7 @@ public class BeanDefinitionParserDelegate {
 	public AbstractBeanDefinition parseBeanDefinitionElement(
 			Element ele, String beanName, @Nullable BeanDefinition containingBean) {
 
-		this.parseState.push(new BeanEntry(beanName));//记录在解析的 bean
+		this.parseState.push(new BeanEntry(beanName));//记录在解析的 bean finally pop 0.0
 
 		// 解析class属性
 		String className = null;
@@ -515,26 +516,44 @@ public class BeanDefinitionParserDelegate {
 //0.0
 		try {
 
-//		    创建用于 承载 bean 属性的 AbstractBeanDefinition 将<bean> 标签转换成 对象
+//
 //			包含class 名字或对象，父类，初始化的构造函数对象，属性
+
+
+			// 这一步 将<bean> 标签转换成 对象
+
+
+            // 创建一个用于 承载 bean 属性的 AbstractBeanDefinition bd = new GenericBeanDefinition()对象。
+            // 并将 字符串 className 规范化，极少会改成 Class 对象。  --如果加载成对象，也是通过 ClassUtils.forName 方法巧妙完成
+
 			AbstractBeanDefinition bd = createBeanDefinition(className, parent);
 
 //			默认bean的各种属性 - lazy-init 等
+            //解析<bean> 标签中的其他属性 - scope/init-method等
 			parseBeanDefinitionAttributes(ele, beanName, containingBean, bd);
+/**************处理  bean  的  字节点。*******************/
+            //获取 子节点 description
 			bd.setDescription(DomUtils.getChildElementValueByTagName(ele, DESCRIPTION_ELEMENT));
 
 //			元数据 - 不是 注册类 的属性，而是一个额外的声明，需要的时候，可以通过 BeanDefinition 的 getAttribute(key) 方法获取。
 			parseMetaElements(ele, bd);
+
 //			lookup-method 属性 - 特殊的方法如注入，把一个方法声明的返回某种类型的 父类bean，实际返回的bean可以在此配置。 --
 			parseLookupOverrideSubElements(ele, bd.getMethodOverrides());
+
+
 //			replaced-method 属性 -配置为 <replaced-method name = 'methodName' replacer = 'replacer'/>
-// 创建实现 MethodReplacer 单独的类。
+//          创建实现 MethodReplacer 单独的类。
 			parseReplacedMethodSubElements(ele, bd.getMethodOverrides());
 
 //            构造函数参数
 			parseConstructorArgElements(ele, bd);
+
+
 //			property 属性
 			parsePropertyElements(ele, bd);
+
+
 //			qualifier 属性
 			parseQualifierElements(ele, bd);
 
@@ -564,12 +583,13 @@ public class BeanDefinitionParserDelegate {
      * 将给定bean元素的属性应用于给定的bean *定义
 	 * @param ele bean declaration element
 	 * @param beanName bean name
-	 * @param containingBean containing bean definition
+	 * @param containingBean containing bean definition  包括此处 0.0
 	 * @return a bean definition initialized according to the bean element attributes
 	 */
 	public AbstractBeanDefinition parseBeanDefinitionAttributes(Element ele, String beanName,
 			@Nullable BeanDefinition containingBean, AbstractBeanDefinition bd) {
 
+	    // 设定 scope
 		if (ele.hasAttribute(SINGLETON_ATTRIBUTE)) {
 			error("Old 1.x 'singleton' attribute in use - upgrade to 'scope' declaration", ele);
 		}

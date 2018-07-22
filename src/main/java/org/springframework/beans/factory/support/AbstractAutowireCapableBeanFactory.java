@@ -22,12 +22,6 @@ import org.springframework.beans.factory.config.*;
 import org.springframework.core.*;
 import org.springframework.lang.Nullable;
 import org.springframework.util.*;
-import org.springframework.beans.*;
-import org.springframework.beans.factory.*;
-import org.springframework.beans.factory.config.*;
-import org.springframework.core.*;
-import org.springframework.lang.Nullable;
-import org.springframework.util.*;
 
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Constructor;
@@ -244,7 +238,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 	 * 对于要忽略的其他类型，请为每个类型调用此方法。
 	 *
 	 * @see BeanFactoryAware
-	 * @see org.springframework.context.ApplicationContextAware
+//	 * @see org.springframework.context.ApplicationContextAware
 	 */
 	public void ignoreDependencyInterface(Class<?> ifc) {
 		this.ignoredDependencyInterfaces.add(ifc);
@@ -389,6 +383,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 		return initializeBean(beanName, existingBean, null);
 	}
 
+	// 每一个bean创建时都会被调用一次吗？
 	@Override
 	public Object applyBeanPostProcessorsBeforeInitialization(Object existingBean, String beanName)
 			throws BeansException {
@@ -448,13 +443,14 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 		// clone the bean definition in case of a dynamically resolved Class
 		// which cannot be stored in the shared merged bean definition.
         // 锁定class,根据设置的class属性或者根据className 来解析class
-		Class<?> resolvedClass = resolveBeanClass(mbd, beanName);
+		// 根据BeanName 和 Bean 定义获取 Class对象。
+		Class<?> resolvedClass = resolveBeanClass(mbd, beanName); //0.0
 		if (resolvedClass != null && !mbd.hasBeanClass() && mbd.getBeanClassName() != null) {
 			mbdToUse = new RootBeanDefinition(mbd);
 			mbdToUse.setBeanClass(resolvedClass);
 		}
 
-		// Prepare method overrides.
+		// Prepare method overrides. 0.0
         // 验证及准备覆盖的方法。 对override 属性进行标记（真是标记为 不为 override）及验证，在 doCreateBean 才会起作用。
 		try {
 			mbdToUse.prepareMethodOverrides();
@@ -526,8 +522,11 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 		}
 		if (instanceWrapper == null) {//为什么又判断一次 0.0 不是又，remove的时候可能会重新赋值了。
             // 将BeanDefinition 转换为 BeanWrapper
+			//根据指定bean使用对应的策略创建新的实例，如：工厂方法，构造函数自动注入，简单初始化
 			instanceWrapper = createBeanInstance(beanName, mbd, args);
 		}
+
+		//0.0
 		final Object bean = (instanceWrapper != null ? instanceWrapper.getWrappedInstance() : null);
 		Class<?> beanType = (instanceWrapper != null ? instanceWrapper.getWrappedClass() : null);
 		mbd.resolvedTargetType = beanType;
@@ -537,7 +536,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 			synchronized (mbd.postProcessingLock) {
 				if (!mbd.postProcessed) {
 					try {
-
+						//应用MergedBeanDefinitionPostProcessors
 					    //bean 合并后的处理，Autowired 注解正式通过此方法实现诸如类型的与解析。
 						applyMergedBeanDefinitionPostProcessors(mbd, beanType, beanName);
 					}
@@ -1106,6 +1105,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 	@Nullable
 	protected BeanWrapper createBeanInstance(String beanName, RootBeanDefinition mbd, @Nullable Object[] args) {
 		// Make sure bean class is actually resolved at this point.
+		// 保证 bean的 Class对象已创建。
 		Class<?> beanClass = resolveBeanClass(mbd, beanName);
 
 		if (beanClass != null && !Modifier.isPublic(beanClass.getModifiers()) && !mbd.isNonPublicAccessAllowed()) {
@@ -1116,28 +1116,34 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 		// bean 供应商？？？？0.0
 		Supplier<?> instanceSupplier = mbd.getInstanceSupplier();
 		if (instanceSupplier != null) {
+		    // 从供应商获取实例
 			return obtainFromSupplier(instanceSupplier, beanName);
 		}
 
 		// 如果工厂方法不为空，则使用工厂方法初始化策略
 		if (mbd.getFactoryMethodName() != null)  {
+		    // 使用工厂方法获取实例
 			return instantiateUsingFactoryMethod(beanName, mbd, args);
 		}
 
-		// Shortcut when re-creating the same bean...
+		// 短路操作 Shortcut when re-creating the same bean...
 		boolean resolved = false;
 		boolean autowireNecessary = false;
 		if (args == null) {
-		    // 如果已经锁定构造函数
+		    // 同步
 			synchronized (mbd.constructorArgumentLock) {
-			    // 如果已锁定 一个类有多个构造函数。因为判断一个类的构造函数有可能会升级成一个消耗性能的怪兽，所以使用缓存。
+			    // 如果已经锁定构造函数。
+                // 一个类有多个构造函数。因为判断一个类的构造函数有可能会升级成一个消耗性能的怪兽，所以使用缓存。
 				if (mbd.resolvedConstructorOrFactoryMethod != null) {
 					resolved = true;
 					autowireNecessary = mbd.constructorArgumentsResolved;
 				}
 			}
 		}
+		//如果已经解析过则使用解析好的构造函数方法不需要锁定
 		if (resolved) {
+
+		    // 两个判断条件不是一致的吗，怎么判断两次
 			if (autowireNecessary) {
 			    // 可自动注入的函数构造
 				return autowireConstructor(beanName, mbd, null, null);
@@ -1191,7 +1197,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 		return bw;
 	}
 
-	/**
+	/** 0.0
 	 * Overridden in order to implicitly register the currently created bean as
 	 * dependent on further beans getting programmatically retrieved during a
 	 * {@link Supplier} callback.

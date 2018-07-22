@@ -34,3 +34,10 @@ zero 目录层级被删掉后，代码成功了。
 
 
 最终 只保留xml配置文件相关的解析。
+
+
+lookup-method 对应的方法应该是 public 的
+
+
+spring.schemas 
+中增加 xsd文件的配置，可以减少网络的访问，如果是Spring jar包的话，可以做到的。

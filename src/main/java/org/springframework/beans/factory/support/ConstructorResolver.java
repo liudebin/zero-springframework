@@ -17,10 +17,6 @@
 package org.springframework.beans.factory.support;
 
 import org.springframework.beans.*;
-import org.springframework.beans.factory.InjectionPoint;
-import org.springframework.core.MethodParameter;
-import org.springframework.util.*;
-import org.springframework.beans.*;
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.BeanDefinitionStoreException;
 import org.springframework.beans.factory.InjectionPoint;
@@ -379,7 +375,7 @@ class ConstructorResolver {
 			isStatic = false;
 		}
 		else {
-			// It's a static factory method on the bean class.
+			// It's a static factory method on the bean class. 自有的静态工厂方法
 			if (!mbd.hasBeanClass()) {
 				throw new BeanDefinitionStoreException(mbd.getResourceDescription(), beanName,
 						"bean definition declares neither a bean class nor a factory-bean reference");

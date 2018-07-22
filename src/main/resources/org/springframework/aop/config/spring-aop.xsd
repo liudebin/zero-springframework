@@ -9,8 +9,8 @@
 
 	<!--<xsd:import namespace="http://www.springframework.org/schema/beans" schemaLocation="http://www.springframework.org/schema/beans/spring-beans.xsd"/>-->
 	<!--<xsd:import namespace="http://www.springframework.org/schema/tool" schemaLocation="http://www.springframework.org/schema/tool/spring-tool.xsd"/>-->
-	<xsd:import namespace="http://www.springframework.org/schema/beans" schemaLocation="classpath:org/springframework/beans/factory/xml/spring-beans.xsd"/>
-	<xsd:import namespace="http://www.springframework.org/schema/tool" schemaLocation="classpath:org/springframework/beans/factory/xml/spring-tool.xsd"/>
+	<xsd:import namespace="http://www.springframework.org/schema/beans" schemaLocation="org/springframework/beans/factory/xml/spring-beans.xsd"/>
+	<xsd:import namespace="http://www.springframework.org/schema/tool" schemaLocation="org/springframework/beans/factory/xml/spring-tool.xsd"/>
 
 	<xsd:annotation>
 		<xsd:documentation><![CDATA[

@@ -810,6 +810,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 			this.beanDefinitionMap.put(beanName, beanDefinition);
 		}
 		else {
+			// 如果已经有bean开始创建了
 			if (hasBeanCreationStarted()) {// 0.0
 				// Cannot modify startup-time collection elements anymore (for stable iteration)
                 ////注册过程需要synchronized，保证数据的一致性

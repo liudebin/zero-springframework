@@ -25,13 +25,13 @@
     </appender>
 
     <!--<logger name="org.springframework" level="trace"/>-->
-    <logger name="org.springframework" level="TRACE"/>
+    <logger name="org.springframework" level="DEBUG" />
     <!--<logger name="org" level="DEBUG"/>-->
     <!--<logger name="org.springframework.beans" level="DEBUG"/>-->
 
     <!-- 异常错误日志文件配置 -->
 
-    <root level="TRACE">
+    <root level="DEBUG">
         <appender-ref ref="console"/>
     </root>
 

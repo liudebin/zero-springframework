@@ -16,11 +16,12 @@
 
 package org.springframework.beans.factory.config;
 
-import org.springframework.lang.Nullable;
 import org.springframework.beans.BeansException;
 import org.springframework.lang.Nullable;
 
 /**
+ *
+ * 工厂钩子，允许对新建的bean实例做自定义修改。
  * Factory hook that allows for custom modification of new bean instances,
  * e.g. checking for marker interfaces or wrapping them with proxies.
  *

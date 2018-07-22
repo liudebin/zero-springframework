@@ -138,10 +138,14 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 		// 如果是 beans 命名空间，处理 profile 属性
 		if (this.delegate.isDefaultNamespace(root)) {// 通过配置文件中的 namespaceURI判断
 			String profileSpec = root.getAttribute(PROFILE_ATTRIBUTE);
-			if (StringUtils.hasText(profileSpec)) {//配置了 profile 属性
+
+			//配置了 profile 属性
+			if (StringUtils.hasText(profileSpec)) {
 				String[] specifiedProfiles = StringUtils.tokenizeToStringArray(
 						profileSpec, BeanDefinitionParserDelegate.MULTI_VALUE_ATTRIBUTE_DELIMITERS);
-				if (!getReaderContext().getEnvironment().acceptsProfiles(specifiedProfiles)) { // 判断有没有配置当前激活的 profile 属性
+
+                // 判断有没有配置当前激活的 profile 属性
+				if (!getReaderContext().getEnvironment().acceptsProfiles(specifiedProfiles)) {
 					if (logger.isInfoEnabled()) {
 						logger.info("Skipped XML bean definition file due to specified profiles [" + profileSpec +
 								"] not matching: " + getReaderContext().getResource());
@@ -168,11 +172,15 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 	}
 
 	/**
+     * 处理 各命名空间
+     * 默认的命名空间，即 beans 及 其内部的自定义Element
+     * 其他 自定义的命名空间。
 	 * Parse the elements at the root level in the document:
 	 * "import", "alias", "bean".
 	 * @param root the DOM root element of the document
 	 */
 	protected void parseBeanDefinitions(Element root, BeanDefinitionParserDelegate delegate) {
+
 	    // 对 delegate 进行处理
         // 如果是 默认的命名空间  beans，在方法的外部已经出现过，同样的方法，在不同的method 层次是可以出现多次的。0.0
 		if (delegate.isDefaultNamespace(root)) {
@@ -328,9 +336,12 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 	    // 委托1. BeanDefinitionDelegate 类 进行元素解析，信息提取
 //        返回的BeanDefinitionHolder中 包含了配置文件中的各种属性，class,name,id,alias
 		BeanDefinitionHolder bdHolder = delegate.parseBeanDefinitionElement(ele);
+
+
+
 //		若dbHolder 不为空
 		if (bdHolder != null) {
-		    //2. 非默认的命名空间的解析，然后对原 BeanDefinitionHolder 进行封装
+		    //2. 非默认的命名空间的解析，然后对原 BeanDefinitionHolder 进行封装，这种方法，就是直接发起，有就给处理，没有就拉倒
 			bdHolder = delegate.decorateBeanDefinitionIfRequired(ele, bdHolder);
 			try {
 				// Register the final decorated instance.

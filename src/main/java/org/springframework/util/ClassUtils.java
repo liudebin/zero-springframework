@@ -80,6 +80,12 @@ public abstract class ClassUtils {
 	/**
 	 * Map with primitive type name as key and corresponding primitive
 	 * type as value, for example: "int" -> "int.class".
+	 * 基本类型名称到 类的映射
+     * int -> int.Class
+     * [I -> int[].class
+     * java.lang.Float -> Float.Class
+     * [Ljava.lang.Float -> Float[].class
+     * ...
 	 */
 	private static final Map<String, Class<?>> primitiveTypeNameMap = new HashMap<>(32);
 
@@ -216,8 +222,9 @@ public abstract class ClassUtils {
 			throws ClassNotFoundException, LinkageError {
 
 		Assert.notNull(name, "Name must not be null");
-
+		// 1. 是否为基本类型
 		Class<?> clazz = resolvePrimitiveClassName(name);
+		// 2. 常用类型 - Object、String等类型与数组
 		if (clazz == null) {
 			clazz = commonClassCache.get(name);
 		}
@@ -226,6 +233,8 @@ public abstract class ClassUtils {
 		}
 
 		// "java.lang.String[]" style arrays
+        // 如果依然是 完整的类数组形式，则新建实例返回class对象。
+        // 递归调用方法处理。
 		if (name.endsWith(ARRAY_SUFFIX)) {
 			String elementClassName = name.substring(0, name.length() - ARRAY_SUFFIX.length());
 			Class<?> elementClass = forName(elementClassName, classLoader);
@@ -246,6 +255,7 @@ public abstract class ClassUtils {
 			return Array.newInstance(elementClass, 0).getClass();
 		}
 
+		// 自定义类的加载
 		ClassLoader clToUse = classLoader;
 		if (clToUse == null) {
 			clToUse = getDefaultClassLoader();
@@ -311,6 +321,7 @@ public abstract class ClassUtils {
 		Class<?> result = null;
 		// Most class names will be quite long, considering that they
 		// SHOULD sit in a package, so a length check is worthwhile.
+        // 会对长度做过滤，bingo
 		if (name != null && name.length() <= 8) {
 			// Could be a primitive - likely.
 			result = primitiveTypeNameMap.get(name);

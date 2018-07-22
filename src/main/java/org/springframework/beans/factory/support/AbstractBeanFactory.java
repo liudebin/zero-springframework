@@ -127,7 +127,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 	private SecurityContextProvider securityContextProvider;
 
 	/** Map from bean name to merged RootBeanDefinition */
-	/**从bean名称映射到合并的RootBeanDefinition**/
+	/**从bean名称映射到合并的RootBeanDefinition  已经融合的会一直保存吗 等下出去看看  todo**/
 	private final Map<String, RootBeanDefinition> mergedBeanDefinitions = new ConcurrentHashMap<>(256);
 
 	/** Names of beans that have already been created at least once */
@@ -1347,7 +1347,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 	}
 
 	/**
-     * 解析 class 0.0
+     * 解析 class 0.0 为什么不适用之前加载的class对象？
 	 * Resolve the bean class for the specified bean definition,
 	 * resolving a bean class name into a Class reference (if necessary)
 	 * and storing the resolved Class in the bean definition for further use.

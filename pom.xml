@@ -32,34 +32,34 @@
 
   <dependencies>
 
-      <dependency>
-          <groupId>ch.qos.logback</groupId>
-          <artifactId>logback-core</artifactId>
-          <version>1.1.5</version>
-      </dependency>
-      <dependency>
-          <groupId>ch.qos.logback</groupId>
-          <artifactId>logback-classic</artifactId>
-          <version>1.1.5</version>
-      </dependency>
-      <dependency>
-          <groupId>ch.qos.logback</groupId>
-          <artifactId>logback-access</artifactId>
-          <version>1.1.5</version>
-      </dependency>
+      <!--<dependency>-->
+          <!--<groupId>ch.qos.logback</groupId>-->
+          <!--<artifactId>logback-core</artifactId>-->
+          <!--<version>1.1.5</version>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+          <!--<groupId>ch.qos.logback</groupId>-->
+          <!--<artifactId>logback-classic</artifactId>-->
+          <!--<version>1.1.5</version>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+          <!--<groupId>ch.qos.logback</groupId>-->
+          <!--<artifactId>logback-access</artifactId>-->
+          <!--<version>1.1.5</version>-->
+      <!--</dependency>-->
 
-      <dependency>
-          <groupId>org.logback-extensions</groupId>
-          <artifactId>logback-ext-spring</artifactId>
-          <version>0.1.1</version>
-      </dependency>
+      <!--<dependency>-->
+          <!--<groupId>org.logback-extensions</groupId>-->
+          <!--<artifactId>logback-ext-spring</artifactId>-->
+          <!--<version>0.1.1</version>-->
+      <!--</dependency>-->
 
 
-      <dependency>
-          <groupId>org.slf4j</groupId>
-          <artifactId>jul-to-slf4j</artifactId>
-          <version>1.7.7</version>
-      </dependency>
+      <!--<dependency>-->
+          <!--<groupId>org.slf4j</groupId>-->
+          <!--<artifactId>jul-to-slf4j</artifactId>-->
+          <!--<version>1.7.7</version>-->
+      <!--</dependency>-->
       <dependency>
           <groupId>junit</groupId>
           <artifactId>junit</artifactId>
@@ -154,5 +154,21 @@
           <version>2.4.2</version>
       </dependency>
 
+
+
+
+      <dependency>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+          <version>1.2.17</version>
+      </dependency>
+      <!-- simple logg facade for java（slf4-api.jar）日志接口 和 log4j具体日志系统之间的适配器 -->
+
+      <dependency>
+            <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>1.7.12</version>
+      </dependency>
+<!---->
   </dependencies>
 </project>

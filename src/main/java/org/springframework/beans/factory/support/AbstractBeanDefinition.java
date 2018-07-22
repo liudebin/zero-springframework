@@ -469,6 +469,8 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	 * rather just serving as parent for concrete child bean definitions.
 	 * <p>Default is "false". Specify true to tell the bean factory to not try to
 	 * instantiate that particular bean in any case.
+	 *
+	 * 不初始化？
 	 */
 	public void setAbstract(boolean abstractFlag) {
 		this.abstractFlag = abstractFlag;
@@ -1001,6 +1003,7 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 
 	/**
 	 * Validate this bean definition. 0.0
+     * 无法将静态工厂方法与方法重写相结合：静态工厂方法必须创建实例
 	 * @throws BeanDefinitionValidationException in case of validation failure
 	 */
 	public void validate() throws BeanDefinitionValidationException {

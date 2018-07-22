@@ -1,7 +1,7 @@
 package zero.test;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import org.apache.log4j.Logger;
 
 /**
  * 抽象类
@@ -11,5 +11,5 @@ import org.slf4j.LoggerFactory;
  */
 
 public class AbstractTest {
-    Logger logger = LoggerFactory.getLogger(this.getClass());
+    Logger logger = Logger.getLogger(this.getClass());
 }

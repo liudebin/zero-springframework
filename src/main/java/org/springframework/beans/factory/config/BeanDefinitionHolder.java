@@ -17,10 +17,6 @@
 package org.springframework.beans.factory.config;
 
 import org.springframework.beans.BeanMetadataElement;
-import org.springframework.lang.Nullable;
-import org.springframework.util.Assert;
-import org.springframework.util.StringUtils;
-import org.springframework.beans.BeanMetadataElement;
 import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
@@ -35,7 +31,7 @@ import org.springframework.util.StringUtils;
  * definitions. If you don't care about BeanNameAware and the like,
  * registering RootBeanDefinition or ChildBeanDefinition is good enough.
  *
- * 通过名字和别名 的 BeanDefinition的持有人。
+ *  BeanDefinition 、 beanName、 aliases 的持有人。
  * 可以注册为内部bean的占位符。
  * 也可以用于内部bean定义的编程注册。
  * 如果你不关心BeanNameAware之类的东西，注册RootBeanDefinition或ChildBeanDefinition就足够了。

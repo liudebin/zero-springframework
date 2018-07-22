@@ -313,7 +313,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 		if (logger.isInfoEnabled()) {
 			logger.info("Loading XML bean definitions from " + encodedResource.getResource());
 		}
-
+// 线程私有的 当前解析的资源set集合
 		Set<EncodedResource> currentResources = this.resourcesCurrentlyBeingLoaded.get();
 		if (currentResources == null) {
 			currentResources = new HashSet<>(4);
@@ -335,7 +335,8 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 				if (encodedResource.getEncoding() != null) {
 					inputSource.setEncoding(encodedResource.getEncoding());
 				}
-				//真正加载 BeanDefinition 的逻辑 所有的do
+				//真正加载 BeanDefinition 的逻辑
+                //所有的do 才是真正干活的
 				return doLoadBeanDefinitions(inputSource, encodedResource.getResource());
 			}
 			finally {
@@ -347,9 +348,12 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 					"IOException parsing XML document from " + encodedResource.getResource(), ex);
 		}
 		finally {
+		    //移除之前加载的资源
 			currentResources.remove(encodedResource);
 			if (currentResources.isEmpty()) {
+			    //如果所有加载资源都为空，则移除本地线程中的对象
 				this.resourcesCurrentlyBeingLoaded.remove();
+				logger.info("移除所有资源");
 			}
 		}
 	}
@@ -392,8 +396,9 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	protected int doLoadBeanDefinitions(InputSource inputSource, Resource resource)
 			throws BeanDefinitionStoreException {
 		try {
-		    //获取 document
+		    //1. 获取 document
 			Document doc = doLoadDocument(inputSource, resource);
+			//2. 注册 BeanDefinitons
 			return registerBeanDefinitions(doc, resource);
 		}
 		catch (BeanDefinitionStoreException ex) {
