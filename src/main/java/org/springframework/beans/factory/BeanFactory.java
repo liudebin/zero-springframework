@@ -57,6 +57,7 @@ import org.springframework.lang.Nullable;
  * Development" for a discussion of the benefits of this approach.
  *
  * 这种方法的要点是把BeanFactory作为应用程序组件的注册中心和集中配置(例如， 不需要个别的对象去读取属性文件)。
+ *
  * <p>Note that it is generally better to rely on Dependency Injection
  * ("push" configuration) to configure application objects through setters
  * or constructors, rather than use any form of "pull" configuration like a

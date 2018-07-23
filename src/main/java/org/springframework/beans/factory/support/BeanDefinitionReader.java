@@ -20,12 +20,6 @@ import org.springframework.beans.factory.BeanDefinitionStoreException;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.lang.Nullable;
-import org.springframework.beans.factory.BeanDefinitionStoreException;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.beans.factory.support.BeanNameGenerator;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.ResourceLoader;
-import org.springframework.lang.Nullable;
 
 /**
  * Simple interface for bean definition readers.

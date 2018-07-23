@@ -16,9 +16,6 @@
 
 package org.springframework.beans.factory.support;
 
-import org.springframework.beans.factory.config.ConstructorArgumentValues;
-import org.springframework.lang.Nullable;
-import org.springframework.util.ObjectUtils;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.factory.config.ConstructorArgumentValues;
 import org.springframework.lang.Nullable;
@@ -41,6 +38,15 @@ import org.springframework.util.ObjectUtils;
  * {@link GenericBeanDefinition#setParentName} method. This effectively
  * supersedes the ChildBeanDefinition class for most use cases.
  *
+ *
+ * <p>
+ * 用于从父Bean继承设置的 BeanDefinition
+
+
+
+ 子bean定义将继承来自父类的构造函数参数值、属性值和方法重写，并具有添加新值的选项。
+ 如果指定了init方法、destroy方法和/或静态工厂方法，
+ 它们将覆盖相应的父设置。其余的设置将始终从子定义中获取:依赖于、自动连接模式、依赖项检查、单例、惰性init。
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @see GenericBeanDefinition

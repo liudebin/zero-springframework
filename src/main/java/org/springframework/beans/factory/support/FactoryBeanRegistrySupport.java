@@ -16,9 +16,6 @@
 
 package org.springframework.beans.factory.support;
 
-import org.springframework.beans.factory.FactoryBean;
-import org.springframework.beans.factory.FactoryBeanNotInitializedException;
-import org.springframework.lang.Nullable;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.BeanCurrentlyInCreationException;
@@ -35,7 +32,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * {@link FactoryBean} instances,
  * integrated with {@link DefaultSingletonBeanRegistry}'s singleton management.
  *
- * <br>对于单例的登记需要 FactoryBean 实例的支撑基类，集成 DefaultSingletonBeanRegistry 的单点管理。
+ * <br>对于单例的登记需要 FactoryBean 实例的支撑基类，集成 DefaultSingletonBeanRegistry 的单例管理。
  * <p>
  * <p>Serves as base class for {@link AbstractBeanFactory}.
  *
