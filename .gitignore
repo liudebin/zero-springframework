@@ -9,3 +9,4 @@ gen
 .gitignore
 target/
 .idea/workspace.xml
+!/src/main/java/org/springframework/aop/target/
