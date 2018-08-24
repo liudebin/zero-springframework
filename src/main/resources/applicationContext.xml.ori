@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans classpath:org/springframework/beans/factory/xml/spring-beans.xsd
+        http://www.springframework.org/schema/aop classpath:org/springframework/aop/config/spring-aop.xsd
+">
+    <!--AOP 现在是解析xml的时候，无法获取命名空间，也是尴尬，Class下已经有了啊-->
+
+    <!--profile="test"-->
+   <bean id="app" class="zero.test.App"/>
+    <!--,; 都可以分割-->
+    <!--<bean id="car" name="122334,232423523 11111" class="zero.test.FactoryBeanTest">-->
+       <!--<property name="appInfo" value="zero,0.0.1,test"/>-->
+   <!--</bean>-->
+    <alias name="app" alias="appAlias"/>
+
+    <!-- 配置使Spring采用CGLIB代理 -->
+    <aop:aspectj-autoproxy proxy-target-class="true" />
+    <!--<aop:aspectj-autoproxy/>-->
+
+    <!--<bean id="myInterceptor" class="zero.test.MyInterceptor"/>-->
+
+</beans>

@@ -17,10 +17,13 @@
 package org.springframework.context.expression;
 
 import org.springframework.core.DefaultParameterNameDiscoverer;
-import org.springframework.core.DefaultParameterNameDiscoverer;
 import org.springframework.core.ParameterNameDiscoverer;
+import org.springframework.expression.Expression;
+import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
+
+import java.util.Map;
 
 //import org.springframework.expression.spel.standard.SpelExpressionParser;
 
@@ -34,61 +37,61 @@ import org.springframework.util.ObjectUtils;
  */
 public abstract class CachedExpressionEvaluator {
 
-//	private final SpelExpressionParser parser;
+	private final SpelExpressionParser parser;
 
 	private final ParameterNameDiscoverer parameterNameDiscoverer = new DefaultParameterNameDiscoverer();
 
 
-//	/**
-//	 * Create a new instance with the specified {@link SpelExpressionParser}.
-//	 */
-//	protected CachedExpressionEvaluator(SpelExpressionParser parser) {
-//		Assert.notNull(parser, "SpelExpressionParser must not be null");
-//		this.parser = parser;
-//	}
-//
-//	/**
-//	 * Create a new instance with a default {@link SpelExpressionParser}.
-//	 */
-//	protected CachedExpressionEvaluator() {
-//		this(new SpelExpressionParser());
-//	}
-//
-//
-//	/**
-//	 * Return the {@link SpelExpressionParser} to use.
-//	 */
-//	protected SpelExpressionParser getParser() {
-//		return this.parser;
-//	}
-//
-//	/**
-//	 * Return a shared parameter name discoverer which caches data internally.
-//	 * @since 4.3
-//	 */
-//	protected ParameterNameDiscoverer getParameterNameDiscoverer() {
-//		return this.parameterNameDiscoverer;
-//	}
-//
-//
-//	/**
-//	 * Return the {@link Expression} for the specified SpEL value
-//	 * <p>Parse the expression if it hasn't been already.
-//	 * @param cache the cache to use
-//	 * @param elementKey the element on which the expression is defined
-//	 * @param expression the expression to parse
-//	 */
-//	protected Expression getExpression(Map<ExpressionKey, Expression> cache,
-//			AnnotatedElementKey elementKey, String expression) {
-//
-//		ExpressionKey expressionKey = createKey(elementKey, expression);
-//		Expression expr = cache.get(expressionKey);
-//		if (expr == null) {
-//			expr = getParser().parseExpression(expression);
-//			cache.put(expressionKey, expr);
-//		}
-//		return expr;
-//	}
+	/**
+	 * Create a new instance with the specified {@link SpelExpressionParser}.
+	 */
+	protected CachedExpressionEvaluator(SpelExpressionParser parser) {
+		Assert.notNull(parser, "SpelExpressionParser must not be null");
+		this.parser = parser;
+	}
+
+	/**
+	 * Create a new instance with a default {@link SpelExpressionParser}.
+	 */
+	protected CachedExpressionEvaluator() {
+		this(new SpelExpressionParser());
+	}
+
+
+	/**
+	 * Return the {@link SpelExpressionParser} to use.
+	 */
+	protected SpelExpressionParser getParser() {
+		return this.parser;
+	}
+
+	/**
+	 * Return a shared parameter name discoverer which caches data internally.
+	 * @since 4.3
+	 */
+	protected ParameterNameDiscoverer getParameterNameDiscoverer() {
+		return this.parameterNameDiscoverer;
+	}
+
+
+	/**
+	 * Return the {@link Expression} for the specified SpEL value
+	 * <p>Parse the expression if it hasn't been already.
+	 * @param cache the cache to use
+	 * @param elementKey the element on which the expression is defined
+	 * @param expression the expression to parse
+	 */
+	protected Expression getExpression(Map<ExpressionKey, Expression> cache,
+									   AnnotatedElementKey elementKey, String expression) {
+
+		ExpressionKey expressionKey = createKey(elementKey, expression);
+		Expression expr = cache.get(expressionKey);
+		if (expr == null) {
+			expr = getParser().parseExpression(expression);
+			cache.put(expressionKey, expr);
+		}
+		return expr;
+	}
 
 	private ExpressionKey createKey(AnnotatedElementKey elementKey, String expression) {
 		return new ExpressionKey(elementKey, expression);

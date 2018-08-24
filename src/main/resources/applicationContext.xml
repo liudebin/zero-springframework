@@ -4,9 +4,11 @@
        xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="
-       http://www.springframework.org/schema/beans classpath:org/springframework/beans/factory/xml/spring-beans.xsd
-        http://www.springframework.org/schema/aop classpath:org/springframework/aop/config/spring-aop.xsd
+       http://www.springframework.org/schema/beans org/springframework/beans/factory/xml/spring-beans.xsd
+        http://www.springframework.org/schema/aop org/springframework/aop/config/spring-aop.xsd
+         http://www.springframework.org/schema/tx org/springframework/transaction/config/spring-tx.xsd
 ">
     <!--AOP 现在是解析xml的时候，无法获取命名空间，也是尴尬，Class下已经有了啊-->
 
@@ -23,5 +25,80 @@
     <!--<aop:aspectj-autoproxy/>-->
 
     <!--<bean id="myInterceptor" class="zero.test.MyInterceptor"/>-->
+
+
+    <!--<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"-->
+          <!--init-method="init" destroy-method="close">-->
+        <!--&lt;!&ndash; 基本属性 url、user、password &ndash;&gt;-->
+        <!--<property name="url" value="jdbc:mysql://localhost:3306/mydb?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;yearIsDateType=false&amp;allowMultiQueries=true"/>-->
+        <!--<property name="username" value="root"/>-->
+        <!--<property name="password" value="root"/>-->
+
+        <!--&lt;!&ndash; 配置初始化大小、最小、最大 &ndash;&gt;-->
+        <!--<property name="initialSize" value="10"/>-->
+        <!--<property name="minIdle" value="5"/>-->
+        <!--<property name="maxActive" value="50"/>-->
+
+        <!--&lt;!&ndash; 配置获取连接等待超时的时间 &ndash;&gt;-->
+        <!--<property name="maxWait" value="60000"/>-->
+
+        <!--&lt;!&ndash; 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 &ndash;&gt;-->
+        <!--<property name="timeBetweenEvictionRunsMillis" value="60000"/>-->
+
+        <!--&lt;!&ndash; 配置一个连接在池中最小生存的时间，单位是毫秒 &ndash;&gt;-->
+        <!--<property name="minEvictableIdleTimeMillis" value="60000" />-->
+        <!--<property name="maxEvictableIdleTimeMillis" value="110000" />-->
+
+        <!--<property name="validationQuery" value="SELECT 1"/>-->
+        <!--<property name="testWhileIdle" value="true"/>-->
+        <!--<property name="testOnBorrow" value="true"/>-->
+        <!--<property name="testOnReturn" value="true"/>-->
+
+        <!--&lt;!&ndash; 打开PSCache，并且指定每个连接上PSCache的大小 &ndash;&gt;-->
+        <!--&lt;!&ndash;property name="poolPreparedStatements" value="true"/> <property name="maxPoolPreparedStatementPerConnectionSize"-->
+            <!--value="20"/ &ndash;&gt;-->
+
+        <!--&lt;!&ndash; 配置监控统计拦截的filters。状态统计：stat，日常记录：slf4j &ndash;&gt;-->
+        <!--<property name="filters" value="stat,slf4j"/>-->
+    <!--</bean>-->
+
+
+    <bean id = "dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/mydb?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;yearIsDateType=false&amp;allowMultiQueries=true"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+        
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <constructor-arg ref="dataSource"/>
+    </bean>
+    <bean id="txTest" class="zero.test.tx.TxTest">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+    <bean id="studentService" class="zero.test.tx.TxService">
+        <property name="txTest" ref="txTest"/>
+    </bean>
+    <!--spring声明式事务管理控制-->
+    <!--配置事务管理器类-->
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--配置事务增强（如何管理事务，只读、读写...）-->
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <tx:method name="*save*" propagation="REQUIRED" read-only="false"/>
+            <tx:method name="get*" propagation="REQUIRED" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+    <!--aop配置，拦截哪些方法（切入点表达式，拦截上面的事务增强）-->
+    <aop:config>
+        <aop:pointcut id="pt" expression="execution(* zero.test.tx.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="pt"/>
+    </aop:config>
+
+
+
+
 
 </beans>

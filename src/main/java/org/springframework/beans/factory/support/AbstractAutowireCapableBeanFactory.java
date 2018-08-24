@@ -22,12 +22,6 @@ import org.springframework.beans.factory.config.*;
 import org.springframework.core.*;
 import org.springframework.lang.Nullable;
 import org.springframework.util.*;
-import org.springframework.beans.*;
-import org.springframework.beans.factory.*;
-import org.springframework.beans.factory.config.*;
-import org.springframework.core.*;
-import org.springframework.lang.Nullable;
-import org.springframework.util.*;
 
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Constructor;
@@ -404,7 +398,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 	}
 
 	// 尽可能保证所有 bean 初始化后都会调用 注册的 BeanPostProcessor的 postProcessAfterInitialization进行处理。
-    // 实例化后的，后处理器调用 0.0
+    // 实例化后的，后处理器调用 0.0  此处会创建代理类。CGLIB
 	@Override
 	public Object applyBeanPostProcessorsAfterInitialization(Object existingBean, String beanName)
 			throws BeansException {
